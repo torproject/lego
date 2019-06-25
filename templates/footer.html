@@ -9,7 +9,7 @@
            <h2 class="text-white text-bold">{{ _('Download Tor Browser') }}</h2>
             <p class="text-white">{{ _('Download Tor Browser to experience real private browsing without tracking, surveillance, or censorship.') }}</p>
             {% set download = site.get('/download') %}
-            {% if download == 'None' %}
+            {% if download == None %}
               <a class="btn text-primary bg-white btn-light pull-right mt-2" href="https://www.torproject.org/download/">
             {% else %}
               <a class="btn text-primary bg-white btn-light pull-right mt-2" href="{{ this.url_to(download, alt=this.alt) }}">
