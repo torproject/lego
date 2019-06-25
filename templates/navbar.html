@@ -9,7 +9,7 @@
       <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
       <span class="sr-only">Tor Logo</span>
     </a>
-    <a href="https://donate.torproject.org" title="{{ _("Donate") }}"><h5><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h5></a>
+    <a href="https://donate.torproject.org" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
     <label for="nav-toggle">
       <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         {{ _("Menu") }} <span class="navbar-toggler-icon ml-1"></span>
@@ -46,11 +46,14 @@
         {{ bag('alternatives', this.alt, 'language') }}
         </button>
         <div class="dropdown-menu">
-          {% for id, item in bag('alternatives').items() %}
-            {% if this.alt != id %}
-              <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
-            {% endif %}
-          {% endfor %}
+          {% set alts = bag('alternatives').items() %}
+          {% if alts|length > 1 %}
+            {% for id, item in bag('alternatives').items() %}
+              {% if this.alt != id %}
+                <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
       {% set download = site.get('/download') %}
