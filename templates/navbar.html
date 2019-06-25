@@ -54,12 +54,12 @@
         </div>
       </div>
       {% set download = site.get('/download') %}
-      <div class="pull-right">
-        {% if this.url_to(download) %}
+      {% if download %}
+        <div class="pull-right">
           <a class="btn btn-outline-light pull-right" href="{{ this.url_to(download)|url(alt=this.alt) }}">
             {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png"></i>
           </a>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
   </nav>
 </div>
