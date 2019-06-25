@@ -54,6 +54,14 @@
         </div>
       </div>
       {% set download = site.get('/download') %}
-      {{ download }}
+      <div class="pull-right">
+        {% if download == 'None' %}
+          <a class="btn btn-outline-light pull-right" href="https://www.torproject.org/download/">
+        {% else %}
+          <a class="btn btn-outline-light pull-right" href="{{ this.url_to(download)|url(alt=this.alt) }}">
+        {% endif %}
+          {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png"></i>
+        </a>
+      </div>
   </nav>
 </div>
