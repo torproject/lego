@@ -1,4 +1,7 @@
-{% if this.color == 'primary' %}
+{% if not this.color %}
+<div class="container bg-primary">
+  <nav class="navbar no-background navbar-expand-lg navbar-dark fixed-top bg-primary p-4">
+{% elif this.color == 'primary' %}
 <div class="container bg-primary">
   <nav class="navbar no-background navbar-expand-lg navbar-dark fixed-top bg-primary p-4">
 {% else %}
