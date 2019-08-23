@@ -36,9 +36,9 @@
           {% if link %}
             <a class="nav-link text-light" href="{{ item.path|url(alt=this.alt) }}">
           {% elif item.label == "Documentation" or item.label == "Blog" %}
-            <a class="nav-link" href="{{ item.path }}">
+            <a class="nav-link text-light" href="{{ item.path }}">
           {% else %}
-            <a class="nav-link" href="{{ item.path }}/{{ this.alt }}">
+            <a class="nav-link text-light" href="{{ item.path }}/{{ this.alt }}">
           {% endif %}
           {{ _(item.label) }}
               {% if this.is_child_of(item.path) %}
