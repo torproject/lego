@@ -28,7 +28,7 @@
             {% set link = site.get(item.path) %}
             {% if link %}
               <a class="nav-link" href="{{ item.path|url(alt=this.alt) }}">
-            {% elif item.label == "Documentation" or item.label == "Blog" %}
+            {% elif item.label == "Documentation" or item.label == "Blog" or item.label == "Jobs" %}
               <a class="nav-link" href="{{ item.path }}">
             {% else %}
               <a class="nav-link" href="{{ item.path }}{{ this.alt }}">
