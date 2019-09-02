@@ -26,7 +26,7 @@ class XmlToHtmlPlugin(Plugin):
             for entry in items:
               title = entry.findtext('title')
               link = entry.findtext('link')
-              stream += "<h3><a href=\"" + link +"\">" + title + "</a></h3>"
+              stream += "<div class=\"row\"><h3><a href=\"" + link +"\">" + title + "</a></h3></div>"
 
             return stream
 
