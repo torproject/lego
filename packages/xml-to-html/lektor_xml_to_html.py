@@ -10,7 +10,7 @@ from xml.etree import ElementTree as etree
 from urllib import request
 
 
-class DisqusCommentsPlugin(Plugin):
+class XmlToHtmlPlugin(Plugin):
     name = u'XML to HTML'
     description = u'Lektor plugin to add an XML feed as HTML.'
 
