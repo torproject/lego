@@ -22,7 +22,6 @@ class XmlToHtmlPlugin(Plugin):
             content = webFile.read()
             root = etree.fromstring(content)
             items = root.findall('channel/item')
-            file_object  = open('../../../templates/stream.html', 'w')
             stream = ""
             for entry in items:
               title = entry.findtext('title')
