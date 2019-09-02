@@ -10,7 +10,7 @@ setup(
     py_modules=['lektor_xml_to_html'],
     entry_points={
         'lektor.plugins': [
-            'xml_to_html = lektor_xml_to_html:XMLToHtmlPlugin',
+            'xml-to-html = lektor_xml_to_html:XMLToHtmlPlugin',
         ]
     }
 )
