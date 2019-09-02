@@ -13,7 +13,7 @@ webFile = request.urlopen("https://blog.torproject.org/events.xml")
 content = webFile.read()
 root = etree.fromstring(content)
 items = root.findall('channel/item')
-file_object  = open('../../templates/stream.html', 'w')
+file_object  = open('../../../templates/stream.html', 'w')
 for entry in items:
   title = entry.findtext('title')
   link = entry.findtext('link')
