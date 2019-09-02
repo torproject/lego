@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #pylint: disable=wrong-import-position
 import sys
+import os
 
 PY3 = sys.version_info > (3,)
 
@@ -13,6 +14,8 @@ webFile = request.urlopen("https://blog.torproject.org/events.xml")
 content = webFile.read()
 root = etree.fromstring(content)
 items = root.findall('channel/item')
+os.chdir(os.path.dirname(__file__))
+print(os.getcwd())
 file_object  = open('../../../templates/stream.html', 'w')
 for entry in items:
   title = entry.findtext('title')
