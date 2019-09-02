@@ -31,4 +31,4 @@ class XmlToHtmlPlugin(Plugin):
 
             return stream
 
-        self.env.jinja_env.globals['render_strean'] = stream
+        self.env.jinja_env.globals['render_stream'] = stream
