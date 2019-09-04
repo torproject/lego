@@ -17,8 +17,8 @@ class XmlToHtmlPlugin(Plugin):
 
     def on_setup_env(self, **extra):
 
-        def stream(identifier=None, url=None):
-            webFile = request.urlopen("https://blog.torproject.org/events.xml")
+        def stream(url=None):
+            webFile = request.urlopen(url)
             content = webFile.read()
             root = etree.fromstring(content)
             items = root.findall('channel/item')
