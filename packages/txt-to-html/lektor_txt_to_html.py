@@ -9,9 +9,9 @@ from lektor.pluginsystem import Plugin
 from urllib import request
 
 
-class TxtToMarkdownPlugin(Plugin):
+class TxtToHtmlPlugin(Plugin):
     name = u'TXT to Markdown'
-    description = u'Lektor plugin to add a remote TXT doc into Markdown.'
+    description = u'Lektor plugin to add a remote TXT doc into HTML.'
 
 
     def on_setup_env(self, **extra):
