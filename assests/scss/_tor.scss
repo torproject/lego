@@ -645,6 +645,13 @@ table {
     display: none !important;
 }
 
+// Sticky menu
+.sticky {
+  position: sticky;
+  top: 105px;
+  z-index: 999;
+}
+
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(sm) {
     .mobile {
