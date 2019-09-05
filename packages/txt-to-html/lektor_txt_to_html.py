@@ -16,7 +16,7 @@ class TxtToHtmlPlugin(Plugin):
 
     def on_setup_env(self, **extra):
 
-        def stream(url=None):
+        def text(url=None):
             webFile = request.urlopen(url)
             content = webFile.read()
             text ="<pre>" + content + "</pre>"
