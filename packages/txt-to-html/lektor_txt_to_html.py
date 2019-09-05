@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 #pylint: disable=wrong-import-position
 import sys
 
@@ -18,7 +18,8 @@ class TxtToHtmlPlugin(Plugin):
 
         def text(url=None):
             webFile = request.urlopen(url)
-            content = webFile.read()
+            charset = webFile.info().get_content_charset()
+            content = webFile.read().decode(charset)
             text ="<pre>" + content + "</pre>"
 
             return text
