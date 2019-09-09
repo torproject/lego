@@ -37,6 +37,90 @@
     color: $white;
 }
 
+// toggle buttons for animations
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 62px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #707070;
+  transition: background-color ease 0.3s;
+}
+
+.toggle:before {
+  content: "on off";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  font: 10px/28px Helvetica;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: -22px;
+  word-spacing: 37px;
+  color: #fff;
+  text-shadow: -1px -1px rgba(0,0,0,0.15);
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+}
+
+.toggle:checked {
+  background-color: #4CD964;
+}
+
+.toggle:checked:before {
+  left: 32px;
+}
+
+
+#https-switch:checked ~ #https {
+  display: inline;
+}
+
+#https-switch:checked ~ #http {
+  display: none;
+}
+
+#tor-switch:checked ~ #tor {
+  display: inline;
+}
+
+#https-switch:checked ~ #tor-switch:checked ~ .switch-on {
+    display: inline;
+}
+
+#https-switch:checked ~ #tor-switch:checked ~ .switch-off {
+    display: none;
+}
+
+#https {
+  display: none;
+
+}
+
+#tor {
+  display: none;
+}
+
+#https-tor {
+  display: none;
+}
+
 // Define darker background
 .bg-darker{
   background-color: $purple-darker;
