@@ -7360,6 +7360,9 @@ main {
 #https-switch:checked ~ #http {
   display: none; }
 
+#tor-switch:checked ~ #http {
+  display: none; }
+
 #tor-switch:checked ~ #tor {
   display: inline; }
 
