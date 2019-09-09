@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p>The following visualization shows what information is visible to eavesdroppers with and without Tor Browser and HTTPS encryption:</p>
 
 <ul>
@@ -5,6 +6,15 @@
   <li>Click the “HTTPS” button to see what data is visible to observers when you're using HTTPS. The button will turn green to indicate that HTTPS is on.</li>
   <li>When both buttons are green, you see the data that is visible to observers when you are using both tools.</li>
   <li>When both buttons are grey, you see the data that is visible to observers when you don't use either tool.</li>
+=======
+<p>{{ _("The following visualization shows what information is visible to eavesdroppers with and without Tor Browser and HTTPS encryption:") }}</p>
+
+<ul>
+  <li>{{ _("Click the “Tor” button to see what data is visible to observers when you're using Tor. The button will turn green to indicate that Tor is on.") }}</li>
+  <li>{{ _("Click the “HTTPS” button to see what data is visible to observers when you're using HTTPS. The button will turn green to indicate that HTTPS is on.") }}</li>
+  <li>{{ _("When both buttons are green, you see the data that is visible to observers when you are using both tools.") }}</li>
+  <li>{{ _("When both buttons are grey, you see the data that is visible to observers when you don't use either tool.") }}</li>
+>>>>>>> Import secure-connections.html from web/manual
 </ul>
 
 <br />
@@ -16,6 +26,7 @@
 <input class="toggle" type="checkbox" id="tor-switch"/>
 
 <br />
+<<<<<<< HEAD
 <div id="http-content" class="switch-off">
   <img src="{{ '/static/images/tor-https-0.png'|asseturl }}" />
 </div>
@@ -30,10 +41,27 @@
 </div>
 
 <h5>POTENTIALLY VISIBLE DATA</h5>
+=======
+<div id="http" class="switch-off">
+  <img src="{{ '/static/images/tor-https-0.png'|asseturl }}" />
+</div>
+<div id="https" class="switch-off">
+  <img src="{{ '/static/images/tor-https-1.png'|asseturl }}" />
+</div>
+<div id="tor" class="switch-off">
+  <img src="{{ '/static/images/tor-https-2.png'|asseturl }}" />
+</div>
+<div id="https-tor" class="switch-on">
+  <img src="{{ '/static/images/tor-https-3.png'|asseturl }}" />
+</div>
+
+<h5>{{ _("POTENTIALLY VISIBLE DATA") }}</h5>
+>>>>>>> Import secure-connections.html from web/manual
 
 <dl>
 
 <dt>
+<<<<<<< HEAD
 Site.com
 </dt>
   <dd>
@@ -66,6 +94,40 @@ Tor
 </dt>
   <dd>
     Whether or not Tor is being used.
+=======
+{{ _("Site.com") }}
+</dt>
+  <dd>
+    {{ _("The site being visited.") }}
+  </dd>
+
+<dt>
+{{ _("user / pw") }}
+</dt>
+  <dd>
+    {{ _("Username and password used for authentication.") }}
+  </dd>
+
+<dt>
+{{ _("data") }}
+</dt>
+  <dd>
+    {{ _("Data being transmitted.") }}
+  </dd>
+
+<dt>
+{{ _("location") }}
+</dt>
+  <dd>
+    {{ _("Network location of the computer used to visit the website (the public IP address).") }}
+  </dd>
+
+<dt>
+{{ _("Tor") }}
+</dt>
+  <dd>
+    {{ _("Whether or not Tor is being used.") }}
+>>>>>>> Import secure-connections.html from web/manual
   </dd>
 
 </dl>
