@@ -1,9 +1,7 @@
 {% macro render_parents(item) %}
-  {% if item.parent %}
-    <li class="breadcrumb-item active" aria-current="page">
-      <a href="{{ parent.path|url }}">
-        {{ parent.title }}
-      </a>
-    </li>
-  {% endif %}
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="{{ item.parent.path|url }}">
+      {{ item.parent.title }}
+    </a>
+  </li>
 {% endmacro %}
