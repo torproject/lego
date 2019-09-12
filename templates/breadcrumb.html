@@ -1,18 +1,22 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    {% set parent = this.parent %}
-    {% for _ in range(1, 10) %}
-      {% if  parent.path == "/" %}
-        {% break %}
-      {% else %}
-        <li class="breadcrumb-item active" aria-current="page">
-          <a href="{{ parent.path|url }}">
-            {{ parent.title }}
-          </a>
-        </li>
-        {% set parent = parent.parent %}
-      {% endif %}
-    {% endfor %}
+    {% if this.parent %}
+      {% set parent = this.parent %}
+      {% for _ in range(1, 5) %}
+        {% if parent %}
+          {% if parent.path == "/" %}
+            {# break #}
+          {% else %}
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="{{ parent.path|url }}">
+                {{ parent.title }}
+              </a>
+            </li>
+            {% set parent = parent.parent %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
   </ol>
 </nav>
