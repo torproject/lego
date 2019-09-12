@@ -12,7 +12,7 @@
                 {{ parent.title }}
               </a>
             </li>
-            {% set parent = parent.parent %}
+            {% parent = parent.parent %}
           {% endif %}
         {% endif %}
       {% endfor %}
