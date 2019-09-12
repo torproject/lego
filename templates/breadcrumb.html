@@ -1,22 +1,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    {% if this.parent %}
-      {% set parent = this.parent %}
-      {% for _ in range(1, 5) %}
-        {% if parent %}
-          {% if parent.path == "/" %}
-            {# break #}
-          {% else %}
-            <li class="breadcrumb-item active" aria-current="page">
-              <a href="{{ parent.path|url }}">
-                {{ parent.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endif %}
-        {% set parent = parent.parent %}
-      {% endfor %}
-    {% endif %}
+    {% from "macros/parent.html" import render_parents %}
+    {{ render_parents(this) }}
     <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
   </ol>
 </nav>
