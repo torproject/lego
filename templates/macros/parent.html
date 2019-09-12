@@ -1,6 +1,6 @@
 {% macro render_parent(item) %}
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="{{ vars.parent.path|url }}">
+    <a href="{{ item.parent.path|url }}">
       {{ item.parent.title }}
     </a>
   </li>
