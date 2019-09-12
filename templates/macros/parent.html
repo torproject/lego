@@ -1,20 +1,25 @@
+{% macro render_parent(item) %}
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="{{ vars.parent.path|url }}">
+      {{ item.parent.title }}
+    </a>
+  </li>
+{% endmacro %}
+
 {% macro render_parents(item) %}
-  {% set vars = {'parent': item.parent, 'item': item } %}
   {% if item.parent %}
-    {% for _ in range(1, 5) %}
-      {% if vars.update({'parent': item.parent}) %} {% endif %}
-      {% if vars.parent %}
-        {% if vars.parent.path == "/" %}
-          {# break #}
-        {% else %}
-          <li class="breadcrumb-item active" aria-current="page">
-            <a href="{{ vars.parent.path|url }}">
-              {{ vars.parent.title }}
-            </a>
-          </li>
+    {{ render_parent(item) }}
+    {% set item = item.parent %}
+    {% if item.parent %}
+      {{ render_parent(item) }}
+      {% set item = item.parent %}
+      {% if item.parent %}
+        {{ render_parent(item) }}
+        {% set item = item.parent %}
+        {% if item.parent %}
+          {{ render_parent(item) }}
         {% endif %}
       {% endif %}
-      {% if vars.update({'item': vars.parent}) %} {% endif %}
-    {% endfor %}
+    {% endif %}
   {% endif %}
 {% endmacro %}
