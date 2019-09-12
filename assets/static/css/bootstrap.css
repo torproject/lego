@@ -7283,7 +7283,7 @@ main {
  */
 /* Move down content because we have a fixed navbar that is 10rem tall */
 .page {
-  padding-top: 10rem; }
+  padding-top: 2em; }
 
 /* Reset */
 .no-border {
