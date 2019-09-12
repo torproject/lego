@@ -1,7 +1,11 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     {% if this.parent %}
-      <li class="breadcrumb-item active" aria-current="page">{{ this.parent.title }}</li>
+      <li class="breadcrumb-item active" aria-current="page">
+        <a href="{{ this.parent.path|url }}">
+          {{ this.parent.title }}
+        </a>
+      </li>
     {% endif %}
     <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
   </ol>
