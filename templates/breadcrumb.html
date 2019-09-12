@@ -12,9 +12,9 @@
                 {{ parent.title }}
               </a>
             </li>
-            {% parent = parent.parent %}
           {% endif %}
         {% endif %}
+        {% set parent = parent.parent %}
       {% endfor %}
     {% endif %}
     <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
