@@ -4,12 +4,12 @@
     {% for _ in range(1, 5) %}
       {% if vars.update({'parent': item.parent}) %} {% endif %}
       {% if vars.parent %}
-        {% if vars.parentvars.parentvars.parent.path == "/" %}
+        {% if vars.parent.path == "/" %}
           {# break #}
         {% else %}
           <li class="breadcrumb-item active" aria-current="page">
             <a href="{{ vars.parent.path|url }}">
-              {{ vars.parentvars.parent.title }}
+              {{ vars.parent.title }}
             </a>
           </li>
         {% endif %}
