@@ -7354,31 +7354,22 @@ main {
 .toggle:checked:before {
   left: 32px; }
 
-#https-switch:checked ~ #https {
+#https-switch:checked ~ #https-content {
   display: inline; }
 
-#https-switch:checked ~ #http {
+#https-switch:checked ~ #http-content {
   display: none; }
 
-#tor-switch:checked ~ #http {
+#tor-switch:checked ~ #http-content {
   display: none; }
 
-#tor-switch:checked ~ #tor {
+#tor-switch:checked ~ #tor-content {
   display: inline; }
 
 #https-switch:checked ~ #tor-switch:checked ~ .switch-on {
   display: inline; }
 
 #https-switch:checked ~ #tor-switch:checked ~ .switch-off {
-  display: none; }
-
-#https {
-  display: none; }
-
-#tor {
-  display: none; }
-
-#https-tor {
   display: none; }
 
 .bg-darker {
