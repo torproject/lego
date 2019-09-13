@@ -112,6 +112,18 @@
     display: none;
 }
 
+#https-content {
+  display: none;
+}
+
+#tor-content {
+  display: none;
+}
+
+#https-tor-content {
+  display: none;
+}
+
 // Define darker background
 .bg-darker{
   background-color: $purple-darker;

@@ -7372,6 +7372,15 @@ main {
 #https-switch:checked ~ #tor-switch:checked ~ .switch-off {
   display: none; }
 
+#https-content {
+  display: none; }
+
+#tor-content {
+  display: none; }
+
+#https-tor-content {
+  display: none; }
+
 .bg-darker {
   background-color: #401753; }
 
