@@ -2,8 +2,8 @@
 
 .dcs-button {
   background-color: var(--grey);
-  box-shadow: 0.3rem 0.3rem 0 var(--white);
-  color: var(--white);
+  box-shadow: 0.3rem 0.3rem 0 #fff;
+  color: #fff;
   display: inline-flex;
   font: 400 1.5rem/1.5rem 'Greve', 'Impact', sans-serif;
   letter-spacing: calc(0.07rem - 0.01rem);
@@ -17,13 +17,13 @@
 
   &:hover,
   &:focus {
-    background-color: var(--white);
-    box-shadow: 0.3rem 0.3rem 0 var(--black);
-    color: var(--black);
+    background-color: #fff !important;
+    box-shadow: 0.3rem 0.3rem 0 #000 !important;
+    color: #000 !important;
   }
 
   &:focus {
-    outline: 2px dotted var(--black);
+    outline: 2px dotted #000;
   }
 }
 
