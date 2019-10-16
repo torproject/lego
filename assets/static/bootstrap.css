@@ -8882,7 +8882,7 @@ a.text-dark:focus, a.text-dark:hover {
   margin-bottom: 200px;
 }
 
-#topics h5 {
+#topics footer h5 {
   padding-top: 7rem;
 }
 
@@ -9016,7 +9016,7 @@ footer {
   margin-bottom: 200px;
 }
 
-#topics h5 {
+#topics footer h5 {
   padding-top: 7rem;
 }
 
@@ -9285,19 +9285,19 @@ main {
   left: 32px;
 }
 
-#https-switch:checked ~ #https {
+#https-switch:checked ~ #https-content {
   display: inline;
 }
 
-#https-switch:checked ~ #http {
+#https-switch:checked ~ #http-content {
   display: none;
 }
 
-#tor-switch:checked ~ #http {
+#tor-switch:checked ~ #http-content {
   display: none;
 }
 
-#tor-switch:checked ~ #tor {
+#tor-switch:checked ~ #tor-content {
   display: inline;
 }
 
@@ -9309,15 +9309,15 @@ main {
   display: none;
 }
 
-#https {
+#https-content {
   display: none;
 }
 
-#tor {
+#tor-content {
   display: none;
 }
 
-#https-tor {
+#https-tor-content {
   display: none;
 }
 
