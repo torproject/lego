@@ -1,0 +1,92 @@
+@font-face {
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Kanit/kanit.woff2') format('woff2');
+}
+
+.banner {
+  background-color: #000000;
+  z-index: 100000000000000 !important;
+}
+
+.banner__containter {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1.25rem 1.25rem 2rem;
+  width: 100%;
+}
+
+.footer__close {
+  height: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+  margin-top: 0rem;
+  margin-right: -2rem;
+  z-index: 1;
+  font-weight: bolder;
+  visibility: inherit;
+}
+
+.take-back-monochrome-purple {
+  width: 533px;
+  height: 475px;
+}
+
+.tracking-surveillan {
+  color: #2EF900 !important;
+  font-family: Source Code Pro;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+}
+
+.take-back-the-intern {
+  color: #2FFF00;
+  font-family: Kanit;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 96px;
+  text-align: left;
+}
+
+.give-today-and-mozi {
+  color: #FFFFFF;
+  font-family: Source Code Pro;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+
+.rectangle {
+  border: 3px solid #8A2BE2 !important;
+  color: #FFFFFF !important;
+}
+
+.eoy-sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+#trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#trigger:checked ~  #banner-header, .banner__containter > #trigger:checked, #trigger:checked + label {
+  display: none;
+  visibility: hidden;
+}

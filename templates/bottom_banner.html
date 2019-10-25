@@ -1,19 +1,29 @@
-<div class="dcs-banner__containter">
-  <input id="trigger" type="checkbox" title="Close banner" /><label for="trigger" class="dcs-footer__close">X</label>
-  <span class="dcs-sr-only">Close banner</span>
-  <div class="dcs-footer" id="dcs-banner-footer" role="contentinfo">
-    <div class="dcs-footer__container">
-      <a class="dcs-footer__logo" href="https://digital.globalclimatestrike.net/join/?source=digitalstrikebanner">
-        <img src="{{ '/static/images/dcs-logo.png'|asseturl }}" alt="Digital Climate Strike logo" class="dcs-logo">
-      </a>
-      <div class="dcs-footer__main">
-        <p class="dcs-footer__body">
-          Our website will join the Global #ClimateStrike on <time id="dcs-strike-date" datetime="2019-09-20">September 20</time>. Will you?
-        </p>
-        <div class="dcs-footer__action">
-          <a type="button" class="dcs-button" href="https://digital.globalclimatestrike.net/join/?source=digitalstrikebanner"> Yes, I’m in. ➔ </a>
+<div class="banner__containter banner align-middle d-flex justify-content-center p-5">
+  <input id="trigger" type="checkbox" title="Close banner" />
+    <label for="trigger" class="footer__close text-white">X</label>
+  <span class="eoy-sr-only text-white">Close banner</span>
+  <div class="eoy-banner row col-12" id="banner-header" role="contentinfo">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="col-12 row">
+        <div class="col-9">
+          <div class="row">
+            <p class="tracking-surveillan">Tracking, surveillance, and censorship are widespread online.</p>
+          </div>
+          <div class="row">
+            <p class="take-back-the-intern">TAKE BACK THE INTERNET WITH TOR</p>
+          </div>
+          <div class="row">
+            <a class="btn-lg rectangle">DONATE NOW</a>
+            <p class="give-today-and-mozi ml-5">Give today, and Mozilla will match your donation.</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <img src="{{ '/static/images/home/png/take-back@3x.png'|asseturl }}" alt="{{ _("Take Back The Internet") }}" />
         </div>
       </div>
+    </div>
+    <div class="col-2">
     </div>
   </div>
 </div>
