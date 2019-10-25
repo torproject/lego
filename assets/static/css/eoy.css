@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: League Gothic;
-  src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf') format('otf');
+  src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf');
 }
 
 .banner {
@@ -23,6 +23,10 @@
   bottom: 0;
   padding: 1.25rem 1.25rem 2rem;
   width: 100%;
+  background-image: url('../images/home/png/take-back@3x.png');
+  background-position: bottom 10% right 30%;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .footer__close {
@@ -38,36 +42,25 @@
   visibility: inherit;
 }
 
-.take-back-monochrome-purple {
-  width: 533px;
-  height: 475px;
-}
-
 .tracking-surveillan {
   color: #2EF900 !important;
   font-family: Source Code Pro;
-  font-size: 18px;
   font-weight: 400;
-  line-height: 22px;
   text-align: left;
 }
 
 .take-back-the-intern {
   color: #2FFF00;
-  font-family: League Gothic;
-  font-size: 80px;
+  font-family: League Gothic !important;
   font-style: italic;
-  font-weight: 400;
-  line-height: 96px;
+  font-weight: 400 !important;
   text-align: left;
 }
 
 .give-today-and-mozi {
   color: #FFFFFF;
   font-family: Source Code Pro;
-  font-size: 14px;
   font-weight: 400;
-  line-height: 17px;
   text-align: left;
 }
 
