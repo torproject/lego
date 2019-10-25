@@ -6,6 +6,11 @@
   src: url('fonts/Kanit/kanit.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: League Gothic;
+  src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf') format('otf');
+}
+
 .banner {
   background-color: #000000;
   z-index: 100000000000000 !important;
@@ -49,7 +54,7 @@
 
 .take-back-the-intern {
   color: #2FFF00;
-  font-family: Kanit;
+  font-family: League Gothic;
   font-size: 80px;
   font-style: italic;
   font-weight: 400;
