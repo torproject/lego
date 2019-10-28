@@ -77,7 +77,7 @@
 }
 
 .banner__containter {
-    position: relative
+    position: relative;
     right: 0;
     left: 0;
     top: 0;
@@ -107,4 +107,16 @@
 #trigger:checked ~  #banner-header, .banner__containter > #trigger:checked, #trigger:checked + label {
   display: none;
   visibility: hidden;
+}
+@include media-breakpoint-down(xs) {
+  .tracking-surveillan{
+    font-size: 1rem;
+  }
+  take-back-the-intern {
+    line-height: 3.4rem;
+    font-size: 4rem;
+  }
+  .rectangle {
+    background:black;
+  }
 }
