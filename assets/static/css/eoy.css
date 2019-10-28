@@ -16,19 +16,6 @@
   z-index: 100000000000000 !important;
 }
 
-.banner__containter {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 1.25rem 1.25rem 2rem;
-  width: 100%;
-  background-image: url('../images/home/png/take-back@3x.png');
-  background-position: bottom 10% right 30%;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .footer__close {
   height: 3rem;
   position: absolute;
@@ -50,23 +37,55 @@
 }
 
 .take-back-the-intern {
-  color: #2FFF00;
+  color: lime;
   font-family: League Gothic !important;
   font-style: italic;
   font-weight: 400 !important;
   text-align: left;
-}
-
-.give-today-and-mozi {
-  color: #FFFFFF;
-  font-family: Source Code Pro;
-  font-weight: 400;
-  text-align: left;
+  width: 40%;
+  line-height: 4rem !important;
+  right: 8px;
+  position: relative;
 }
 
 .rectangle {
-  border: 3px solid #8A2BE2 !important;
-  color: #FFFFFF !important;
+    border: 3px solid blueviolet !important;
+    color: white !important;
+    border-radius: 0 !important;
+    font-family: League Gothic;
+    font-size: 2rem !important;
+    padding: 0 20px !important;
+}
+
+.rectangle:hover{
+    text-decoration: none;
+    color: white;
+    background: blueviolet;
+}
+
+.give-today-and-mozi {
+  color: white;
+  font-family: Source Code Pro;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 0;
+  line-height: 4em;
+}
+
+.banner__containter {
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 1.25rem 1.25rem 2rem;
+    width: 100%;
+    background-image: url('../images/home/png/take-back@3x.png');
+    background-position: bottom 10% right 45%;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 
 .eoy-sr-only {
