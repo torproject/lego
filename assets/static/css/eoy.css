@@ -11,6 +11,11 @@
   src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf');
 }
 
+/* Don't move down content w banner. Navbar isn't fixed. */
+.page {
+  padding-top: 0 !important; }
+
+
 .banner {
   background-color: #000000;
   z-index: 100000000000000 !important;
@@ -72,18 +77,16 @@
 }
 
 .banner__containter {
-
-    position: fixed;
+    position: relative
     right: 0;
     left: 0;
-    bottom: 0;
+    top: 0;
     padding: 1.25rem 1.25rem 2rem;
     width: 100%;
     background-image: url('../images/home/png/take-back@3x.png');
     background-position: bottom 10% right 45%;
     background-repeat: no-repeat;
     background-size: contain;
-
 }
 
 .eoy-sr-only {
