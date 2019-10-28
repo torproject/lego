@@ -8117,7 +8117,8 @@ a.side-nav.active {
   color: #2EF900 !important;
   font-family: Source Code Pro;
   font-weight: 400;
-  text-align: left; }
+  text-align: left;
+  font-size: 16px; }
 
 .take-back-the-intern {
   color: lime;
