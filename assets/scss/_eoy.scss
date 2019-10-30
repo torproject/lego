@@ -10,9 +10,18 @@
   font-family: League Gothic;
   src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf');
 }
-.w-40 {
-  width: 40% !important;
+
+@include media-breakpoint-down(md) {
+  .w-40 {
+    width: 40% !important;
+  }
 }
+@include media-breakpoint-down(lg) {
+  .w-40 {
+    width: 40% !important;
+  }
+}
+
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
   padding-top: 0 !important; }

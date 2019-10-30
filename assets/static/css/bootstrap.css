@@ -8093,9 +8093,12 @@ a.side-nav.active {
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/LeagueGothic-Italic.otf"); }
-.w-40 {
-  width: 40% !important; }
-
+@media (max-width: 991px) {
+  .w-40 {
+    width: 40% !important; } }
+@media (max-width: 1199px) {
+  .w-40 {
+    width: 40% !important; } }
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
   padding-top: 0 !important; }
