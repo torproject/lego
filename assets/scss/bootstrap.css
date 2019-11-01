@@ -440,7 +440,7 @@ mark,
 
 .initialism {
   font-size: 90%;
-  text-transform: uppercase; }
+  text-transform: none; }
 
 .blockquote {
   margin-bottom: 1rem;
@@ -6266,13 +6266,13 @@ a.bg-dark:focus, a.bg-dark:hover {
   .text-xl-center {
     text-align: center !important; } }
 .text-lowercase {
-  text-transform: lowercase !important; }
+  text-transform: none !important; }
 
 .text-uppercase {
-  text-transform: uppercase !important; }
+  text-transform: none !important; }
 
 .text-capitalize {
-  text-transform: capitalize !important; }
+  text-transform: none !important; }
 
 .font-weight-light {
   font-weight: 300 !important; }
@@ -6401,7 +6401,7 @@ a.text-dark:focus, a.text-dark:hover {
   font-family: Source Sans Pro Bold; }
 
 h6 {
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   color: #7D4698; }
 
@@ -6595,7 +6595,7 @@ mark, .mark {
     padding: 20px !important; }
 
 .badge {
-  text-transform: uppercase; }
+  text-transform: none; }
 
 .breadcrumb {
   background-color: #fff; }

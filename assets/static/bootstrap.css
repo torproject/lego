@@ -784,7 +784,7 @@ mark,
 
 .initialism {
   font-size: 90%;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .blockquote {
@@ -8195,7 +8195,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 }
 
 .text-uppercase {
-  text-transform: uppercase !important;
+  text-transform: none !important;
 }
 
 .text-capitalize {
@@ -9266,7 +9266,7 @@ main {
   top: 2px;
   border-radius: 50%;
   font: 10px/28px Helvetica;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   text-indent: -22px;
   word-spacing: 37px;
@@ -9503,7 +9503,7 @@ small, .small {
 }
 
 h6 {
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: bold;
   color: #7D4698;
 }
@@ -9722,7 +9722,7 @@ a.side-nav.active {
 }
 
 .badge {
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .breadcrumb {
