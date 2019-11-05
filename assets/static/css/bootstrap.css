@@ -654,7 +654,7 @@ mark,
 
 .initialism {
   font-size: 90%;
-  text-transform: none; }
+  text-transform: uppercase; }
 
 .blockquote {
   margin-bottom: 1rem;
@@ -6480,13 +6480,13 @@ a.bg-dark:focus, a.bg-dark:hover {
   .text-xl-center {
     text-align: center !important; } }
 .text-lowercase {
-  text-transform: lowercase !important; }
+  text-transform: none !important; }
 
 .text-uppercase {
   text-transform: none !important; }
 
 .text-capitalize {
-  text-transform: capitalize !important; }
+  text-transform: none !important; }
 
 .font-weight-light {
   font-weight: 300 !important; }
@@ -7338,7 +7338,7 @@ main {
   top: 2px;
   border-radius: 50%;
   font: 10px/28px Helvetica;
-  text-transform: none;
+  text-transform: uppercase;
   font-weight: bold;
   text-indent: -22px;
   word-spacing: 37px;
@@ -7520,7 +7520,7 @@ small, .small {
   font-size: 90%; }
 
 h6 {
-  text-transform: none;
+  text-transform: uppercase;
   font-weight: bold;
   color: #7D4698; }
 
@@ -7622,7 +7622,7 @@ mark, .mark {
   border-radius: 0; }
 
 .btn {
-  text-transform: capitalize; }
+  text-transform: none; }
 
 label {
   cursor: pointer; }
@@ -7695,7 +7695,7 @@ a.side-nav.active {
   line-height: 1.7rem; }
 
 .badge {
-  text-transform: none; }
+  text-transform: uppercase; }
 
 .breadcrumb {
   background-color: #FFFFFF; }
@@ -8093,12 +8093,6 @@ a.side-nav.active {
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/LeagueGothic-Italic.otf"); }
-@media (max-width: 991px) {
-  .w-40 {
-    width: 40% !important; } }
-@media (max-width: 1199px) {
-  .w-40 {
-    width: 40% !important; } }
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
   padding-top: 0 !important; }
@@ -8134,7 +8128,8 @@ a.side-nav.active {
   text-align: left;
   line-height: 4rem !important;
   right: 8px;
-  position: relative; }
+  position: relative;
+  max-width: 280px; }
 
 .rectangle {
   border: 3px solid blueviolet !important;
