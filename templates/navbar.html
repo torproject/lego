@@ -32,7 +32,12 @@
             {% if link %}
               <a class="nav-link" href="{{ item.path|url(alt=this.alt) }}">
             {% else %}
-              <a class="nav-link" href="{{ item.path }}">
+              {% set link = bag('links', this.alt, item.label) %}
+              {% if link %}
+                <a class="nav-link" href="{{ link }}">
+              {% else %}
+                <a class="nav-link" href="{{ item.path }}">
+              {% endif %}
             {% endif %}
             {{ _(item.label) }}
               {% if this.path == item.path %}
