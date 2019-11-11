@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse hamburger-menu" id="navbarSupportedContent">
       <div class="mx-auto">
         <ul class="navbar-nav">
-        	{% set menubag = 'menu+' + this.alt %}
+        	{% set menubag = 'menu' %}
         	{% for id, item in bag(menubag).items() %}
         	<li{% if this.path == item.path %} class="nav-item active" {% else %} class="nav-item"{% endif %}>
             {% set link = site.get(item.path) %}
