@@ -14,7 +14,12 @@
       <span class="sr-only">Tor Logo</span>
     </a>
 
-    <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+    {% set link = bag('links', this.alt, 'donate') %}
+    {% if link %}
+      <a href="link" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+    {% else %}
+      <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+    {% endif %}
 
     <label for="nav-toggle">
       <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
