@@ -36,9 +36,9 @@
           {% if link %}
             <a class="nav-link text-light" href="{{ item.path|url(alt=this.alt) }}">
           {% else %}
-            {% set link = bag('links', this.alt, id) %}
-            {% if link %}
-              <a class="nav-link text-light" href="{{ link }}">
+            {% set local = bag('links', this.alt, id) %}
+            {% if local %}
+              <a class="nav-link text-light" href="{{ local }}">
             {% else %}
               <a class="nav-link text-light" href="{{ item.path }}">
             {% endif %}
