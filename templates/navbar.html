@@ -16,9 +16,9 @@
 
     {% set link = bag('links', this.alt, 'donate') %}
     {% if link %}
-      <a href="{{ link }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+      <h4 class="p-2"><a href="{{ link }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a></h4>
     {% else %}
-      <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+      <h4 class="p-2"><a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a></h4>
     {% endif %}
 
     <label for="nav-toggle">
