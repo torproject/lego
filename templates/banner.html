@@ -20,7 +20,11 @@
               {{ _('TAKE BACK THE INTERNET WITH TOR') }}
             </h2>
           </div>
-          <div class="col-6 order-1">
+          {% if locale.direction == 'text-right' %}
+            <div class="col-6 order-0">
+          {% else %}
+            <div class="col-6 order-1">
+          {% endif %}
           </div>
         </div>
         <div class="row">
