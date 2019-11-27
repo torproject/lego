@@ -22,9 +22,9 @@
         <div class="row">
           {% set link = bag('links', this.alt, 'donate') %}
           {% if link %}
-            <a class="btn-lg rectangle mb-3 mr-3" href="{{ link }}">{{ _('DONATE NOW') }}</a>
+            <a class="btn-lg rectangle mb-3 mr-3 ml-3" href="{{ link }}">{{ _('DONATE NOW') }}</a>
           {% else %}
-            <a class="btn-lg rectangle mb-3 mr-3" href="https://torproject.org/donate/donate-tbi-hp1">{{ _('DONATE NOW') }}</a>
+            <a class="btn-lg rectangle mb-3 mr-3 ml-3" href="https://torproject.org/donate/donate-tbi-hp1">{{ _('DONATE NOW') }}</a>
           {% endif %}
           <p class="give-today-and-mozi">{{ _('Give today, and Mozilla will match your donation.') }}</p>
         </div>
