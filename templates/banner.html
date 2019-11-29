@@ -1,0 +1,44 @@
+{% set locale = bag('alternatives', this.alt) %}
+<div class="banner__containter banner align-middle d-flex justify-content-center p-0">
+  <input id="trigger" type="checkbox" title="{{ _('Close banner') }}" />
+  <label for="trigger" class="footer__close text-white">X</label>
+  <span class="eoy-sr-only text-white">{{ _('Close banner') }}</span>
+  <div class="eoy-banner row col-md-12" id="banner-header" role="contentinfo">
+    <div class="col-lg-3 col-md-1"></div>
+    <div class="col-lg-6 col-md-10">
+      <div class="col-12 p-5 {{ locale.direction }}">
+        <div class="row">
+          <h4 class="tracking-surveillan">{{ _('Tracking, surveillance, and censorship are widespread online.') }}</h4>
+        </div>
+        <div class="row">
+          {% if locale.direction == 'text-right' %}
+            <div class="col-6 order-1">
+          {% else %}
+            <div class="col-6 order-0">
+          {% endif %}
+            <h2 class="take-back-the-intern display-3 py-3">
+              {{ _('TAKE BACK THE INTERNET WITH TOR') }}
+            </h2>
+          </div>
+          {% if locale.direction == 'text-right' %}
+            <div class="col-6 order-0">
+          {% else %}
+            <div class="col-6 order-1">
+          {% endif %}
+          </div>
+        </div>
+        <div class="row">
+          {% set link = bag('links', this.alt, 'donate') %}
+          {% if link %}
+            <a class="btn-lg rectangle mb-3 mr-3 ml-3" href="{{ link }}">{{ _('DONATE NOW') }}</a>
+          {% else %}
+            <a class="btn-lg rectangle mb-3 mr-3 ml-3" href="https://torproject.org/donate/donate-tbi-hp1">{{ _('DONATE NOW') }}</a>
+          {% endif %}
+          <p class="give-today-and-mozi">{{ _('Give today, and Mozilla will match your donation.') }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-1">
+    </div>
+  </div>
+</div>

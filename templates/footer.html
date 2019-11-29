@@ -1,7 +1,8 @@
 {% if this.path == '/download' %}
   {% include 'download-android.html' %}
 {% endif %}
-<div class="container-fluid bg-dark footer onion-bg">
+{% set locale = bag('alternatives', this.alt) %}
+<div class="container-fluid bg-dark footer onion-bg {{ locale.order }} {{ locale.direction }}">
   <div class="row">
     <div class="col-12 d-flex justify-content-right">
       <div class="container pt-5 justify-content-right">
@@ -29,33 +30,43 @@
       </div>
       <div class="col-sm-2 mt-5 d-none d-sm-block">
         <ul class="nav flex-column mt-sm-5">
-          {% set menubag = 'menu_footer+' + this.alt %}
+          {% set menubag = 'menu_footer' %}
           {% for id, item in bag(menubag).items() %}
           <li{% if this.is_child_of(item.path) %} class="nav-item active" {% else %} class="nav-item"{% endif %}>
           {% set link = site.get(item.path) %}
           {% if link %}
             <a class="nav-link text-light" href="{{ item.path|url(alt=this.alt) }}">
           {% else %}
-            <a class="nav-link text-light" href="{{ item.path }}">
+            {% set local = bag('links', this.alt, id) %}
+            {% if local %}
+              <a class="nav-link text-light" href="{{ local }}">
+            {% else %}
+              <a class="nav-link text-light" href="{{ item.path }}">
+            {% endif %}
           {% endif %}
-          {{ _(item.label) }}
+              {{ _(item.label) }}
               {% if this.is_child_of(item.path) %}
-              <span class="sr-only">(current)</span>
+                <span class="sr-only">(current)</span>
               {% endif %}
             </a>
           </li>
           {% endfor %}
         </ul>
-        <a href="https://donate.torproject.org" title="{{ _("Donate") }}"><h5><span class="badge badge-warning p-2 mt-2">{{ _("Donate Now") }}</span></h5></a>
+        {% set link = bag('links', this.alt, 'donate') %}
+        {% if link %}
+          <a href="{{ link }}" title="{{ _("Donate") }}"><h5><span class="badge badge-warning p-2 mt-2">{{ _("Donate Now") }}</span></h5></a>
+        {% else %}
+          <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+        {% endif %}
       </div>
     </div>
     <div class="col-12 d-flex justify-content-center border">
-      <div class="col-sm-6 offset-lx-1 offset-md-2 offset-sm-0 mt-5 mt-5 pb-5">
+      <div class="col-sm-6 offset-lx-1 offset-sm-0 mt-5">
         <p class="text-primary-light text-uppercase">{{ _('Subscribe to our Newsletter') }}</p>
         <p class="text-light">{{ _('Get monthly updates and opportunities from the Tor Project:') }}</p>
         <p class="w"><a class="btn btn-small btn-dark mt-2 text-white text-uppercase active" role="button" aria-pressed="true" href="https://newsletter.torproject.org/">{{ _('Sign up') }}</a></p>
       </div>
-      <div class="col-md-4 col-lg-4 ml-2 mt-5 pb-5">
+      <div class="col-sm-2 mt-5 d-none d-sm-block">
         <div class="row">
           <h4><a class="text-white px-3" target="_blank" href="https://www.facebook.com/TorProject/"><i class="fab fa-facebook-png"></i></a></h4>
           <h4><a class="mastodon text-white px-3" target="_blank" href="https://mastodon.social/@torproject"><i class="fab fa-mastodon-png"></i></a></h4>
@@ -85,10 +96,10 @@
     	          <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
               {% endif %}
             {% endfor %}
-      	</div>
+        	</div>
+        </div>
       </div>
     </div>
-
     <script src="{{ '/static/js/jquery-3.2.1.min.js'|asseturl }}" ></script>
     <script src="{{ '/static/js/popper.min.js'|asseturl }}" ></script>
     <script src="{{ '/static/js/bootstrap.bundle.min.js'|asseturl }}" ></script>
@@ -97,3 +108,4 @@
     <script src="{{ '/static/js/download.js'|asseturl }}" ></script>
     <script src="{{ '/static/js/fallback.js'|asseturl }}" ></script>
   </div>
+</div>

@@ -1,19 +1,25 @@
+{% include 'banner.html' %}
 {% if not this.color %}
-<div class="container bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark fixed-top bg-primary p-4">
+<div class="container-fluid bg-primary">
+  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
 {% elif this.color == 'primary' %}
-<div class="container bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark fixed-top bg-primary p-4">
+<div class="container-fluid bg-primary">
+  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
 {% else %}
-<div class="container bg-dark">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark fixed-top bg-dark p-4">
+<div class="container-fluid bg-dark">
+  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-dark p-4">
 {% endif %}
     <a class="navbar-brand" href="{{ '/'|url(alt=this.alt) }}">
       <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
       <span class="sr-only">Tor Logo</span>
     </a>
-   
-    <a href="https://donate.torproject.org/{{ '/'|url(alt=this.alt) }}" title="{{ _("Donate") }}"><h4><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></h4></a>
+
+    {% set link = bag('links', this.alt, 'donate') %}
+    {% if link %}
+      <h4 class="pl-2 pr-2"><a href="{{ link }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a></h4>
+    {% else %}
+      <h4 class="pl-2 pr-2"><a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a></h4>
+    {% endif %}
 
     <label for="nav-toggle">
       <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +30,19 @@
     <div class="collapse navbar-collapse hamburger-menu" id="navbarSupportedContent">
       <div class="mx-auto">
         <ul class="navbar-nav">
-        	{% set menubag = 'menu+' + this.alt %}
+        	{% set menubag = 'menu' %}
         	{% for id, item in bag(menubag).items() %}
         	<li{% if this.path == item.path %} class="nav-item active" {% else %} class="nav-item"{% endif %}>
             {% set link = site.get(item.path) %}
             {% if link %}
               <a class="nav-link" href="{{ item.path|url(alt=this.alt) }}">
             {% else %}
-              <a class="nav-link" href="{{ item.path }}">
+              {% set link = bag('links', this.alt, id) %}
+              {% if link %}
+                <a class="nav-link" href="{{ link }}">
+              {% else %}
+                <a class="nav-link" href="{{ item.path }}">
+              {% endif %}
             {% endif %}
             {{ _(item.label) }}
               {% if this.path == item.path %}

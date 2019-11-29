@@ -6480,13 +6480,13 @@ a.bg-dark:focus, a.bg-dark:hover {
   .text-xl-center {
     text-align: center !important; } }
 .text-lowercase {
-  text-transform: lowercase !important; }
+  text-transform: none !important; }
 
 .text-uppercase {
-  text-transform: uppercase !important; }
+  text-transform: none !important; }
 
 .text-capitalize {
-  text-transform: capitalize !important; }
+  text-transform: none !important; }
 
 .font-weight-light {
   font-weight: 300 !important; }
@@ -7020,7 +7020,7 @@ a.text-dark:focus, a.text-dark:hover {
   min-height: 500px;
   margin-bottom: 200px; }
 
-#topics h5 {
+#topics footer h5 {
   padding-top: 7rem; }
 
 .question {
@@ -7131,7 +7131,7 @@ footer {
   min-height: 500px;
   margin-bottom: 200px; }
 
-#topics h5 {
+#topics footer h5 {
   padding-top: 7rem; }
 
 .question {
@@ -7253,8 +7253,7 @@ main {
   color: #484848;
   font-family: Source Sans Pro Light;
   font-size: 4.5rem;
-  line-height: 5rem;
-  text-align: left; }
+  line-height: 5rem; }
 
 .row--limit-overflow {
   position: relative;
@@ -7622,7 +7621,7 @@ mark, .mark {
   border-radius: 0; }
 
 .btn {
-  text-transform: capitalize; }
+  text-transform: none; }
 
 label {
   cursor: pointer; }
@@ -8083,5 +8082,112 @@ a.side-nav.active {
     font-size: 150%; } }
 .no-gutters {
   margin-bottom: 0 !important; }
+
+@font-face {
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Kanit/kanit.woff2") format("woff2"); }
+@font-face {
+  font-family: League Gothic;
+  src: url("fonts/LeagueGothic/LeagueGothic-Italic.otf"); }
+/* Don't move down content w banner. Navbar isn't fixed. */
+.page {
+  padding-top: 0 !important; }
+
+.banner {
+  background-color: #000000;
+  z-index: 100000000000000 !important;
+  overflow-x: hidden; }
+
+.footer__close {
+  height: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+  margin-top: 0rem;
+  margin-right: -2rem;
+  z-index: 1;
+  font-weight: bolder;
+  visibility: inherit; }
+
+.tracking-surveillan {
+  color: #2EF900 !important;
+  font-family: Source Code Pro;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px; }
+
+.take-back-the-intern {
+  color: lime;
+  font-family: League Gothic !important;
+  font-weight: 400 !important;
+  line-height: 4rem !important;
+  right: 8px;
+  position: relative;
+  max-width: 280px; }
+
+.rectangle {
+  border: 3px solid blueviolet !important;
+  color: white !important;
+  border-radius: 0 !important;
+  font-family: League Gothic;
+  font-size: 2rem !important;
+  padding: 0 20px !important; }
+
+.rectangle:hover {
+  text-decoration: none;
+  color: white;
+  background: blueviolet; }
+
+.give-today-and-mozi {
+  color: white;
+  font-family: Source Code Pro;
+  font-weight: 400;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 0; }
+
+.banner__containter {
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 1.25rem 1.25rem 2rem;
+  width: 100%;
+  background-image: url("../images/home/png/take-back@3x.png");
+  background-position: bottom 10% right 45%;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.eoy-sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px; }
+
+#trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+#trigger:checked ~ #banner-header, .banner__containter > #trigger:checked, #trigger:checked + label {
+  display: none;
+  visibility: hidden; }
+
+@media (max-width: 575px) {
+  .tracking-surveillan {
+    font-size: 1rem; }
+
+  .take-back-the-intern {
+    line-height: 3.4rem;
+    font-size: 4rem; }
+
+  .rectangle {
+    background: black; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
