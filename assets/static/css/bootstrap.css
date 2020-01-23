@@ -7337,7 +7337,6 @@ main {
   top: 2px;
   border-radius: 50%;
   font: 10px/28px Helvetica;
-  text-transform: uppercase;
   font-weight: bold;
   text-indent: -22px;
   word-spacing: 37px;
@@ -7519,7 +7518,6 @@ small, .small {
   font-size: 90%; }
 
 h6 {
-  text-transform: uppercase;
   font-weight: bold;
   color: #7D4698; }
 
@@ -7692,9 +7690,6 @@ a.side-nav.active {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.7rem; }
-
-.badge {
-  text-transform: uppercase; }
 
 .breadcrumb {
   background-color: #FFFFFF; }
