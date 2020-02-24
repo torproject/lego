@@ -2,8 +2,11 @@
   {% include 'download-android.html' %}
 {% endif %}
 {% set locale = bag('alternatives', this.alt) %}
-<div class="container-fluid bg-dark footer onion-bg {{ locale.order }} {{ locale.direction }}">
-  <div class="row">
+<div class="container-fluid bg-dark footer {{ locale.order }} {{ locale.direction }}">
+
+  {% if this.path != '/download' %}
+
+  <div class="row onion-bg">
     <div class="col-12 d-flex justify-content-right">
       <div class="container pt-5 justify-content-right">
         <div class="offset-lx-2 offset-sm-4 mt-5">
@@ -22,6 +25,10 @@
       </div>
     </div>
   </div>
+
+  {% endif %}
+
+
   <div class="row">
     <div class="col-12 d-flex justify-content-center">
       <div class="col-sm-6 offset-lx-1 offset-sm-0 mt-5">
