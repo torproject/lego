@@ -440,36 +440,12 @@ label {
   display: block;
 }
 
-.navbar-toggler:hover .chevron-up {
-    display: block !important;
-}
-
-.navbar-toggler:hover .chevron-down {
-    display: none;
-}
-
 a.side-nav.active {
     color: $primary !important;
 }
 
 .smalltopics {
     display: none;
-}
-
-.chevron {
-    height: 50px;
-    width: 50px;
-    margin: -10px -1px 1px -1px;
-}
-
-.chevron-up {
-    display: none !important;
-    top: 10px !important;
-}
-
-.chevron-down {
-    display: block;
-    top: 10px !important;
 }
 
 /*
@@ -802,14 +778,6 @@ label {
   display: block;
 }
 
-.navbar-toggler:hover .chevron-up {
-  display: block !important;
-}
-
-.navbar-toggler:hover .chevron-down {
-  display: none;
-}
-
 
 a.side-nav.active {
   color: $primary !important;
@@ -819,21 +787,13 @@ a.side-nav.active {
   display: none;
 }
 
-.chevron {
-  height: 50px;
-  width: 50px;
-  margin: -10px -1px 1px -1px;
+[data-toggle="collapse"] .fas::before {
+  content: "\f077";
 }
 
-.chevron-up {
-  display: none !important;
-  top: 10px !important;
+[data-toggle="collapse"].collapsed .fas::before {
+  content: "\f078";
 }
-.chevron-down {
-  display: block;
-  top: 10px !important;
-}
-
 
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(sm) {
