@@ -11,9 +11,11 @@
     {% endif %}
       <div class="row">
         <div class="col-12 content-center pt-5">
+          {% if this.section.lower() != this.title.lower() %}
           <div class="row">
             <h6 class="mx-auto text-white text-capitalize">{% block section %}{{ this.section }}{% endblock %}</h6>
           </div>
+          {% endif %}
           <div class="row pb-5">
             <h2 class="mx-auto display-3 text-white text-capitalize">{% block title %}{{ this.title }}{% endblock %}</h2>
           </div>
