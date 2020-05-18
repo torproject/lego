@@ -1,7 +1,19 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb bg-light m-0 small">
-    {% from "macros/parent.html" import render_parents %}
-    {{ render_parents(this) }}
-    <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
-  </ol>
+<ol class="breadcrumb bg-light m-0 small">
+    {% set crumbs = [] %}
+    {% set current = {'crumb': this} %}
+    {% for i in this._path.split("/") %}
+        {% if current.crumb is not none %}
+            {% if crumbs.insert(0, current.crumb) %}{% endif %}
+            {% if current.update({"crumb": current.crumb.parent}) %}{% endif %}
+        {% endif %}
+    {% endfor %}
+    {% for crumb in crumbs %}
+        {% if this._path == crumb._path %}
+            <li class="breadcrumb-item active">{{ crumb.title }}</li>
+        {% else %}
+            <li class="breadcrumb-item" aria-current="page"><a href="{{ crumb|url }}">{{ crumb.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ol>
 </nav>
