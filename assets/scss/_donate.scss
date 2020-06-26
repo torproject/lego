@@ -24,6 +24,9 @@ $donate-screen-breakpoint: 767px;
 
   input[type="text"],
   input[type="date"],
+  .field.card-number,
+  .field.exp-date,
+  .field.cvc,
   textarea {
     border: 1px solid grey;
     color: grey;
@@ -414,9 +417,6 @@ $donate-screen-breakpoint: 767px;
     .payment-method-question {
       margin-bottom: 3%;
     }
-    .payment-option {
-      margin-bottom: 2%;
-    }
   }
   .info-area {
     padding-top: 4%;
@@ -424,8 +424,6 @@ $donate-screen-breakpoint: 767px;
     margin-right: auto;
     max-width: 600px;
     text-align: center;
-
-
     #firstName {
       width: 100%;
       margin-bottom: 10px;
@@ -494,12 +492,35 @@ $donate-screen-breakpoint: 767px;
       }
     }
     #mailingListOptInCheckbox {
-      margin: 2px 4px 10px 10px;
+      margin: 2px 4px 10px 0;
     }
-    #cardNumber {
+    .stripe-elements {
       width: 100%;
+    }
+    .card-number,
+    .exp-date,
+    .cvc {
+      border-color: $green;
+      width: 100%;
+      padding: 12px 12px 5px 12px;
+    }
+    .card-number {
       @media only screen and (min-width: $donate-screen-breakpoint) {
-        width: 56%;
+        width: 75%;
+        margin-right: 10px;
+      }
+    }
+    .exp-date,
+    .cvc {
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: calc(50% - 5px);
+      }
+    }
+    .exp-date {
+      margin-bottom: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        margin-right: 10px;
+        margin-bottom: 0;
       }
     }
     img.credit-cards {
@@ -512,18 +533,6 @@ $donate-screen-breakpoint: 767px;
       }
     }
     #expMonth {
-      width: 38%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
-        width: 33%;
-      }
-    }
-    #expYear {
-      width: 38.5%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
-        width: 33%;
-      }
-    }
-    #cvc {
       width: 38%;
       @media only screen and (min-width: $donate-screen-breakpoint) {
         width: 33%;
@@ -568,10 +577,7 @@ $donate-screen-breakpoint: 767px;
   #donate-comments-wrapper {
     text-align: left;
     textarea {
-      width: 95%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
-        width: 97%;
-      }
+      width: 100%;
     }
   }
 }

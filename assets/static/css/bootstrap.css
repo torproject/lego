@@ -8166,6 +8166,9 @@ a.side-nav.active {
     margin-right: 4px; }
   .donate-form input[type="text"],
   .donate-form input[type="date"],
+  .donate-form .field.card-number,
+  .donate-form .field.exp-date,
+  .donate-form .field.cvc,
   .donate-form textarea {
     border: 1px solid grey;
     color: grey;
@@ -8174,18 +8177,30 @@ a.side-nav.active {
     padding: 8px 12px; }
     .donate-form input[type="text"].required,
     .donate-form input[type="date"].required,
+    .donate-form .field.card-number.required,
+    .donate-form .field.exp-date.required,
+    .donate-form .field.cvc.required,
     .donate-form textarea.required {
       border-color: #68B030; }
     .donate-form input[type="text"].error,
     .donate-form input[type="date"].error,
+    .donate-form .field.card-number.error,
+    .donate-form .field.exp-date.error,
+    .donate-form .field.cvc.error,
     .donate-form textarea.error {
       border-color: red; }
     .donate-form input[type="text"]::placeholder,
     .donate-form input[type="date"]::placeholder,
+    .donate-form .field.card-number::placeholder,
+    .donate-form .field.exp-date::placeholder,
+    .donate-form .field.cvc::placeholder,
     .donate-form textarea::placeholder {
       color: grey; }
     .donate-form input[type="text"]:focus,
     .donate-form input[type="date"]:focus,
+    .donate-form .field.card-number:focus,
+    .donate-form .field.exp-date:focus,
+    .donate-form .field.cvc:focus,
     .donate-form textarea:focus {
       border-color: #59316B;
       color: #8a2be2;
@@ -8506,8 +8521,6 @@ a.side-nav.active {
         color: black; }
     .donate-form .payment-method-area .payment-method-question {
       margin-bottom: 3%; }
-    .donate-form .payment-method-area .payment-option {
-      margin-bottom: 2%; }
   .donate-form .info-area {
     padding-top: 4%;
     margin-left: auto;
@@ -8572,12 +8585,29 @@ a.side-nav.active {
         .donate-form .info-area .receipt {
           display: block; } }
     .donate-form .info-area #mailingListOptInCheckbox {
-      margin: 2px 4px 10px 10px; }
-    .donate-form .info-area #cardNumber {
+      margin: 2px 4px 10px 0; }
+    .donate-form .info-area .stripe-elements {
       width: 100%; }
+    .donate-form .info-area .card-number,
+    .donate-form .info-area .exp-date,
+    .donate-form .info-area .cvc {
+      border-color: #68B030;
+      width: 100%;
+      padding: 12px 12px 5px 12px; }
+    @media only screen and (min-width: 767px) {
+      .donate-form .info-area .card-number {
+        width: 75%;
+        margin-right: 10px; } }
+    @media only screen and (min-width: 767px) {
+      .donate-form .info-area .exp-date,
+      .donate-form .info-area .cvc {
+        width: calc(50% - 5px); } }
+    .donate-form .info-area .exp-date {
+      margin-bottom: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-form .info-area #cardNumber {
-          width: 56%; } }
+        .donate-form .info-area .exp-date {
+          margin-right: 10px;
+          margin-bottom: 0; } }
     .donate-form .info-area img.credit-cards {
       display: none; }
       @media only screen and (min-width: 767px) {
@@ -8589,16 +8619,6 @@ a.side-nav.active {
       width: 38%; }
       @media only screen and (min-width: 767px) {
         .donate-form .info-area #expMonth {
-          width: 33%; } }
-    .donate-form .info-area #expYear {
-      width: 38.5%; }
-      @media only screen and (min-width: 767px) {
-        .donate-form .info-area #expYear {
-          width: 33%; } }
-    .donate-form .info-area #cvc {
-      width: 38%; }
-      @media only screen and (min-width: 767px) {
-        .donate-form .info-area #cvc {
           width: 33%; } }
     .donate-form .info-area #perk-fields {
       display: block;
@@ -8630,9 +8650,6 @@ a.side-nav.active {
   .donate-form #donate-comments-wrapper {
     text-align: left; }
     .donate-form #donate-comments-wrapper textarea {
-      width: 95%; }
-      @media only screen and (min-width: 767px) {
-        .donate-form #donate-comments-wrapper textarea {
-          width: 97%; } }
+      width: 100%; }
 
 /*# sourceMappingURL=bootstrap.css.map */
