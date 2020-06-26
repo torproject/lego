@@ -1,0 +1,577 @@
+$blue-violet: #8a2be2;
+$donate-screen-breakpoint: 767px;
+
+.donate-pages {
+  box-sizing: border-box;
+  .bold {
+    font-weight: bold;
+  }
+  .light {
+    font-weight: 200;
+  }
+  .lime {
+    color: lime;
+  }
+  .required {
+    color: $green;
+  }
+
+  input[type="checkbox"] {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 4px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    border: 1px solid grey;
+    color: grey;
+    font-size: 16px;
+    height: 43px;
+    padding: 8px 12px;
+    &.required {
+      border-color: $green;
+    }
+    &.error {
+      border-color: red;
+    }
+    &::placeholder {
+      color: grey;
+    }
+    &:focus {
+      border-color: $purple-dark;
+      color: $blue-violet;
+      outline: none;
+    }
+  }
+  textarea {
+    box-sizing: border-box;
+    width: 60%;
+    height: 3em;
+    display: block;
+    padding: 8px 12px;
+  }
+  select {
+    background: $white;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 16px;
+    height: 45px;
+    padding: 8px 12px;
+    &.required {
+      border-color: $green;
+      color: grey;
+    }
+    &.error {
+      border-color: red;
+    }
+    &:focus {
+      border-color: $purple-dark;
+      color: $blue-violet;
+      outline: none;
+    }
+  }
+  .field-row {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+    @media only screen and (min-width: $donate-screen-breakpoint) {
+      flex-wrap: nowrap;
+    }
+  }
+  button {
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .donate-options {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 40px auto;
+    button {
+      font-size: 20px;
+      background-color: white;
+      border: 2px solid $gray-600;
+      color: $blue-violet;
+      font-weight: normal;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 15px;
+      padding-right: 15px;
+      &.single {
+        border-radius: 5px 0 0 5px;
+        margin-left: 0;
+      }
+      &.monthly {
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        margin-left: 0;
+      }
+      &.selected,
+      &:hover {
+        background-color: lime;
+      }
+      &.selected {
+        color: black;
+      }
+    }
+  }
+  .donation-selection-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto 2% auto 2%;
+    max-width: 1024px;
+    justify-content: center;
+    @media only screen and (min-width: $donate-screen-breakpoint) {
+      flex-direction: row;
+    }
+    .donate-buttons {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 5px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        flex-direction: row;
+        margin-right: 5px;
+      }
+      .price-btn {
+        line-height: 20px;
+        background-color: $blue-violet;
+        border-radius: 5px;
+        border-style: none;
+        color: white;
+        display: block;
+        font-size: 23px;
+        font-weight: normal;
+        margin: 5px;
+        padding: 20px 0px;
+        text-align: center;
+        text-decoration: none;
+        width: 120px;
+        &.selected {
+          background-color: lime;
+          color: black;
+        }
+        @media only screen and (min-width: $donate-screen-breakpoint) {
+          font-size: 29px;
+        }
+      }
+      .other-amount-field {
+        .error {
+          color: red;
+          display: block;
+          text-align: center;
+        }
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .perk-amt {
+          background-color: #f1f1f3;
+          font-size: 23px;
+          font-weight: bold;
+          height: 60px;
+          margin: 5px;
+          min-width: 80px;
+          text-transform: capitalize;
+          text-align: center;
+          width:100px;
+        }
+      }
+    }
+    .perk-intro {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2% 5% 2% 5%;
+      justify-content: center;
+      text-align: center;
+      .perk-title {
+        font-size: 22px;
+        margin-bottom: 0px;
+      }
+    }
+    .no-perk-area {
+      margin: 1% 1% 20px 1%;
+      width: 100%;
+      text-align: center;
+      label {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    .perks {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+      justify-content: space-evenly;
+
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        border: none;
+        flex-direction: row;
+      }
+      .perk {
+        border-color: grey;
+        border-style: solid;
+        border-width: 0px 1px 1px 1px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &:first-child {
+          border-top-width: 1px;
+        }
+        @media only screen and (min-width: $donate-screen-breakpoint) {
+          border: 1px solid grey;
+          flex-direction: column;
+          justify-content: flex-start;
+          margin: 0px 5px 20px 5px;
+          position: relative;
+          width: 30%;
+          top: 0px;
+          flex-wrap: nowrap;
+        }
+        &.disabled {
+          border-color: grey;
+          color: grey;
+          font-style: italic;
+          img {
+            opacity: 0.2;
+          }
+          select {
+            color: grey;
+            font-style: italic;
+          }
+          .promo-red-dot {
+            background-color: grey;
+          }
+          .promo-price {
+            color: grey;
+          }
+        }
+        .slides {
+          position: relative;
+          align-self: center;
+          display: none;
+          height: 175px;
+          overflow: hidden;
+          width: 100%;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            display: block;
+            order: 2;
+          }
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+          max-width: 50%;
+          height: auto;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            max-width: 70%;
+          }
+        }
+        .promo-red-dot {
+          position: absolute;
+          background: red;
+          top: 45px;
+          right: 15px;
+          color: white;
+          padding: 10px 20px;
+          font-size: 28px;
+          line-height: 31px;
+          font-weight: bold;
+          border-radius: 40px;
+        }
+        .price-tag-group {
+          margin: 20px 0 20px 20px;
+          font-size: 21px;
+          font-weight: 600;
+          width: 40%;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            font-size: 16px;
+            order: 1;
+            width: 100%;
+          }
+        }
+        .perk-label {
+          font-size: 21px;
+          font-weight: 700;
+          margin: 20px 20px 20px 0;
+          text-align: right;
+          text-transform: uppercase;
+          width: 40%;
+          box-sizing: border-box;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            margin: 0;
+            padding: 20px;
+            padding-bottom: 0;
+            font-size: 27px;
+            width: 100%;
+            order: 3;
+            text-align: center;
+          }
+        }
+        .perk-desc {
+          font-size: 16px;
+          font-weight: 300;
+          display: none;
+          padding: 20px;
+          width: 100%;
+          box-sizing: border-box;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            display: block;
+            margin: 0 11px 0 11px;
+            order: 4;
+            padding-left: 4px;
+            padding-right: 4px;
+            width: auto;
+          }
+        }
+        .perk-sub-select {
+          display: none;
+          border-color: #aeaeae;
+          margin: 10px 10px 10px 10px;
+          width: 100%;
+          @media only screen and (min-width: $donate-screen-breakpoint) {
+            display: block;
+            order: 5;
+            width: 92%;
+          }
+        }
+      }
+      .selected {
+        background-color: lime;
+        transition: all 0.5s;
+        .slides {
+          display: block;
+        }
+        .perk-desc {
+          display: block;
+        }
+        .perk-sub-select {
+          display: block;
+        }
+        @media only screen and (min-width: $donate-screen-breakpoint) {
+          background-color: white;
+          box-shadow: 8px 8px lime;
+          position: relative;
+          top: -4px;
+        }
+      }
+    }
+  }
+  .payment-method-area,
+  .info-area {
+    position: relative;
+    z-index: 2;
+  }
+  .payment-method-area {
+    border-bottom: 2px solid $gray-300;
+    border-top: 2px solid $gray-300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 4% 21px;
+    text-align: center;
+    text-transform: uppercase;
+    button {
+      text-transform: uppercase;
+      width: 160px;
+      vertical-align: top;
+      line-height: 20px;
+      color: $blue-violet;
+      border-radius: 5px;
+      padding: 14px 10px;
+      font-size: 20px;
+      border: 1px solid grey;
+      margin: 7px;
+      &.paypal {
+        padding: 8px 0;
+        img {
+          height: 32px;
+        }
+      }
+      &.selected {
+        background-color: lime;
+        color: black;
+      }
+    }
+    .payment-method-question {
+      margin-bottom: 3%;
+    }
+    .payment-option {
+      margin-bottom: 2%;
+    }
+  }
+  .info-area {
+    padding-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: center;
+
+
+    #firstName {
+      width: 100%;
+      margin-bottom: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 50%;
+        margin-bottom: 0px;
+        margin-right: 10px;
+      }
+    }
+    #lastName {
+      width: 100%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 50%;
+      }
+    }
+    #streetAddress {
+      width: 100%;
+      margin-bottom: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 80%;
+        margin-bottom: 0px;
+        margin-right: 10px;
+      }
+    }
+    #extendedAddress {
+      width: 20%;
+    }
+    #country {
+      width: 100%;
+    }
+    #locality {
+      width: 38%;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 35%;
+        margin-bottom: 0px;
+      }
+    }
+    #region {
+      width: 45%;
+      margin-bottom: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 40%;
+        margin-bottom: 0px;
+        margin-right: 10px;
+      }
+    }
+    #postalCode {
+      width: 100%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 25%;
+      }
+    }
+    #email {
+      width: 100%;
+      margin-right: 10px;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 56%;
+      }
+    }
+    .receipt {
+      display: none;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        display: block;
+      }
+    }
+    #mailingListOptInCheckbox {
+      margin: 2px 4px 10px 10px;
+    }
+    #cardNumber {
+      width: 100%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 56%;
+      }
+    }
+    img.credit-cards {
+      display: none;
+
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        display: block;
+        height: 29px;
+        vertical-align: middle;
+      }
+    }
+    #expMonth {
+      width: 38%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 33%;
+      }
+    }
+    #expYear {
+      width: 38.5%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 33%;
+      }
+    }
+    #cvc {
+      width: 38%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 33%;
+      }
+    }
+    #perk-fields {
+      display: block;
+      margin: 10px;
+      text-align: left;
+      #selected-perk-fields-label {
+        margin-top: 10px;
+      }
+      #perk-fit {
+        margin-left: 0px;
+      }
+    }
+    #captcha {
+      width: 82px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+    .donate-submit-area {
+      color: grey;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 20px 0;
+      line-height: 26px;
+    }
+    #donate-submit-button {
+      button {
+        background-color: lime;;
+        color: black;
+        text-transform: uppercase;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        font-size: 20px;
+        padding: 10px;
+      }
+    }
+  }
+  #donate-comments-wrapper {
+    text-align: left;
+    textarea {
+      width: 95%;
+      @media only screen and (min-width: $donate-screen-breakpoint) {
+        width: 97%;
+      }
+    }
+  }
+}

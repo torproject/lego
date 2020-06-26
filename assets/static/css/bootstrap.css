@@ -6480,13 +6480,13 @@ a.bg-dark:focus, a.bg-dark:hover {
   .text-xl-center {
     text-align: center !important; } }
 .text-lowercase {
-  text-transform: none !important; }
+  text-transform: lowercase; }
 
 .text-uppercase {
-  text-transform: none !important; }
+  text-transform: uppercase; }
 
 .text-capitalize {
-  text-transform: none !important; }
+  text-transform: capitalize; }
 
 .font-weight-light {
   font-weight: 300 !important; }
@@ -7036,9 +7036,6 @@ a.text-dark:focus, a.text-dark:hover {
 footer .border {
   border: 0 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important; }
-
-footer {
-  padding-top: 10em; }
 
 #wrapper {
   width: 100%;
@@ -8153,5 +8150,489 @@ a.side-nav.active {
 
   .rectangle {
     background: black; } }
+.donate-pages {
+  box-sizing: border-box; }
+  .donate-pages .bold {
+    font-weight: bold; }
+  .donate-pages .light {
+    font-weight: 200; }
+  .donate-pages .lime {
+    color: lime; }
+  .donate-pages .required {
+    color: #68B030; }
+  .donate-pages input[type="checkbox"] {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 4px; }
+  .donate-pages input[type="text"],
+  .donate-pages input[type="date"],
+  .donate-pages textarea {
+    border: 1px solid grey;
+    color: grey;
+    font-size: 16px;
+    height: 43px;
+    padding: 8px 12px; }
+    .donate-pages input[type="text"].required,
+    .donate-pages input[type="date"].required,
+    .donate-pages textarea.required {
+      border-color: #68B030; }
+    .donate-pages input[type="text"].error,
+    .donate-pages input[type="date"].error,
+    .donate-pages textarea.error {
+      border-color: red; }
+    .donate-pages input[type="text"]::placeholder,
+    .donate-pages input[type="date"]::placeholder,
+    .donate-pages textarea::placeholder {
+      color: grey; }
+    .donate-pages input[type="text"]:focus,
+    .donate-pages input[type="date"]:focus,
+    .donate-pages textarea:focus {
+      border-color: #59316B;
+      color: #8a2be2;
+      outline: none; }
+  .donate-pages textarea {
+    box-sizing: border-box;
+    width: 60%;
+    height: 3em;
+    display: block;
+    padding: 8px 12px; }
+  .donate-pages select {
+    background: #FFFFFF;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 16px;
+    height: 45px;
+    padding: 8px 12px; }
+    .donate-pages select.required {
+      border-color: #68B030;
+      color: grey; }
+    .donate-pages select.error {
+      border-color: red; }
+    .donate-pages select:focus {
+      border-color: #59316B;
+      color: #8a2be2;
+      outline: none; }
+  .donate-pages .field-row {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 767px) {
+      .donate-pages .field-row {
+        flex-wrap: nowrap; } }
+  .donate-pages button {
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none; }
+  .donate-pages .donate-options {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 40px auto; }
+    .donate-pages .donate-options button {
+      font-size: 20px;
+      background-color: white;
+      border: 2px solid #848E97;
+      color: #8a2be2;
+      font-weight: normal;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      padding-left: 15px;
+      padding-right: 15px; }
+      .donate-pages .donate-options button.single {
+        border-radius: 5px 0 0 5px;
+        margin-left: 0; }
+      .donate-pages .donate-options button.monthly {
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        margin-left: 0; }
+      .donate-pages .donate-options button.selected, .donate-pages .donate-options button:hover {
+        background-color: lime; }
+      .donate-pages .donate-options button.selected {
+        color: black; }
+  .donate-pages .donation-selection-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto 2% auto 2%;
+    max-width: 1024px;
+    justify-content: center; }
+    @media only screen and (min-width: 767px) {
+      .donate-pages .donation-selection-area {
+        flex-direction: row; } }
+    .donate-pages .donation-selection-area .donate-buttons {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 5px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .donation-selection-area .donate-buttons {
+          flex-direction: row;
+          margin-right: 5px; } }
+      .donate-pages .donation-selection-area .donate-buttons .price-btn {
+        line-height: 20px;
+        background-color: #8a2be2;
+        border-radius: 5px;
+        border-style: none;
+        color: white;
+        display: block;
+        font-size: 23px;
+        font-weight: normal;
+        margin: 5px;
+        padding: 20px 0px;
+        text-align: center;
+        text-decoration: none;
+        width: 120px; }
+        .donate-pages .donation-selection-area .donate-buttons .price-btn.selected {
+          background-color: lime;
+          color: black; }
+        @media only screen and (min-width: 767px) {
+          .donate-pages .donation-selection-area .donate-buttons .price-btn {
+            font-size: 29px; } }
+      .donate-pages .donation-selection-area .donate-buttons .other-amount-field {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .donate-pages .donation-selection-area .donate-buttons .other-amount-field .error {
+          color: red;
+          display: block;
+          text-align: center; }
+        .donate-pages .donation-selection-area .donate-buttons .other-amount-field .perk-amt {
+          background-color: #f1f1f3;
+          font-size: 23px;
+          font-weight: bold;
+          height: 60px;
+          margin: 5px;
+          min-width: 80px;
+          text-transform: capitalize;
+          text-align: center;
+          width: 100px; }
+    .donate-pages .donation-selection-area .perk-intro {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2% 5% 2% 5%;
+      justify-content: center;
+      text-align: center; }
+      .donate-pages .donation-selection-area .perk-intro .perk-title {
+        font-size: 22px;
+        margin-bottom: 0px; }
+    .donate-pages .donation-selection-area .no-perk-area {
+      margin: 1% 1% 20px 1%;
+      width: 100%;
+      text-align: center; }
+      .donate-pages .donation-selection-area .no-perk-area label {
+        font-size: 20px;
+        line-height: 24px; }
+    .donate-pages .donation-selection-area .perks {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+      justify-content: space-evenly; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .donation-selection-area .perks {
+          border: none;
+          flex-direction: row; } }
+      .donate-pages .donation-selection-area .perks .perk {
+        border-color: grey;
+        border-style: solid;
+        border-width: 0px 1px 1px 1px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .donate-pages .donation-selection-area .perks .perk:first-child {
+          border-top-width: 1px; }
+        @media only screen and (min-width: 767px) {
+          .donate-pages .donation-selection-area .perks .perk {
+            border: 1px solid grey;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0px 5px 20px 5px;
+            position: relative;
+            width: 30%;
+            top: 0px;
+            flex-wrap: nowrap; } }
+        .donate-pages .donation-selection-area .perks .perk.disabled {
+          border-color: grey;
+          color: grey;
+          font-style: italic; }
+          .donate-pages .donation-selection-area .perks .perk.disabled img {
+            opacity: 0.2; }
+          .donate-pages .donation-selection-area .perks .perk.disabled select {
+            color: grey;
+            font-style: italic; }
+          .donate-pages .donation-selection-area .perks .perk.disabled .promo-red-dot {
+            background-color: grey; }
+          .donate-pages .donation-selection-area .perks .perk.disabled .promo-price {
+            color: grey; }
+        .donate-pages .donation-selection-area .perks .perk .slides {
+          position: relative;
+          align-self: center;
+          display: none;
+          height: 175px;
+          overflow: hidden;
+          width: 100%; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk .slides {
+              display: block;
+              order: 2; } }
+        .donate-pages .donation-selection-area .perks .perk img {
+          display: block;
+          margin: 0 auto;
+          max-width: 50%;
+          height: auto; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk img {
+              max-width: 70%; } }
+        .donate-pages .donation-selection-area .perks .perk .promo-red-dot {
+          position: absolute;
+          background: red;
+          top: 45px;
+          right: 15px;
+          color: white;
+          padding: 10px 20px;
+          font-size: 28px;
+          line-height: 31px;
+          font-weight: bold;
+          border-radius: 40px; }
+        .donate-pages .donation-selection-area .perks .perk .price-tag-group {
+          margin: 20px 0 20px 20px;
+          font-size: 21px;
+          font-weight: 600;
+          width: 40%; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk .price-tag-group {
+              font-size: 16px;
+              order: 1;
+              width: 100%; } }
+        .donate-pages .donation-selection-area .perks .perk .perk-label {
+          font-size: 21px;
+          font-weight: 700;
+          margin: 20px 20px 20px 0;
+          text-align: right;
+          text-transform: uppercase;
+          width: 40%;
+          box-sizing: border-box; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk .perk-label {
+              margin: 0;
+              padding: 20px;
+              padding-bottom: 0;
+              font-size: 27px;
+              width: 100%;
+              order: 3;
+              text-align: center; } }
+        .donate-pages .donation-selection-area .perks .perk .perk-desc {
+          font-size: 16px;
+          font-weight: 300;
+          display: none;
+          padding: 20px;
+          width: 100%;
+          box-sizing: border-box; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk .perk-desc {
+              display: block;
+              margin: 0 11px 0 11px;
+              order: 4;
+              padding-left: 4px;
+              padding-right: 4px;
+              width: auto; } }
+        .donate-pages .donation-selection-area .perks .perk .perk-sub-select {
+          display: none;
+          border-color: #aeaeae;
+          margin: 10px 10px 10px 10px;
+          width: 100%; }
+          @media only screen and (min-width: 767px) {
+            .donate-pages .donation-selection-area .perks .perk .perk-sub-select {
+              display: block;
+              order: 5;
+              width: 92%; } }
+      .donate-pages .donation-selection-area .perks .selected {
+        background-color: lime;
+        transition: all 0.5s; }
+        .donate-pages .donation-selection-area .perks .selected .slides {
+          display: block; }
+        .donate-pages .donation-selection-area .perks .selected .perk-desc {
+          display: block; }
+        .donate-pages .donation-selection-area .perks .selected .perk-sub-select {
+          display: block; }
+        @media only screen and (min-width: 767px) {
+          .donate-pages .donation-selection-area .perks .selected {
+            background-color: white;
+            box-shadow: 8px 8px lime;
+            position: relative;
+            top: -4px; } }
+  .donate-pages .payment-method-area,
+  .donate-pages .info-area {
+    position: relative;
+    z-index: 2; }
+  .donate-pages .payment-method-area {
+    border-bottom: 2px solid #dee2e6;
+    border-top: 2px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 4% 21px;
+    text-align: center;
+    text-transform: uppercase; }
+    .donate-pages .payment-method-area button {
+      text-transform: uppercase;
+      width: 160px;
+      vertical-align: top;
+      line-height: 20px;
+      color: #8a2be2;
+      border-radius: 5px;
+      padding: 14px 10px;
+      font-size: 20px;
+      border: 1px solid grey;
+      margin: 7px; }
+      .donate-pages .payment-method-area button.paypal {
+        padding: 8px 0; }
+        .donate-pages .payment-method-area button.paypal img {
+          height: 32px; }
+      .donate-pages .payment-method-area button.selected {
+        background-color: lime;
+        color: black; }
+    .donate-pages .payment-method-area .payment-method-question {
+      margin-bottom: 3%; }
+    .donate-pages .payment-method-area .payment-option {
+      margin-bottom: 2%; }
+  .donate-pages .info-area {
+    padding-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: center; }
+    .donate-pages .info-area #firstName {
+      width: 100%;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #firstName {
+          width: 50%;
+          margin-bottom: 0px;
+          margin-right: 10px; } }
+    .donate-pages .info-area #lastName {
+      width: 100%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #lastName {
+          width: 50%; } }
+    .donate-pages .info-area #streetAddress {
+      width: 100%;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #streetAddress {
+          width: 80%;
+          margin-bottom: 0px;
+          margin-right: 10px; } }
+    .donate-pages .info-area #extendedAddress {
+      width: 20%; }
+    .donate-pages .info-area #country {
+      width: 100%; }
+    .donate-pages .info-area #locality {
+      width: 38%;
+      margin-bottom: 10px;
+      margin-right: 10px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #locality {
+          width: 35%;
+          margin-bottom: 0px; } }
+    .donate-pages .info-area #region {
+      width: 45%;
+      margin-bottom: 10px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #region {
+          width: 40%;
+          margin-bottom: 0px;
+          margin-right: 10px; } }
+    .donate-pages .info-area #postalCode {
+      width: 100%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #postalCode {
+          width: 25%; } }
+    .donate-pages .info-area #email {
+      width: 100%;
+      margin-right: 10px; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #email {
+          width: 56%; } }
+    .donate-pages .info-area .receipt {
+      display: none; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area .receipt {
+          display: block; } }
+    .donate-pages .info-area #mailingListOptInCheckbox {
+      margin: 2px 4px 10px 10px; }
+    .donate-pages .info-area #cardNumber {
+      width: 100%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #cardNumber {
+          width: 56%; } }
+    .donate-pages .info-area img.credit-cards {
+      display: none; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area img.credit-cards {
+          display: block;
+          height: 29px;
+          vertical-align: middle; } }
+    .donate-pages .info-area #expMonth {
+      width: 38%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #expMonth {
+          width: 33%; } }
+    .donate-pages .info-area #expYear {
+      width: 38.5%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #expYear {
+          width: 33%; } }
+    .donate-pages .info-area #cvc {
+      width: 38%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages .info-area #cvc {
+          width: 33%; } }
+    .donate-pages .info-area #perk-fields {
+      display: block;
+      margin: 10px;
+      text-align: left; }
+      .donate-pages .info-area #perk-fields #selected-perk-fields-label {
+        margin-top: 10px; }
+      .donate-pages .info-area #perk-fields #perk-fit {
+        margin-left: 0px; }
+    .donate-pages .info-area #captcha {
+      width: 82px;
+      margin-bottom: 20px;
+      margin-left: 10px; }
+    .donate-pages .info-area .donate-submit-area {
+      color: grey;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 20px 0;
+      line-height: 26px; }
+    .donate-pages .info-area #donate-submit-button button {
+      background-color: lime;
+      color: black;
+      text-transform: uppercase;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid grey;
+      font-size: 20px;
+      padding: 10px; }
+  .donate-pages #donate-comments-wrapper {
+    text-align: left; }
+    .donate-pages #donate-comments-wrapper textarea {
+      width: 95%; }
+      @media only screen and (min-width: 767px) {
+        .donate-pages #donate-comments-wrapper textarea {
+          width: 97%; } }
 
 /*# sourceMappingURL=bootstrap.css.map */
