@@ -8150,69 +8150,69 @@ a.side-nav.active {
 
   .rectangle {
     background: black; } }
-.donate-pages {
+.donate-form {
   box-sizing: border-box; }
-  .donate-pages .bold {
+  .donate-form .bold {
     font-weight: bold; }
-  .donate-pages .light {
+  .donate-form .light {
     font-weight: 200; }
-  .donate-pages .lime {
+  .donate-form .lime {
     color: lime; }
-  .donate-pages .required {
+  .donate-form .required {
     color: #68B030; }
-  .donate-pages input[type="checkbox"] {
+  .donate-form input[type="checkbox"] {
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 4px; }
-  .donate-pages input[type="text"],
-  .donate-pages input[type="date"],
-  .donate-pages textarea {
+  .donate-form input[type="text"],
+  .donate-form input[type="date"],
+  .donate-form textarea {
     border: 1px solid grey;
     color: grey;
     font-size: 16px;
     height: 43px;
     padding: 8px 12px; }
-    .donate-pages input[type="text"].required,
-    .donate-pages input[type="date"].required,
-    .donate-pages textarea.required {
+    .donate-form input[type="text"].required,
+    .donate-form input[type="date"].required,
+    .donate-form textarea.required {
       border-color: #68B030; }
-    .donate-pages input[type="text"].error,
-    .donate-pages input[type="date"].error,
-    .donate-pages textarea.error {
+    .donate-form input[type="text"].error,
+    .donate-form input[type="date"].error,
+    .donate-form textarea.error {
       border-color: red; }
-    .donate-pages input[type="text"]::placeholder,
-    .donate-pages input[type="date"]::placeholder,
-    .donate-pages textarea::placeholder {
+    .donate-form input[type="text"]::placeholder,
+    .donate-form input[type="date"]::placeholder,
+    .donate-form textarea::placeholder {
       color: grey; }
-    .donate-pages input[type="text"]:focus,
-    .donate-pages input[type="date"]:focus,
-    .donate-pages textarea:focus {
+    .donate-form input[type="text"]:focus,
+    .donate-form input[type="date"]:focus,
+    .donate-form textarea:focus {
       border-color: #59316B;
       color: #8a2be2;
       outline: none; }
-  .donate-pages textarea {
+  .donate-form textarea {
     box-sizing: border-box;
     width: 60%;
     height: 3em;
     display: block;
     padding: 8px 12px; }
-  .donate-pages select {
+  .donate-form select {
     background: #FFFFFF;
     border: 1px solid grey;
     color: grey;
     font-size: 16px;
     height: 45px;
     padding: 8px 12px; }
-    .donate-pages select.required {
+    .donate-form select.required {
       border-color: #68B030;
       color: grey; }
-    .donate-pages select.error {
+    .donate-form select.error {
       border-color: red; }
-    .donate-pages select:focus {
+    .donate-form select:focus {
       border-color: #59316B;
       color: #8a2be2;
       outline: none; }
-  .donate-pages .field-row {
+  .donate-form .field-row {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -8221,17 +8221,17 @@ a.side-nav.active {
     width: 100%;
     margin-bottom: 10px; }
     @media only screen and (min-width: 767px) {
-      .donate-pages .field-row {
+      .donate-form .field-row {
         flex-wrap: nowrap; } }
-  .donate-pages button {
+  .donate-form button {
     cursor: pointer;
     box-sizing: border-box;
     text-decoration: none; }
-  .donate-pages .donate-options {
+  .donate-form .donate-options {
     display: flex;
     justify-content: center;
     margin: 0px auto 40px auto; }
-    .donate-pages .donate-options button {
+    .donate-form .donate-options button {
       font-size: 20px;
       background-color: white;
       border: 2px solid #848E97;
@@ -8242,28 +8242,28 @@ a.side-nav.active {
       text-transform: uppercase;
       padding-left: 15px;
       padding-right: 15px; }
-      .donate-pages .donate-options button.single {
+      .donate-form .donate-options button.single {
         border-radius: 5px 0 0 5px;
         margin-left: 0; }
-      .donate-pages .donate-options button.monthly {
+      .donate-form .donate-options button.monthly {
         border-left: none;
         border-radius: 0 5px 5px 0;
         margin-left: 0; }
-      .donate-pages .donate-options button.selected, .donate-pages .donate-options button:hover {
+      .donate-form .donate-options button.selected, .donate-form .donate-options button:hover {
         background-color: lime; }
-      .donate-pages .donate-options button.selected {
+      .donate-form .donate-options button.selected {
         color: black; }
-  .donate-pages .donation-selection-area {
+  .donate-form .donation-selection-area {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto 2% auto 2%;
+    margin: 2% auto 2% auto;
     max-width: 1024px;
     justify-content: center; }
     @media only screen and (min-width: 767px) {
-      .donate-pages .donation-selection-area {
+      .donate-form .donation-selection-area {
         flex-direction: row; } }
-    .donate-pages .donation-selection-area .donate-buttons {
+    .donate-form .donation-selection-area .donate-buttons {
       align-items: center;
       display: flex;
       flex-direction: row;
@@ -8271,10 +8271,10 @@ a.side-nav.active {
       justify-content: center;
       margin: 5px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .donation-selection-area .donate-buttons {
+        .donate-form .donation-selection-area .donate-buttons {
           flex-direction: row;
           margin-right: 5px; } }
-      .donate-pages .donation-selection-area .donate-buttons .price-btn {
+      .donate-form .donation-selection-area .donate-buttons .price-btn {
         line-height: 20px;
         background-color: #8a2be2;
         border-radius: 5px;
@@ -8288,22 +8288,22 @@ a.side-nav.active {
         text-align: center;
         text-decoration: none;
         width: 120px; }
-        .donate-pages .donation-selection-area .donate-buttons .price-btn.selected {
+        .donate-form .donation-selection-area .donate-buttons .price-btn.selected {
           background-color: lime;
           color: black; }
         @media only screen and (min-width: 767px) {
-          .donate-pages .donation-selection-area .donate-buttons .price-btn {
+          .donate-form .donation-selection-area .donate-buttons .price-btn {
             font-size: 29px; } }
-      .donate-pages .donation-selection-area .donate-buttons .other-amount-field {
+      .donate-form .donation-selection-area .donate-buttons .other-amount-field {
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center; }
-        .donate-pages .donation-selection-area .donate-buttons .other-amount-field .error {
+        .donate-form .donation-selection-area .donate-buttons .other-amount-field .error {
           color: red;
           display: block;
           text-align: center; }
-        .donate-pages .donation-selection-area .donate-buttons .other-amount-field .perk-amt {
+        .donate-form .donation-selection-area .donate-buttons .other-amount-field .perk-amt {
           background-color: #f1f1f3;
           font-size: 23px;
           font-weight: bold;
@@ -8313,23 +8313,23 @@ a.side-nav.active {
           text-transform: capitalize;
           text-align: center;
           width: 100px; }
-    .donate-pages .donation-selection-area .perk-intro {
+    .donate-form .donation-selection-area .perk-intro {
       display: flex;
       flex-wrap: wrap;
       margin: 2% 5% 2% 5%;
       justify-content: center;
       text-align: center; }
-      .donate-pages .donation-selection-area .perk-intro .perk-title {
+      .donate-form .donation-selection-area .perk-intro .perk-title {
         font-size: 22px;
         margin-bottom: 0px; }
-    .donate-pages .donation-selection-area .no-perk-area {
+    .donate-form .donation-selection-area .no-perk-area {
       margin: 1% 1% 20px 1%;
       width: 100%;
       text-align: center; }
-      .donate-pages .donation-selection-area .no-perk-area label {
+      .donate-form .donation-selection-area .no-perk-area label {
         font-size: 20px;
         line-height: 24px; }
-    .donate-pages .donation-selection-area .perks {
+    .donate-form .donation-selection-area .perks {
       align-self: center;
       display: flex;
       flex-direction: column;
@@ -8339,10 +8339,10 @@ a.side-nav.active {
       z-index: 2;
       justify-content: space-evenly; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .donation-selection-area .perks {
+        .donate-form .donation-selection-area .perks {
           border: none;
           flex-direction: row; } }
-      .donate-pages .donation-selection-area .perks .perk {
+      .donate-form .donation-selection-area .perks .perk {
         border-color: grey;
         border-style: solid;
         border-width: 0px 1px 1px 1px;
@@ -8350,10 +8350,10 @@ a.side-nav.active {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between; }
-        .donate-pages .donation-selection-area .perks .perk:first-child {
+        .donate-form .donation-selection-area .perks .perk:first-child {
           border-top-width: 1px; }
         @media only screen and (min-width: 767px) {
-          .donate-pages .donation-selection-area .perks .perk {
+          .donate-form .donation-selection-area .perks .perk {
             border: 1px solid grey;
             flex-direction: column;
             justify-content: flex-start;
@@ -8362,20 +8362,20 @@ a.side-nav.active {
             width: 30%;
             top: 0px;
             flex-wrap: nowrap; } }
-        .donate-pages .donation-selection-area .perks .perk.disabled {
+        .donate-form .donation-selection-area .perks .perk.disabled {
           border-color: grey;
           color: grey;
           font-style: italic; }
-          .donate-pages .donation-selection-area .perks .perk.disabled img {
+          .donate-form .donation-selection-area .perks .perk.disabled img {
             opacity: 0.2; }
-          .donate-pages .donation-selection-area .perks .perk.disabled select {
+          .donate-form .donation-selection-area .perks .perk.disabled select {
             color: grey;
             font-style: italic; }
-          .donate-pages .donation-selection-area .perks .perk.disabled .promo-red-dot {
+          .donate-form .donation-selection-area .perks .perk.disabled .promo-red-dot {
             background-color: grey; }
-          .donate-pages .donation-selection-area .perks .perk.disabled .promo-price {
+          .donate-form .donation-selection-area .perks .perk.disabled .promo-price {
             color: grey; }
-        .donate-pages .donation-selection-area .perks .perk .slides {
+        .donate-form .donation-selection-area .perks .perk .slides {
           position: relative;
           align-self: center;
           display: none;
@@ -8383,18 +8383,18 @@ a.side-nav.active {
           overflow: hidden;
           width: 100%; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk .slides {
+            .donate-form .donation-selection-area .perks .perk .slides {
               display: block;
               order: 2; } }
-        .donate-pages .donation-selection-area .perks .perk img {
+        .donate-form .donation-selection-area .perks .perk img {
           display: block;
           margin: 0 auto;
           max-width: 50%;
           height: auto; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk img {
+            .donate-form .donation-selection-area .perks .perk img {
               max-width: 70%; } }
-        .donate-pages .donation-selection-area .perks .perk .promo-red-dot {
+        .donate-form .donation-selection-area .perks .perk .promo-red-dot {
           position: absolute;
           background: red;
           top: 45px;
@@ -8405,17 +8405,17 @@ a.side-nav.active {
           line-height: 31px;
           font-weight: bold;
           border-radius: 40px; }
-        .donate-pages .donation-selection-area .perks .perk .price-tag-group {
+        .donate-form .donation-selection-area .perks .perk .price-tag-group {
           margin: 20px 0 20px 20px;
           font-size: 21px;
           font-weight: 600;
           width: 40%; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk .price-tag-group {
+            .donate-form .donation-selection-area .perks .perk .price-tag-group {
               font-size: 16px;
               order: 1;
               width: 100%; } }
-        .donate-pages .donation-selection-area .perks .perk .perk-label {
+        .donate-form .donation-selection-area .perks .perk .perk-label {
           font-size: 21px;
           font-weight: 700;
           margin: 20px 20px 20px 0;
@@ -8424,7 +8424,7 @@ a.side-nav.active {
           width: 40%;
           box-sizing: border-box; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk .perk-label {
+            .donate-form .donation-selection-area .perks .perk .perk-label {
               margin: 0;
               padding: 20px;
               padding-bottom: 0;
@@ -8432,7 +8432,7 @@ a.side-nav.active {
               width: 100%;
               order: 3;
               text-align: center; } }
-        .donate-pages .donation-selection-area .perks .perk .perk-desc {
+        .donate-form .donation-selection-area .perks .perk .perk-desc {
           font-size: 16px;
           font-weight: 300;
           display: none;
@@ -8440,43 +8440,43 @@ a.side-nav.active {
           width: 100%;
           box-sizing: border-box; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk .perk-desc {
+            .donate-form .donation-selection-area .perks .perk .perk-desc {
               display: block;
               margin: 0 11px 0 11px;
               order: 4;
               padding-left: 4px;
               padding-right: 4px;
               width: auto; } }
-        .donate-pages .donation-selection-area .perks .perk .perk-sub-select {
+        .donate-form .donation-selection-area .perks .perk .perk-sub-select {
           display: none;
           border-color: #aeaeae;
           margin: 10px 10px 10px 10px;
           width: 100%; }
           @media only screen and (min-width: 767px) {
-            .donate-pages .donation-selection-area .perks .perk .perk-sub-select {
+            .donate-form .donation-selection-area .perks .perk .perk-sub-select {
               display: block;
               order: 5;
               width: 92%; } }
-      .donate-pages .donation-selection-area .perks .selected {
+      .donate-form .donation-selection-area .perks .selected {
         background-color: lime;
         transition: all 0.5s; }
-        .donate-pages .donation-selection-area .perks .selected .slides {
+        .donate-form .donation-selection-area .perks .selected .slides {
           display: block; }
-        .donate-pages .donation-selection-area .perks .selected .perk-desc {
+        .donate-form .donation-selection-area .perks .selected .perk-desc {
           display: block; }
-        .donate-pages .donation-selection-area .perks .selected .perk-sub-select {
+        .donate-form .donation-selection-area .perks .selected .perk-sub-select {
           display: block; }
         @media only screen and (min-width: 767px) {
-          .donate-pages .donation-selection-area .perks .selected {
+          .donate-form .donation-selection-area .perks .selected {
             background-color: white;
             box-shadow: 8px 8px lime;
             position: relative;
             top: -4px; } }
-  .donate-pages .payment-method-area,
-  .donate-pages .info-area {
+  .donate-form .payment-method-area,
+  .donate-form .info-area {
     position: relative;
     z-index: 2; }
-  .donate-pages .payment-method-area {
+  .donate-form .payment-method-area {
     border-bottom: 2px solid #dee2e6;
     border-top: 2px solid #dee2e6;
     display: flex;
@@ -8486,7 +8486,7 @@ a.side-nav.active {
     padding: 4% 21px;
     text-align: center;
     text-transform: uppercase; }
-    .donate-pages .payment-method-area button {
+    .donate-form .payment-method-area button {
       text-transform: uppercase;
       width: 160px;
       vertical-align: top;
@@ -8497,128 +8497,128 @@ a.side-nav.active {
       font-size: 20px;
       border: 1px solid grey;
       margin: 7px; }
-      .donate-pages .payment-method-area button.paypal {
+      .donate-form .payment-method-area button.paypal {
         padding: 8px 0; }
-        .donate-pages .payment-method-area button.paypal img {
+        .donate-form .payment-method-area button.paypal img {
           height: 32px; }
-      .donate-pages .payment-method-area button.selected {
+      .donate-form .payment-method-area button.selected {
         background-color: lime;
         color: black; }
-    .donate-pages .payment-method-area .payment-method-question {
+    .donate-form .payment-method-area .payment-method-question {
       margin-bottom: 3%; }
-    .donate-pages .payment-method-area .payment-option {
+    .donate-form .payment-method-area .payment-option {
       margin-bottom: 2%; }
-  .donate-pages .info-area {
+  .donate-form .info-area {
     padding-top: 4%;
     margin-left: auto;
     margin-right: auto;
     max-width: 600px;
     text-align: center; }
-    .donate-pages .info-area #firstName {
+    .donate-form .info-area #firstName {
       width: 100%;
       margin-bottom: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #firstName {
+        .donate-form .info-area #firstName {
           width: 50%;
           margin-bottom: 0px;
           margin-right: 10px; } }
-    .donate-pages .info-area #lastName {
+    .donate-form .info-area #lastName {
       width: 100%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #lastName {
+        .donate-form .info-area #lastName {
           width: 50%; } }
-    .donate-pages .info-area #streetAddress {
+    .donate-form .info-area #streetAddress {
       width: 100%;
       margin-bottom: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #streetAddress {
+        .donate-form .info-area #streetAddress {
           width: 80%;
           margin-bottom: 0px;
           margin-right: 10px; } }
-    .donate-pages .info-area #extendedAddress {
+    .donate-form .info-area #extendedAddress {
       width: 20%; }
-    .donate-pages .info-area #country {
+    .donate-form .info-area #country {
       width: 100%; }
-    .donate-pages .info-area #locality {
+    .donate-form .info-area #locality {
       width: 38%;
       margin-bottom: 10px;
       margin-right: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #locality {
+        .donate-form .info-area #locality {
           width: 35%;
           margin-bottom: 0px; } }
-    .donate-pages .info-area #region {
+    .donate-form .info-area #region {
       width: 45%;
       margin-bottom: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #region {
+        .donate-form .info-area #region {
           width: 40%;
           margin-bottom: 0px;
           margin-right: 10px; } }
-    .donate-pages .info-area #postalCode {
+    .donate-form .info-area #postalCode {
       width: 100%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #postalCode {
+        .donate-form .info-area #postalCode {
           width: 25%; } }
-    .donate-pages .info-area #email {
+    .donate-form .info-area #email {
       width: 100%;
       margin-right: 10px; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #email {
+        .donate-form .info-area #email {
           width: 56%; } }
-    .donate-pages .info-area .receipt {
+    .donate-form .info-area .receipt {
       display: none; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area .receipt {
+        .donate-form .info-area .receipt {
           display: block; } }
-    .donate-pages .info-area #mailingListOptInCheckbox {
+    .donate-form .info-area #mailingListOptInCheckbox {
       margin: 2px 4px 10px 10px; }
-    .donate-pages .info-area #cardNumber {
+    .donate-form .info-area #cardNumber {
       width: 100%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #cardNumber {
+        .donate-form .info-area #cardNumber {
           width: 56%; } }
-    .donate-pages .info-area img.credit-cards {
+    .donate-form .info-area img.credit-cards {
       display: none; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area img.credit-cards {
+        .donate-form .info-area img.credit-cards {
           display: block;
           height: 29px;
           vertical-align: middle; } }
-    .donate-pages .info-area #expMonth {
+    .donate-form .info-area #expMonth {
       width: 38%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #expMonth {
+        .donate-form .info-area #expMonth {
           width: 33%; } }
-    .donate-pages .info-area #expYear {
+    .donate-form .info-area #expYear {
       width: 38.5%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #expYear {
+        .donate-form .info-area #expYear {
           width: 33%; } }
-    .donate-pages .info-area #cvc {
+    .donate-form .info-area #cvc {
       width: 38%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages .info-area #cvc {
+        .donate-form .info-area #cvc {
           width: 33%; } }
-    .donate-pages .info-area #perk-fields {
+    .donate-form .info-area #perk-fields {
       display: block;
       margin: 10px;
       text-align: left; }
-      .donate-pages .info-area #perk-fields #selected-perk-fields-label {
+      .donate-form .info-area #perk-fields #selected-perk-fields-label {
         margin-top: 10px; }
-      .donate-pages .info-area #perk-fields #perk-fit {
+      .donate-form .info-area #perk-fields #perk-fit {
         margin-left: 0px; }
-    .donate-pages .info-area #captcha {
+    .donate-form .info-area #captcha {
       width: 82px;
       margin-bottom: 20px;
       margin-left: 10px; }
-    .donate-pages .info-area .donate-submit-area {
+    .donate-form .info-area .donate-submit-area {
       color: grey;
       font-size: 22px;
       font-weight: bold;
       padding: 20px 0;
       line-height: 26px; }
-    .donate-pages .info-area #donate-submit-button button {
+    .donate-form .info-area #donate-submit-button button {
       background-color: lime;
       color: black;
       text-transform: uppercase;
@@ -8627,12 +8627,12 @@ a.side-nav.active {
       border: 1px solid grey;
       font-size: 20px;
       padding: 10px; }
-  .donate-pages #donate-comments-wrapper {
+  .donate-form #donate-comments-wrapper {
     text-align: left; }
-    .donate-pages #donate-comments-wrapper textarea {
+    .donate-form #donate-comments-wrapper textarea {
       width: 95%; }
       @media only screen and (min-width: 767px) {
-        .donate-pages #donate-comments-wrapper textarea {
+        .donate-form #donate-comments-wrapper textarea {
           width: 97%; } }
 
 /*# sourceMappingURL=bootstrap.css.map */

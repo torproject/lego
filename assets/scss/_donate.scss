@@ -1,7 +1,7 @@
 $blue-violet: #8a2be2;
 $donate-screen-breakpoint: 767px;
 
-.donate-pages {
+.donate-form {
   box-sizing: border-box;
   .bold {
     font-weight: bold;
@@ -127,7 +127,7 @@ $donate-screen-breakpoint: 767px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto 2% auto 2%;
+    margin: 2% auto 2% auto;
     max-width: 1024px;
     justify-content: center;
     @media only screen and (min-width: $donate-screen-breakpoint) {
