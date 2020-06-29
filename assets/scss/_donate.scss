@@ -1,6 +1,3 @@
-$blue-violet: #8a2be2;
-$donate-screen-breakpoint: 767px;
-
 .donate-form {
   box-sizing: border-box;
   .bold {
@@ -83,7 +80,7 @@ $donate-screen-breakpoint: 767px;
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 10px;
-    @media only screen and (min-width: $donate-screen-breakpoint) {
+    @include media-breakpoint-up(md) {
       flex-wrap: nowrap;
     }
   }
@@ -133,7 +130,7 @@ $donate-screen-breakpoint: 767px;
     margin: 2% auto 2% auto;
     max-width: 1024px;
     justify-content: center;
-    @media only screen and (min-width: $donate-screen-breakpoint) {
+    @include media-breakpoint-up(md) {
       flex-direction: row;
     }
     .donate-buttons {
@@ -143,7 +140,7 @@ $donate-screen-breakpoint: 767px;
       flex-wrap: wrap;
       justify-content: center;
       margin: 5px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         flex-direction: row;
         margin-right: 5px;
       }
@@ -165,7 +162,7 @@ $donate-screen-breakpoint: 767px;
           background-color: lime;
           color: black;
         }
-        @media only screen and (min-width: $donate-screen-breakpoint) {
+        @include media-breakpoint-up(md) {
           font-size: 29px;
         }
       }
@@ -222,7 +219,7 @@ $donate-screen-breakpoint: 767px;
       z-index: 2;
       justify-content: space-evenly;
 
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         border: none;
         flex-direction: row;
       }
@@ -238,7 +235,7 @@ $donate-screen-breakpoint: 767px;
         &:first-child {
           border-top-width: 1px;
         }
-        @media only screen and (min-width: $donate-screen-breakpoint) {
+        @include media-breakpoint-up(md) {
           border: 1px solid grey;
           flex-direction: column;
           justify-content: flex-start;
@@ -273,7 +270,7 @@ $donate-screen-breakpoint: 767px;
           height: 175px;
           overflow: hidden;
           width: 100%;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             display: block;
             order: 2;
           }
@@ -283,7 +280,7 @@ $donate-screen-breakpoint: 767px;
           margin: 0 auto;
           max-width: 50%;
           height: auto;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             max-width: 70%;
           }
         }
@@ -304,7 +301,7 @@ $donate-screen-breakpoint: 767px;
           font-size: 21px;
           font-weight: 600;
           width: 40%;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             font-size: 16px;
             order: 1;
             width: 100%;
@@ -318,7 +315,7 @@ $donate-screen-breakpoint: 767px;
           text-transform: uppercase;
           width: 40%;
           box-sizing: border-box;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             margin: 0;
             padding: 20px;
             padding-bottom: 0;
@@ -335,7 +332,7 @@ $donate-screen-breakpoint: 767px;
           padding: 20px;
           width: 100%;
           box-sizing: border-box;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             display: block;
             margin: 0 11px 0 11px;
             order: 4;
@@ -349,7 +346,7 @@ $donate-screen-breakpoint: 767px;
           border-color: #aeaeae;
           margin: 10px 10px 10px 10px;
           width: 100%;
-          @media only screen and (min-width: $donate-screen-breakpoint) {
+          @include media-breakpoint-up(md) {
             display: block;
             order: 5;
             width: 92%;
@@ -368,7 +365,7 @@ $donate-screen-breakpoint: 767px;
         .perk-sub-select {
           display: block;
         }
-        @media only screen and (min-width: $donate-screen-breakpoint) {
+        @include media-breakpoint-up(md) {
           background-color: white;
           box-shadow: 8px 8px lime;
           position: relative;
@@ -427,7 +424,7 @@ $donate-screen-breakpoint: 767px;
     #firstName {
       width: 100%;
       margin-bottom: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 50%;
         margin-bottom: 0px;
         margin-right: 10px;
@@ -435,14 +432,14 @@ $donate-screen-breakpoint: 767px;
     }
     #lastName {
       width: 100%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 50%;
       }
     }
     #streetAddress {
       width: 100%;
       margin-bottom: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 80%;
         margin-bottom: 0px;
         margin-right: 10px;
@@ -458,7 +455,7 @@ $donate-screen-breakpoint: 767px;
       width: 38%;
       margin-bottom: 10px;
       margin-right: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 35%;
         margin-bottom: 0px;
       }
@@ -466,7 +463,7 @@ $donate-screen-breakpoint: 767px;
     #region {
       width: 45%;
       margin-bottom: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 40%;
         margin-bottom: 0px;
         margin-right: 10px;
@@ -474,20 +471,20 @@ $donate-screen-breakpoint: 767px;
     }
     #postalCode {
       width: 100%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 25%;
       }
     }
     #email {
       width: 100%;
       margin-right: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 56%;
       }
     }
     .receipt {
       display: none;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         display: block;
       }
     }
@@ -505,20 +502,20 @@ $donate-screen-breakpoint: 767px;
       padding: 12px 12px 5px 12px;
     }
     .card-number {
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 75%;
         margin-right: 10px;
       }
     }
     .exp-date,
     .cvc {
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: calc(50% - 5px);
       }
     }
     .exp-date {
       margin-bottom: 10px;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         margin-right: 10px;
         margin-bottom: 0;
       }
@@ -526,7 +523,7 @@ $donate-screen-breakpoint: 767px;
     img.credit-cards {
       display: none;
 
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         display: block;
         height: 29px;
         vertical-align: middle;
@@ -534,19 +531,19 @@ $donate-screen-breakpoint: 767px;
     }
     #expMonth {
       width: 38%;
-      @media only screen and (min-width: $donate-screen-breakpoint) {
+      @include media-breakpoint-up(md) {
         width: 33%;
       }
     }
     #perk-fields {
       display: block;
-      margin: 10px;
+      margin: 10px 0;
       text-align: left;
       #selected-perk-fields-label {
-        margin-top: 10px;
+        margin: 10px 0;
       }
-      #perk-fit {
-        margin-left: 0px;
+      .fit {
+        margin: 0 10px;
       }
     }
     #captcha {
