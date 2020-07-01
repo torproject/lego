@@ -577,4 +577,23 @@
       width: 100%;
     }
   }
+  .error-container {
+    display: block;
+    width: 50%;
+    min-height: 100px;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-left: auto;
+    padding: 2% 5%;
+    border: 1px solid #aeaeae;
+    box-shadow: 11px 11px 0 0 #e70000;
+
+    .title {
+      margin-bottom: 3%;
+      color: #e70000;
+      font-size: 34px;
+      line-height: 40px;
+      text-align: center;
+    }
+  }
 }
