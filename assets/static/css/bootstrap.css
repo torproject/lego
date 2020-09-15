@@ -8150,6 +8150,19 @@ a.side-nav.active {
 
   .rectangle {
     background: black; } }
+@media (min-width: 576px) {
+  .donate-has-image .donate-title {
+    display: none; } }
+.donate-has-image .donate-header-image {
+  display: none; }
+  @media (min-width: 576px) {
+    .donate-has-image .donate-header-image {
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      height: auto; } }
+
 .donate-form {
   box-sizing: border-box; }
   .donate-form .bold {

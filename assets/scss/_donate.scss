@@ -1,3 +1,21 @@
+.donate-has-image {
+  .donate-title {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+  .donate-header-image {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      height: auto;
+    }
+  }
+}
+
 .donate-form {
   box-sizing: border-box;
   .bold {
