@@ -9,6 +9,7 @@
 @font-face {
   font-family: League Gothic;
   src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf');
+  font-style: italic;
 }
 
 /* Don't move down content w banner. Navbar isn't fixed. */
@@ -46,6 +47,7 @@
 .take-back-the-intern {
   color: lime;
   font-family: League Gothic !important;
+  font-style: italic;
   font-weight: 400 !important;
   line-height: 4rem !important;
   right: 8px;
@@ -58,6 +60,7 @@
     color: white !important;
     border-radius: 0 !important;
     font-family: League Gothic;
+    font-style: italic;
     font-size: 2rem !important;
     padding: 0 20px !important;
 }

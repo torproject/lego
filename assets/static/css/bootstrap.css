@@ -8052,7 +8052,8 @@ a.side-nav.active {
   src: url("fonts/Kanit/kanit.woff2") format("woff2"); }
 @font-face {
   font-family: League Gothic;
-  src: url("fonts/LeagueGothic/LeagueGothic-Italic.otf"); }
+  src: url("fonts/LeagueGothic/LeagueGothic-Italic.otf");
+  font-style: italic; }
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
   padding-top: 0 !important; }
@@ -8084,6 +8085,7 @@ a.side-nav.active {
 .take-back-the-intern {
   color: lime;
   font-family: League Gothic !important;
+  font-style: italic;
   font-weight: 400 !important;
   line-height: 4rem !important;
   right: 8px;
@@ -8095,6 +8097,7 @@ a.side-nav.active {
   color: white !important;
   border-radius: 0 !important;
   font-family: League Gothic;
+  font-style: italic;
   font-size: 2rem !important;
   padding: 0 20px !important; }
 
@@ -8150,6 +8153,9 @@ a.side-nav.active {
 
   .rectangle {
     background: black; } }
+@font-face {
+  font-family: League Gothic;
+  src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
 @media (min-width: 576px) {
   .donate-has-image .donate-title {
     display: none; } }
@@ -8280,7 +8286,7 @@ a.side-nav.active {
       .donate-form .donate-options button.selected, .donate-form .donate-options button:hover {
         background-color: lime; }
       .donate-form .donate-options button.selected {
-        color: black; }
+        color: #000; }
   .donate-form .donation-selection-area {
     display: flex;
     flex-direction: row;
@@ -8318,7 +8324,7 @@ a.side-nav.active {
         width: 120px; }
         .donate-form .donation-selection-area .donate-buttons .price-btn.selected {
           background-color: lime;
-          color: black; }
+          color: #000; }
         @media (min-width: 768px) {
           .donate-form .donation-selection-area .donate-buttons .price-btn {
             font-size: 29px; } }
@@ -8531,7 +8537,7 @@ a.side-nav.active {
           height: 32px; }
       .donate-form .payment-method-area button.selected {
         background-color: lime;
-        color: black; }
+        color: #000; }
     .donate-form .payment-method-area .payment-method-question {
       margin-bottom: 3%; }
   .donate-form .info-area {
@@ -8653,7 +8659,7 @@ a.side-nav.active {
       line-height: 26px; }
     .donate-form .info-area #donate-submit-button button {
       background-color: lime;
-      color: black;
+      color: #000;
       text-transform: uppercase;
       width: 300px;
       border-radius: 5px;
@@ -8680,5 +8686,40 @@ a.side-nav.active {
       font-size: 34px;
       line-height: 40px;
       text-align: center; }
+
+#campaign-totals-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 100px; }
+  #campaign-totals-area .characters {
+    color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+    margin: 10px 30px; }
+    #campaign-totals-area .characters .character {
+      position: relative;
+      font-size: 130px;
+      font-weight: 700;
+      font-family: "League Gothic"; }
+      #campaign-totals-area .characters .character .cover {
+        background: lime;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        visibility: hidden;
+        right: 0;
+        top: 0;
+        z-index: 1; }
+      #campaign-totals-area .characters .character.covered .cover {
+        visibility: visible; }
+      #campaign-totals-area .characters .character.resolved {
+        color: lime; }
+  #campaign-totals-area .label {
+    font-size: 18px;
+    text-align: center;
+    font-family: monospace;
+    color: #000; }
 
 /*# sourceMappingURL=bootstrap.css.map */
