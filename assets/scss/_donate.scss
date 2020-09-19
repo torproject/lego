@@ -21,6 +21,20 @@
   }
 }
 
+.header-description {
+  margin-bottom: 30px;
+  p {
+    color: $white;
+  }
+  .content-center {
+    margin: 0 auto;
+  }
+  .share-icons img {
+    margin: 20px 10px 0;
+    width: 50px;
+  }
+}
+
 .donate-form {
   box-sizing: border-box;
   .bold {
@@ -666,5 +680,25 @@
     text-align: center;
     font-family: monospace;
     color: $black;
+  }
+}
+
+.donate-page {
+  padding: 40px 20px;
+  width: 95%;
+  margin: 0 auto;
+  @include media-breakpoint-up(lg) {
+    max-width: 940px
+  }
+  .thank-you {
+    text-align: center;
+    hr {
+      border-top: 1px solid $green;
+      max-width: 106px;
+      margin: 40px auto;
+    }
+    .btn {
+      text-transform: uppercase;
+    }
   }
 }

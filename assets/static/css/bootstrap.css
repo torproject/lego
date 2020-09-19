@@ -8169,6 +8169,16 @@ a.side-nav.active {
       margin: 0 auto;
       height: auto; } }
 
+.header-description {
+  margin-bottom: 30px; }
+  .header-description p {
+    color: #FFFFFF; }
+  .header-description .content-center {
+    margin: 0 auto; }
+  .header-description .share-icons img {
+    margin: 20px 10px 0;
+    width: 50px; }
+
 .donate-form {
   box-sizing: border-box; }
   .donate-form .bold {
@@ -8722,5 +8732,21 @@ a.side-nav.active {
     text-align: center;
     font-family: monospace;
     color: #000; }
+
+.donate-page {
+  padding: 40px 20px;
+  width: 95%;
+  margin: 0 auto; }
+  @media (min-width: 992px) {
+    .donate-page {
+      max-width: 940px; } }
+  .donate-page .thank-you {
+    text-align: center; }
+    .donate-page .thank-you hr {
+      border-top: 1px solid #68B030;
+      max-width: 106px;
+      margin: 40px auto; }
+    .donate-page .thank-you .btn {
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=bootstrap.css.map */

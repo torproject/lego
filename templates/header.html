@@ -25,6 +25,15 @@
           <div class="row pb-5">
             <h2 class="mx-auto display-3 text-white text-capitalize">{% block title %}{{ this.title }}{% endblock %}</h2>
           </div>
+          {% if this.header_description_alignment == 'center' %}
+          <div class="row text-center header-description">
+          {% elif this.header_description_alignment == 'right' %}
+          <div class="row text-right header-description">
+          {% else %}
+          <div class="row header-description">
+          {% endif %}
+            {{ this.header_description }}
+          </div>
         </div>
         {% endif %}
       </div>
