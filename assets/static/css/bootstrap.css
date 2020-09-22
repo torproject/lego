@@ -8044,6 +8044,10 @@ a.side-nav.active {
 .no-gutters {
   margin-bottom: 0 !important; }
 
+.errors {
+  color: red;
+  font-size: 1.3rem; }
+
 @font-face {
   font-family: Kanit;
   font-style: normal;
