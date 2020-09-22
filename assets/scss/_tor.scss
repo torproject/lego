@@ -828,3 +828,12 @@ a.side-nav.active {
   color: red;
   font-size: 1.3rem;
 }
+
+.btn-purple {
+  background-color: $purple;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+  }
+}

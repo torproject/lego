@@ -8048,6 +8048,12 @@ a.side-nav.active {
   color: red;
   font-size: 1.3rem; }
 
+.btn-purple {
+  background-color: #7D4698;
+  color: #FFFFFF; }
+  .btn-purple:hover {
+    background-color: #FFFFFF; }
+
 @font-face {
   font-family: Kanit;
   font-style: normal;
