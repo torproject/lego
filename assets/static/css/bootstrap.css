@@ -8707,7 +8707,73 @@ a.side-nav.active {
       font-size: 34px;
       line-height: 40px;
       text-align: center; }
-
+  .donate-form #loading-dialog .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #495057;
+    z-index: 99; }
+  .donate-form #loading-dialog .dialog-area {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20vh;
+    width: 100%;
+    z-index: 100; }
+  .donate-form #loading-dialog .dialog {
+    background-color: #FFFFFF;
+    min-height: 150px;
+    text-align: center;
+    width: 300px; }
+  .donate-form #loading-dialog .message {
+    margin: 20px; }
+  .donate-form #loading-dialog .dots {
+    display: flex;
+    margin: 20px 20px 0 20px;
+    justify-content: center; }
+  .donate-form #loading-dialog .dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    border-radius: 20px;
+    background-color: lime;
+    opacity: 0.3; }
+  .donate-form #loading-dialog .dot:nth-child(0n+1) {
+    animation-name: moving-dot;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0; }
+  .donate-form #loading-dialog .dot:nth-child(0n+2) {
+    animation-name: moving-dot;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s; }
+  .donate-form #loading-dialog .dot:nth-child(0n+3) {
+    animation-name: moving-dot;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s; }
+  .donate-form #loading-dialog .dot:nth-child(0n+4) {
+    animation-name: moving-dot;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s; }
+  .donate-form #loading-dialog .dot:nth-child(0n+5) {
+    animation-name: moving-dot;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s; }
+@keyframes moving-dot {
+  from {
+    opacity: 0.3; }
+  20% {
+    opacity: 1; }
+  to {
+    opacity: 0.3; } }
 #campaign-totals-area {
   display: flex;
   flex-wrap: wrap;
@@ -8742,6 +8808,8 @@ a.side-nav.active {
     text-align: center;
     font-family: monospace;
     color: #000; }
+  #campaign-totals-area .no-close .ui-dialog-titlebar-close {
+    display: none; }
 
 .donate-page {
   padding: 40px 20px;

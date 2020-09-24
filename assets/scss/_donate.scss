@@ -634,6 +634,96 @@
       text-align: center;
     }
   }
+
+  #loading-dialog {
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $gray-700;
+      z-index: 99;
+    }
+
+    .dialog-area {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 20vh;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .dialog {
+      background-color: $white;
+      min-height: 150px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .message {
+      margin: 20px;
+    }
+
+    .dots {
+      display: flex;
+      margin: 20px 20px 0 20px;
+      justify-content: center;
+    }
+
+    .dot {
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-right: 0.5%;
+      margin-left: 0.5%;
+      border-radius: 20px;
+      background-color: lime;
+      opacity: 0.3;
+    }
+
+    @mixin moving-dot($delay) {
+      animation-name: moving-dot;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      animation-delay: $delay;
+    }
+
+    .dot:nth-child(0n+1) {
+      @include moving-dot(0);
+    }
+
+    .dot:nth-child(0n+2) {
+      @include moving-dot(0.5s);
+    }
+
+    .dot:nth-child(0n+3) {
+      @include moving-dot(1s);
+    }
+
+    .dot:nth-child(0n+4) {
+      @include moving-dot(1.5s);
+    }
+
+    .dot:nth-child(0n+5) {
+      @include moving-dot(2s);
+    }
+
+    @keyframes moving-dot {
+      from {
+        opacity: 0.3;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 #campaign-totals-area {
@@ -680,6 +770,10 @@
     text-align: center;
     font-family: monospace;
     color: $black;
+  }
+
+  .no-close .ui-dialog-titlebar-close {
+    display: none;
   }
 }
 
