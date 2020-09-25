@@ -8190,6 +8190,7 @@ a.side-nav.active {
     width: 50px; }
 
 .donate-form {
+  padding-top: 50px;
   box-sizing: border-box; }
   .donate-form .bold {
     font-weight: bold; }
