@@ -36,7 +36,6 @@
 }
 
 .donate-form {
-  padding-top: 50px;
   box-sizing: border-box;
   .bold {
     font-weight: bold;
@@ -636,6 +635,10 @@
     }
   }
 
+  #giving-form {
+    margin-top: 50px;
+  }
+
   #loading-dialog {
     .overlay {
       position: fixed;
@@ -731,7 +734,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 100px;
 
   .characters {
     color: $gray-200;

@@ -8190,7 +8190,6 @@ a.side-nav.active {
     width: 50px; }
 
 .donate-form {
-  padding-top: 50px;
   box-sizing: border-box; }
   .donate-form .bold {
     font-weight: bold; }
@@ -8708,6 +8707,8 @@ a.side-nav.active {
       font-size: 34px;
       line-height: 40px;
       text-align: center; }
+  .donate-form #giving-form {
+    margin-top: 50px; }
   .donate-form #loading-dialog .overlay {
     position: fixed;
     top: 0;
@@ -8778,8 +8779,7 @@ a.side-nav.active {
 #campaign-totals-area {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 100px; }
+  justify-content: center; }
   #campaign-totals-area .characters {
     color: #e9ecef;
     display: flex;
