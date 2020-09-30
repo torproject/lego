@@ -8828,4 +8828,236 @@ a.side-nav.active {
     .donate-page .thank-you .btn {
       text-transform: uppercase; }
 
+.cryptocurrency {
+  padding-top: 40px;
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .cryptocurrency .payment-other-div {
+    text-align: center;
+    margin-bottom: 40px; }
+  .cryptocurrency h4 {
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase; }
+  .cryptocurrency a {
+    font-weight: 700;
+    text-decoration: none; }
+    .cryptocurrency a:hover {
+      color: lime; }
+  .cryptocurrency .btc-form {
+    margin-bottom: 40px; }
+    .cryptocurrency .btc-form .btc-onion-link {
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-top: 25px; }
+  .cryptocurrency .intro-text-section {
+    margin: 0 15px; }
+  .cryptocurrency #cryptocurrency-form {
+    margin: 40px auto;
+    max-width: 1024px; }
+  .cryptocurrency .copy-button {
+    background: url("/static/images/copy.svg") center/12px 12px no-repeat;
+    border: none;
+    height: 43px;
+    width: 43px;
+    padding: 5px 5px 2px 5px;
+    margin: 0;
+    z-index: 100; }
+    .cryptocurrency .copy-button:focus {
+      outline: none; }
+  .cryptocurrency .donate.button {
+    background-color: lime;
+    color: #000;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #848282;
+    cursor: pointer;
+    text-transform: uppercase; }
+  .cryptocurrency .field-error {
+    color: #EF243E;
+    font-size: 12px; }
+  .cryptocurrency .form-column {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .cryptocurrency .form-column {
+        width: 50%; } }
+  .cryptocurrency .form-fields {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: [first] 1fr [second] 1fr [end];
+    margin-top: 20px; }
+    @media (min-width: 576px) {
+      .cryptocurrency .form-fields {
+        grid-template-columns: [first] 1fr [second] 1fr [third] 1fr [fourth] 1fr [end]; } }
+    .cryptocurrency .form-fields input {
+      border: 1px solid #000;
+      padding: 8px 12px; }
+      .cryptocurrency .form-fields input:required {
+        border-color: lime; }
+      .cryptocurrency .form-fields input:focus {
+        outline: none; }
+  .cryptocurrency input {
+    box-sizing: border-box;
+    height: 43px;
+    margin: 0;
+    width: 100%; }
+    .cryptocurrency input[type=checkbox] {
+      width: auto; }
+    .cryptocurrency input[required] {
+      border-color: lime; }
+    .cryptocurrency input.error {
+      border-color: #EF243E; }
+    .cryptocurrency input[name=firstName] {
+      grid-column: first / span 2; }
+    .cryptocurrency input[name=lastName] {
+      grid-column: first / end; }
+      @media (min-width: 576px) {
+        .cryptocurrency input[name=lastName] {
+          grid-column-start: third; } }
+    .cryptocurrency input[name=streetAddress] {
+      grid-column: first / end; }
+      @media (min-width: 576px) {
+        .cryptocurrency input[name=streetAddress] {
+          grid-column: first / fourth; } }
+    .cryptocurrency input[name=extendedAddress] {
+      grid-column-start: first; }
+      @media (min-width: 576px) {
+        .cryptocurrency input[name=extendedAddress] {
+          grid-column-start: fourth; } }
+    .cryptocurrency input[name=locality] {
+      grid-column: first / span 2; }
+    .cryptocurrency input[name=postalCode] {
+      grid-column: first / span 2; }
+    .cryptocurrency input[name=email] {
+      grid-column: first / end; }
+    @media (min-width: 576px) {
+      .cryptocurrency input[name=estimatedDonationDate] {
+        grid-column: 3 / span 2; } }
+    .cryptocurrency input[name=region] {
+      grid-column: first / span 2; }
+      @media (min-width: 576px) {
+        .cryptocurrency input[name=region] {
+          grid-column: third / span 2; } }
+  .cryptocurrency label[for=estimatedDonationDate] {
+    align-self: center;
+    grid-column: first;
+    text-align: right; }
+    @media (min-width: 576px) {
+      .cryptocurrency label[for=estimatedDonationDate] {
+        grid-column: first / span 2; } }
+  .cryptocurrency .field-area.currencyAmount {
+    grid-column: first / span 2; }
+    @media (min-width: 576px) {
+      .cryptocurrency .field-area.currencyAmount {
+        grid-column: third / span 2; } }
+  .cryptocurrency .checkbox-row {
+    display: flex;
+    grid-column: first / end;
+    align-items: center; }
+    .cryptocurrency .checkbox-row input {
+      margin-right: 5px; }
+    .cryptocurrency .checkbox-row label {
+      margin-bottom: 0; }
+  .cryptocurrency select {
+    box-sizing: border-box;
+    height: 43px;
+    margin: 0;
+    background-color: transparent;
+    padding: 8px 12px; }
+    .cryptocurrency select[name=country] {
+      grid-column: first / end; }
+    .cryptocurrency select[name=region] {
+      grid-column: first / span 2; }
+      @media (min-width: 576px) {
+        .cryptocurrency select[name=region] {
+          grid-column: third / span 2; } }
+    .cryptocurrency select[name=cryptocurrencyType] {
+      grid-column: first / span 2;
+      color: #000;
+      border-color: lime; }
+  .cryptocurrency .wallet-column {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .cryptocurrency .wallet-column {
+        width: 50%; } }
+    .cryptocurrency .wallet-column ul {
+      list-style-type: none;
+      margin-top: 20px;
+      padding: 0;
+      width: 100%; }
+    .cryptocurrency .wallet-column li {
+      align-items: center;
+      display: flex;
+      margin-bottom: 10px;
+      width: 100%; }
+    .cryptocurrency .wallet-column .currency-name {
+      padding: 5px;
+      width: 30%; }
+    .cryptocurrency .wallet-column .wallet-id {
+      font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      padding: 5px;
+      width: 60%; }
+  .cryptocurrency .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px; }
+  .cryptocurrency .button-section {
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%; }
+
+.notify-popup {
+  background: #7D4698;
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  padding: 3px 5px 5px 5px;
+  margin: 10px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 3s; }
+  .notify-popup.start {
+    opacity: 1;
+    transition-duration: 1ms; }
+  .notify-popup .arrow {
+    height: 10px;
+    width: 10px; }
+    .notify-popup .arrow::before {
+      border-style: solid;
+      content: '';
+      display: block;
+      height: 0;
+      margin: auto;
+      width: 0; }
+  .notify-popup[data-placement="top"] .arrow {
+    bottom: 0;
+    margin-bottom: -10px;
+    position: absolute; }
+    .notify-popup[data-placement="top"] .arrow::before {
+      border-width: 5px 5px 0 5px;
+      border-color: #7D4698 transparent transparent transparent; }
+  .notify-popup[data-placement="bottom"] .arrow {
+    top: -5px;
+    position: absolute; }
+    .notify-popup[data-placement="bottom"] .arrow::before {
+      border-width: 0 5px 5px 5px;
+      border-color: transparent transparent #7D4698 transparent; }
+
+@keyframes fadeout {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
 /*# sourceMappingURL=bootstrap.css.map */
