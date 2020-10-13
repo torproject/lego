@@ -1,0 +1,14 @@
+diff -ur npm-support.orig/setup.py npm-support/setup.py
+--- npm-support.orig/setup.py	2020-10-13 10:59:31.300029385 -0700
++++ npm-support/setup.py	2020-10-13 10:59:45.204039777 -0700
+@@ -24,10 +24,8 @@
+     long_description=read('README.md'),
+     long_description_content_type='text/markdown',
+     py_modules=['lektor_npm_support'],
+-    install_requires=['future'],
+     setup_requires=['pytest-runner'],
+     tests_require=tests_require,
+-    extras_require={'test': tests_require},
+     entry_points={
+         'lektor.plugins': [
+             'npm-support = lektor_npm_support:NPMSupportPlugin',

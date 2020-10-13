@@ -1,0 +1,16 @@
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+environs/__init__.py
+environs/py.typed
+environs.egg-info/PKG-INFO
+environs.egg-info/SOURCES.txt
+environs.egg-info/dependency_links.txt
+environs.egg-info/not-zip-safe
+environs.egg-info/requires.txt
+environs.egg-info/top_level.txt

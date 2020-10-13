@@ -1,0 +1,2 @@
+marshmallow>=2.7.0
+python-dotenv

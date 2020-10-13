@@ -1,0 +1,22 @@
+diff -ur envvars.orig/lektor_envvars.egg-info/SOURCES.txt envvars/lektor_envvars.egg-info/SOURCES.txt
+--- envvars.orig/lektor_envvars.egg-info/SOURCES.txt	2020-10-13 11:01:26.640115570 -0700
++++ envvars/lektor_envvars.egg-info/SOURCES.txt	2020-10-13 11:01:25.756114909 -0700
+@@ -8,5 +8,4 @@
+ lektor_envvars.egg-info/SOURCES.txt
+ lektor_envvars.egg-info/dependency_links.txt
+ lektor_envvars.egg-info/entry_points.txt
+-lektor_envvars.egg-info/requires.txt
+ lektor_envvars.egg-info/top_level.txt
+\ ファイル末尾に改行がありません
+envvars.orig/lektor_envvars.egg-info のみに存在: requires.txt
+diff -ur envvars.orig/setup.py envvars/setup.py
+--- envvars.orig/setup.py	2020-10-13 11:01:09.036102429 -0700
++++ envvars/setup.py	2020-10-13 11:01:22.500112479 -0700
+@@ -11,7 +11,6 @@
+     author_email="seb@roadsi.de",
+     url="https://www.github.com/elbaschid/lektor-envvars",
+     py_modules=["lektor_envvars"],
+-    install_requires=["lektor", "environs"],
+     entry_points={"lektor.plugins": ["envvars = lektor_envvars:EnvvarsPlugin"]},
+     classifiers=[
+         "License :: OSI Approved :: MIT License",
