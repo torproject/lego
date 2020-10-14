@@ -8121,7 +8121,8 @@ a.side-nav.active {
 
 .rectangle:hover {
   background-image: url("./images/home/png/tape-purple.png");
-  color: white; }
+  color: white;
+  text-decoration: none; }
 
 .give-today-and-mozi {
   color: white;
