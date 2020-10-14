@@ -8112,7 +8112,7 @@ a.side-nav.active {
 .rectangle {
   background-image: url("./images/home/png/tape.png");
   color: black;
-  padding: 20px;
+  padding: 10px;
   font-size: 2em;
   font-family: "TerminalGrotesque", sans-serif;
   text-decoration: none;
