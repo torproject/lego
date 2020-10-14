@@ -8055,16 +8055,6 @@ a.side-nav.active {
     background-color: #FFFFFF; }
 
 @font-face {
-  font-family: Kanit;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./fonts/Kanit/kanit.woff2") format("woff2"); }
-@font-face {
-  font-family: League Gothic;
-  src: url("./fonts/LeagueGothic/LeagueGothic-Italic.otf");
-  font-style: italic; }
-@font-face {
   font-family: WhiteonBlack;
   /* https://open-foundry.com/fonts/league_gothic_italic */
   src: url("./fonts/WhiteonBlack/WhiteOnBlack.ttf"); }
@@ -8167,7 +8157,11 @@ a.side-nav.active {
 
   .take-back-the-intern {
     width: 100%;
-    font-size: 2rem; } }
+    font-size: 2rem; }
+
+  .banner__containter {
+    background-position: top 90% right -20%;
+    background-size: 70%; } }
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
