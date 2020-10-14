@@ -8163,14 +8163,11 @@ a.side-nav.active {
 
 @media (max-width: 575px) {
   .tracking-surveillan {
-    font-size: 1rem; }
+    width: 100%; }
 
   .take-back-the-intern {
-    line-height: 3.4rem;
-    font-size: 4rem; }
-
-  .rectangle {
-    background: black; } }
+    width: 100%;
+    font-size: 2rem; } }
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
