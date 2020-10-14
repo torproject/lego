@@ -12,6 +12,15 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: WhiteonBlack; /* https://open-foundry.com/fonts/league_gothic_italic */
+  src: url('./fonts/WhiteonBlack/WhiteOnBlack.ttf');
+}
+@font-face {
+  font-family: TerminalGrotesque; /* https://open-foundry.com/fonts/league_gothic_italic */
+  src: url('./fonts/grotesque/terminal-grotesque_open.otf');
+}
+
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
   padding-top: 0 !important; }
@@ -37,11 +46,13 @@
 }
 
 .tracking-surveillan {
-  color: #2EF900 !important;
-  font-family: Source Code Pro;
-  font-weight: 400;
-  text-align: left;
-  font-size: 16px;
+  color: white;
+  font-family: "WhiteonBlack", sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-synthesis: style;
+  margin: 0;
+  width: 70%;
 }
 
 .take-back-the-intern {
