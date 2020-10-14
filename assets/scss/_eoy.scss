@@ -64,20 +64,22 @@
 }
 
 .rectangle {
-    border: 3px solid blueviolet !important;
-    color: white !important;
-    border-radius: 0 !important;
-    font-family: League Gothic;
-    font-style: italic;
-    font-size: 2rem !important;
-    padding: 0 20px !important;
+  background-image: url('./images/home/png/tape.png');
+  color: black;
+  padding: 20px;
+  font-size: 2em;
+  font-family: "TerminalGrotesque", sans-serif;
+  text-decoration: none;
+  background-size: cover;
+  font-weight: bold;
 }
 
-.rectangle:hover{
-    text-decoration: none;
-    color: white;
-    background: blueviolet;
+.rectangle:hover {
+  background-image: url('./images/home/png/tape-purple.png');
+  color: white;
 }
+
+
 
 .give-today-and-mozi {
   color: white;
