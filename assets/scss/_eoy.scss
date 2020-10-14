@@ -3,12 +3,12 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('fonts/Kanit/kanit.woff2') format('woff2');
+  src: url('./fonts/Kanit/kanit.woff2') format('woff2');
 }
 
 @font-face {
   font-family: League Gothic;
-  src: url('fonts/LeagueGothic/LeagueGothic-Italic.otf');
+  src: url('./fonts/LeagueGothic/LeagueGothic-Italic.otf');
   font-style: italic;
 }
 
@@ -87,7 +87,7 @@
     top: 0;
     padding: 1.25rem 1.25rem 2rem;
     width: 100%;
-    background-image: url('../images/home/png/use-tor.png');
+    background-image: url('./images/home/png/use-tor.png');
     background-position: bottom 10% right 35%;
     background-repeat: no-repeat;
     background-size: contain;
