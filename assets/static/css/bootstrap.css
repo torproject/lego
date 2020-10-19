@@ -8056,11 +8056,11 @@ a.side-nav.active {
 
 @font-face {
   font-family: WhiteonBlack;
-  /* https://open-foundry.com/fonts/league_gothic_italic */
+  /* by imagex-fonts.com */
   src: url("./fonts/WhiteonBlack/WhiteOnBlack.ttf"); }
 @font-face {
   font-family: TerminalGrotesque;
-  /* https://open-foundry.com/fonts/league_gothic_italic */
+  /* https://open-foundry.com/fonts/terminal_grotesque_open */
   src: url("./fonts/grotesque/terminal-grotesque_open.otf"); }
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
@@ -8102,7 +8102,7 @@ a.side-nav.active {
 .rectangle {
   background-image: url("./images/home/png/tape.png");
   color: black;
-  padding: 10px;
+  padding: 15px 40px 0px 15px;
   font-size: 2em;
   font-family: "TerminalGrotesque", sans-serif;
   text-decoration: none;
