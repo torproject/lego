@@ -8827,6 +8827,9 @@ a.side-nav.active {
     .donate-page .thank-you .btn {
       text-transform: uppercase; }
 
+.donor-faq li {
+  font-size: 30px; }
+
 .cryptocurrency {
   padding-top: 40px;
   display: flex;
