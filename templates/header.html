@@ -1,13 +1,13 @@
 {% if this.color == 'primary' %}
 <div class="container-fluid bg-primary">
 {% else %}
-<div class="container-fluid bg-dark">
+<div class="container-fluid {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}">
 {% endif %}
   <div class="row flex-xl-nowrap {{ bag('alternatives', this.alt, 'order') }}">
     {% if this.color == 'primary' %}
     <div class="container bg-primary pt-5">
     {% else %}
-    <div class="container bg-dark pt-5">
+    <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %} pt-5">
     {% endif %}
       <div class="row">
         {% if this.html == 'donate-form.html' and this.header_image|length %}
