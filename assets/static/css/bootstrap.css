@@ -7380,6 +7380,9 @@ main {
 .bg-darker {
   background-color: #401753; }
 
+.bg-black {
+  background-color: black; }
+
 /*
  * Typography
  */
