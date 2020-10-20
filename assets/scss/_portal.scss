@@ -37,6 +37,12 @@
   text-align: left;
 }
 
+.nick.text-white {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .description {
   font-family: Source Sans Pro;
   font-size: 18px;
