@@ -8544,7 +8544,7 @@ a.side-nav.active {
     text-transform: uppercase; }
     .donate-form .payment-method-area button {
       text-transform: uppercase;
-      width: 160px;
+      min-width: 160px;
       vertical-align: top;
       line-height: 20px;
       color: #8a2be2;
