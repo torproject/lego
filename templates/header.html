@@ -15,7 +15,8 @@
           <div class="row pb-5">
             <h2 class="mx-auto display-3 text-white text-capitalize donate-title">{{ this.title }}</h2>
             <img src="{{ this.header_image | asseturl }}" class="donate-header-image" />
-            <img src="{{ this.header_image + '-mobile' | asseturl }}" class="donate-header-image-mobile" />
+            {% set header_mobile = this.header_image + "-mobile" %}
+            <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile" />
           </div>
         </div>
         {% else %}

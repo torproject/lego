@@ -8170,13 +8170,23 @@ a.side-nav.active {
   src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
 .donate-has-image .donate-title {
   display: none; }
-@media (min-width: 576px) {
-  .donate-has-image .donate-header-image {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
-    height: auto; } }
+.donate-has-image .donate-header-image-mobile {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: auto; }
+  @media (min-width: 576px) {
+    .donate-has-image .donate-header-image-mobile {
+      display: none; } }
+.donate-has-image .donate-header-image {
+  display: none; }
+  @media (min-width: 576px) {
+    .donate-has-image .donate-header-image {
+      display: block;
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+      height: auto; } }
 
 .header-description {
   margin-bottom: 30px; }
