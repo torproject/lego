@@ -7,7 +7,17 @@
   .donate-title {
     display: none;
   }
+  .donate-has-image-mobile {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
   .donate-header-image {
+    display: none;
     @include media-breakpoint-up(sm) {
       display: block;
       width: 100%;
