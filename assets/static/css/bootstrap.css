@@ -8168,6 +8168,9 @@ a.side-nav.active {
 @font-face {
   font-family: League Gothic;
   src: url("fonts/LeagueGothic/League_Gothic_Regular.woff"); }
+.donate-header-image {
+  width: 100%; }
+
 .donate-has-image .donate-title {
   display: none; }
 .donate-has-image .donate-header-image-mobile {
