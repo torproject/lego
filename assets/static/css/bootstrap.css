@@ -8174,7 +8174,7 @@ a.side-nav.active {
 .donate-has-image .donate-title {
   display: none; }
 .donate-has-image .donate-header-image-mobile {
-  display: block;
+  display: flex;
   width: 100%;
   margin: 0 auto;
   height: auto; }
@@ -8185,11 +8185,15 @@ a.side-nav.active {
   display: none; }
   @media (min-width: 576px) {
     .donate-has-image .donate-header-image {
-      display: block;
+      display: flex;
       width: 100%;
       max-width: 650px;
       margin: 0 auto;
       height: auto; } }
+.donate-has-image img {
+  object-fit: contain;
+  flex-flow: row nowrap;
+  align-items: center; }
 
 .header-description {
   margin-bottom: 30px; }

@@ -11,7 +11,7 @@
     display: none;
   }
   .donate-header-image-mobile {
-    display: block;
+    display: flex;
     width: 100%;
     margin: 0 auto;
     height: auto;
@@ -22,12 +22,17 @@
   .donate-header-image {
     display: none;
     @include media-breakpoint-up(sm) {
-      display: block;
+      display: flex;
       width: 100%;
       max-width: 650px;
       margin: 0 auto;
       height: auto;
     }
+  }
+  img {
+     object-fit: contain;
+     flex-flow: row nowrap;
+     align-items: center;
   }
 }
 
