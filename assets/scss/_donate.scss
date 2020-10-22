@@ -12,9 +12,6 @@
   }
   .donate-header-image-mobile {
     display: flex;
-    width: 100%;
-    margin: 0 auto;
-    height: auto;
     @include media-breakpoint-up(sm) {
       display: none;
     }
@@ -23,15 +20,17 @@
     display: none;
     @include media-breakpoint-up(sm) {
       display: flex;
-      width: 100%;
       max-width: 650px;
-      margin: 0 auto;
-      height: auto;
     }
   }
   img {
+     display: flex;
      object-fit: contain;
      flex-flow: row nowrap;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 auto;
+     height: auto;
      align-items: center;
   }
 }
