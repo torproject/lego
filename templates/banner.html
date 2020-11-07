@@ -28,6 +28,11 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-8 order-0 pb-3">
+            <a href="https://blog.torproject.org/friends-of-tor-match-2020" target="_blank" title="Friends of Tor" class="match">{{ _('Your donation will be matched by Friends of Tor.') }}</a>
+          </div>
+        </div>
+        <div class="row">
           {% set link = bag('links', this.alt, 'donate') %}
           {% if link %}
             <a class="rectangle" href="{{ link }}">{{ _('Donate Now') }}</a>
