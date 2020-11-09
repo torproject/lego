@@ -8123,8 +8123,8 @@ a.side-nav.active {
   background: #000;
   font-family: Courier New, monospace; }
 
-.match:hoover {
-  color: #9D4AE8 !important; }
+.match:hover {
+  color: #9D4AE8; }
 
 .banner__containter {
   position: relative;
