@@ -7,7 +7,7 @@
     {% if this.color == 'primary' %}
     <div class="container bg-primary pt-1 pt-sm-0">
     {% else %}
-    <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}git  pt-5">
+    <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}git py-4">
     {% endif %}
       <div class="row">
         {% if this.html == 'donate-form.html' and this.header_image|length %}
@@ -17,6 +17,11 @@
             {% set idx = this.header_image.index(".png") %}
             {% set header_mobile = this.header_image[:idx] + "-mobile" + this.header_image[idx:] %}
             <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />
+            
+            <div class="text-center py-3">
+              <a href="https://blog.torproject.org/friends-of-tor-match-2020" target="_blank" title="Friends of Tor" class="match">{{ _('Your donation will be matched by Friends of Tor.') }}</a>
+            </div>  
+
         </div>
         {% else %}
         <div class="col-12 content-center pt-5">
