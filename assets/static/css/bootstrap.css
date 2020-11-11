@@ -8118,13 +8118,13 @@ a.side-nav.active {
   text-decoration: none; }
 
 .match {
-  font-size: 16px;
+  font-size: 18px;
   color: #9D4AE8;
   background: #000;
   font-family: Courier New, monospace; }
 
 .match:hover {
-  color: #9D4AE8; }
+  color: #00FF00; }
 
 .banner__containter {
   position: relative;
