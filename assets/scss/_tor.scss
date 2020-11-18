@@ -164,11 +164,11 @@
 
 @font-face {
   font-family: Tor Icons;
-  src: url('fonts/TorIcons/tor-icons.eot?#iefix') format('embedded-opentype'),
-  url('fonts/TorIcons/tor-icons.woff2') format('woff2'),
-  url('fonsts/TorIcons/tor-icons.woff') format('woff'),
-  url('fonts/TorIcons/tor-icons.ttf') format('truetype'),
-  url('fonts/TorIcons/tor-icons.svg?#tor-icons') format('svg');
+  src: url('../static/fonts/TorIcons/tor-icons.eot?#iefix') format('embedded-opentype'),
+  url('../static/fonts/TorIcons/tor-icons.woff2') format('woff2'),
+  url('../static/fonts/TorIcons/tor-icons.woff') format('woff'),
+  url('../static/fonts/TorIcons/tor-icons.ttf') format('truetype'),
+  url('../static/fonts/TorIcons/tor-icons.svg?#tor-icons') format('svg');
 }
 
 .ti:before {
