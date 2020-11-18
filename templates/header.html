@@ -17,11 +17,11 @@
             {% set idx = this.header_image.index(".png") %}
             {% set header_mobile = this.header_image[:idx] + "-mobile" + this.header_image[idx:] %}
             <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />
-            
-            <div class="text-center py-3">
-              <a href="https://blog.torproject.org/friends-of-tor-match-2020" target="_blank" title="Friends of Tor" class="match">{{ _('Your donation will be matched by Friends of Tor, up to $100,000.') }}</a>
-            </div>  
-
+            {% if this.header_tag_line %}
+              <div class="text-center py-3">
+                <a href="{{ this.header_tag_link }}" title="Friends of Tor" class="match">{{ _({{ this.header_tag_line }}) }}</a>
+              </div>
+            {% endif %}
         </div>
         {% else %}
         <div class="col-12 content-center pt-5">
