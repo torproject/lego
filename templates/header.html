@@ -19,7 +19,7 @@
             <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />
             {% if this.header_tag_line %}
               <div class="text-center py-3">
-                <a href="{{ this.header_tag_link.ascii_url | url }}" title="Friends of Tor" class="match">{{ _( this.header_tag_line ) }}</a>
+                <a href="{{ this.header_tag_link.ascii_url }}" title="Friends of Tor" class="match">{{ _( this.header_tag_line ) }}</a>
               </div>
             {% endif %}
         </div>
