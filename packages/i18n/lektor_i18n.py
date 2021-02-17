@@ -271,7 +271,7 @@ class I18NPlugin(Plugin):
                             )
 
             if isinstance(field.type, FlowType):
-                if sections.has_key(field.name):
+                if field.name in sections:
                     section = sections[field.name]
                     for blockname, blockvalue in process_flowblock_data("".join(section)):
                         flowblockmodel = source.pad.db.flowblocks[blockname]
@@ -426,5 +426,3 @@ class I18NPlugin(Plugin):
         for language in self.translations_languages:
             po_file=POFile(language, self.i18npath)
             po_file.generate()
-
-
