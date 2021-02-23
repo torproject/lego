@@ -50,6 +50,18 @@
             </a>
         	</li>
   	{% endfor %}
+    <!--
+            I add some strings here because the i18n plugin does not pick them up from the Databags
+            {{ _('About') }}
+            {{ _('Documentation') }}
+            {{ _('Support') }}
+            {{ _('Community') }}
+            {{ _('Blog') }}
+            {{ _('Jobs') }}
+            {{ _('Contact') }}
+            {{ _('Press') }}
+            {{ _('Donate') }}
+    -->
         </ul>
       </div>
       {% set alts = bag('alternatives').items() %}
