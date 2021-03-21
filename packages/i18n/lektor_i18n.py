@@ -119,7 +119,7 @@ class Translations():
 
         for msg, paths in self.translations.items():
             result += "#: %s\n"%" ".join(paths)
-            for token, repl in {'\n': '\\n', '\t': '\\t', '"': '\\"'}.items():
+            for token, repl in {'\\': '\\\\', '\n': '\\n', '\t': '\\t', '"': '\\"'}.items():
                 msg = msg.replace(token, repl)
             result+='msgid "%s"\n' % msg
             result+='msgstr ""\n\n'
@@ -223,8 +223,36 @@ class I18NPlugin(Plugin):
     name = u'i18n'
     description = u'Internationalisation helper'
 
+    def translate_tag(self, s, *args, **kwargs):
+        if not self.enabled:
+            return s # no operation
+        s = s.strip()
+        ctx = get_ctx()
+        if self.content_language==ctx.locale:
+            translations.add(s,'(dynamic)')
+            reporter.report_debug_info('added to translation memory (dynamic): ', truncate(s))
+            return s
+        else:
+            translator = gettext.translation("contents", join(self.i18npath,'_compiled'), languages=[ctx.locale], fallback = True)
+            return trans(translator, s)
+
+    def choose_language(self, l, language, fallback='en', attribute='language'):
+        """Will return from list 'l' the element with attribute 'attribute' set to given 'language'.
+        If none is found, will try to return element with attribute 'attribute' set to given 'fallback'.
+        Else returns None."""
+        language=language.strip().lower()
+        fallback=fallback.strip().lower()
+        for item in l:
+            if item[attribute].strip().lower()==language:
+                return item
+        # fallback
+        for item in l:
+            if item[attribute].strip().lower()==fallback:
+                return item
+        return None
+
     #pylint: disable=attribute-defined-outside-init
-    def on_setup_env(self):
+    def on_setup_env(self, **extra):
         """Setup `env` for the plugin"""
         # Read configuration
         self.enabled = self.get_config().get('enable', 'true') in ('true','True','1')
@@ -240,7 +268,7 @@ class I18NPlugin(Plugin):
         self.env.jinja_env.add_extension('jinja2.ext.i18n')
         self.env.jinja_env.policies['ext.i18n.trimmed'] = True # do a .strip()
         self.env.jinja_env.install_gettext_translations(TemplateTranslator(self.i18npath))
-        # ToDo: is this stil required
+        # ToDo: is this still required
         try:
             self.translations_languages=self.get_config().get('translations').replace(' ','').split(',')
         except AttributeError:
@@ -249,8 +277,12 @@ class I18NPlugin(Plugin):
         if not self.content_language in self.translations_languages:
             self.translations_languages.append(self.content_language)
 
+        self.env.jinja_env.filters['translate'] = self.translate_tag
+        self.env.jinja_env.globals['_'] = self.translate_tag
+        self.env.jinja_env.globals['choose_language'] = self.choose_language
+
     def process_node(self, fields, sections, source, zone, root_path):
-        """For a give node (), identify all fields to translate, and add new
+        """For a given node (), identify all fields to translate, and add new
         fields to translations memory. Flow blocks are handled recursively."""
         for field in fields:
             if ('translate' in field.options) \
@@ -326,7 +358,7 @@ class I18NPlugin(Plugin):
         return newblocks
 
 
-    def on_before_build(self, builder, build_state, source, prog):
+    def on_before_build(self, builder, build_state, source, prog, **extra):
         """Before building a page, produce all its alternatives (=translated pages)
         using the gettext translations available."""
         if self.enabled and isinstance(source,Page) and source.alt in (PRIMARY_ALT, self.content_language):
@@ -382,7 +414,7 @@ class I18NPlugin(Plugin):
         return '\n\n'.join(result)
 
 
-    def on_after_build(self, builder, build_state, source, prog):
+    def on_after_build(self, builder, build_state, source, prog, **extra):
         if self.enabled and isinstance(source,Page):
             try:
                 text = source.contents.as_text()
