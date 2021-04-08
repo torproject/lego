@@ -426,10 +426,18 @@ class I18NPlugin(Plugin):
                 self.process_node(fields, sections, source, source.datamodel.id, builder.env.root_path)
 
 
+    def get_templates_pot_filename(self):
+        try:
+            return self.pot_templates_filename
+        except AttributeError:
+            self.pot_templates_file = tempfile.NamedTemporaryFile(suffix=".pot",prefix="templates-")
+            self.pot_templates_filename = self.pot_templates_file.name
+            return self.pot_templates_filename
+
     def on_before_build_all(self, builder, **extra):
         if self.enabled:
             reporter.report_generic("i18n activated, with main language %s"% self.content_language )
-            templates_pot_filename = join(tempfile.gettempdir(), 'templates.pot')
+            templates_pot_filename = self.get_templates_pot_filename()
             reporter.report_generic("Parsing templates for i18n into %s" \
                     % relpath(templates_pot_filename, builder.env.root_path))
             translations.parse_templates(templates_pot_filename)
@@ -443,7 +451,7 @@ class I18NPlugin(Plugin):
             return
         contents_pot_filename = join(builder.env.root_path, self.i18npath, 'contents.pot')
         pots = [contents_pot_filename,
-                join(tempfile.gettempdir(), 'templates.pot'),
+                self.get_templates_pot_filename(),
                 join(builder.env.root_path, self.i18npath, 'plugins.pot')]
         # write out contents.pot from web site contents
         translations.write_pot(pots[0], self.content_language)
