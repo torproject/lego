@@ -883,6 +883,18 @@ pre code {
   overflow-y: scroll;
 }
 
+.preamble p {
+    color: #777777;
+    font-family: Source Sans Pro;
+    line-height: 1.3em;
+    font-weight: 300; }
+    @media (max-width: 767px) {
+      .preamble p {
+        font-size: 1.7em; } }
+    @media (min-width: 768px) {
+      .preamble p {
+        font-size: 2em; } }
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -8935,14 +8947,6 @@ footer {
   font-weight: 400;
   line-height: 36px;
   text-align: left;
-}
-
-.preamble p {
-  color: #777777;
-  font-family: Source Sans Pro;
-  font-size: 2em;
-  line-height: 1.3em;
-  font-weight: 300;
 }
 
 .human-name {
