@@ -10,7 +10,7 @@
     <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}git py-4">
     {% endif %}
       <div class="row">
-        {% if this.html == 'donate-form.html' and this.header_image|length %}
+        {% if this._model == 'donate-form' and this.header_image|length %}
         <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
             <h2 class="mx-auto display-3 text-white text-capitalize donate-title">{{ this.title }}</h2>
             <img src="{{ this.header_image | asseturl }}" class="donate-header-image img-fluid" />
