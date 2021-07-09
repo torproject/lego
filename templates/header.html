@@ -38,7 +38,7 @@
           {% else %}
           <div class="row header-description">
           {% endif %}
-            {{ this.header_description }}
+            {% block header_description %}{{ this.header_description }}{% endblock %}
           </div>
         </div>
         {% endif %}
