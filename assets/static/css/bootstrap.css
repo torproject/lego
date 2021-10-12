@@ -10400,8 +10400,8 @@ a.side-nav.active {
 .donate-form .light {
   font-weight: 200;
 }
-.donate-form .lime {
-  color: lime;
+.donate-form .donate-main-color {
+  color: #EFB149;
 }
 .donate-form .required {
   color: #68B030;
@@ -10530,7 +10530,7 @@ a.side-nav.active {
   margin-left: 0;
 }
 .donate-form .donate-options button.selected, .donate-form .donate-options button:hover {
-  background-color: lime;
+  background-color: #EFB149;
 }
 .donate-form .donate-options button.selected {
   color: #000;
@@ -10578,7 +10578,7 @@ a.side-nav.active {
   width: 120px;
 }
 .donate-form .donation-selection-area .donate-buttons .price-btn.selected {
-  background-color: lime;
+  background-color: #EFB149;
   color: #000;
 }
 @media (min-width: 768px) {
@@ -10788,7 +10788,7 @@ a.side-nav.active {
   }
 }
 .donate-form .donation-selection-area .perks .selected {
-  background-color: lime;
+  background-color: #EFB149;
   transition: all 0.5s;
 }
 .donate-form .donation-selection-area .perks .selected .slides {
@@ -10803,7 +10803,7 @@ a.side-nav.active {
 @media (min-width: 768px) {
   .donate-form .donation-selection-area .perks .selected {
     background-color: white;
-    box-shadow: 8px 8px lime;
+    box-shadow: 8px 8px #EFB149;
     position: relative;
     top: -4px;
   }
@@ -10843,7 +10843,7 @@ a.side-nav.active {
   height: 32px;
 }
 .donate-form .payment-method-area button.selected {
-  background-color: lime;
+  background-color: #EFB149;
   color: #000;
 }
 .donate-form .payment-method-area .payment-method-question {
@@ -11016,7 +11016,7 @@ a.side-nav.active {
   line-height: 26px;
 }
 .donate-form .info-area #donate-submit-button button {
-  background-color: lime;
+  background-color: #EFB149;
   color: #000;
   text-transform: uppercase;
   width: 300px;
@@ -11090,7 +11090,7 @@ a.side-nav.active {
   margin-right: 0.5%;
   margin-left: 0.5%;
   border-radius: 20px;
-  background-color: lime;
+  background-color: #EFB149;
   opacity: 0.3;
 }
 .donate-form #loading-dialog .dot:nth-child(0n+1) {
@@ -11154,7 +11154,7 @@ a.side-nav.active {
   font-family: "League Gothic";
 }
 #campaign-totals-area .characters .character .cover {
-  background: lime;
+  background: #EFB149;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -11167,7 +11167,7 @@ a.side-nav.active {
   visibility: visible;
 }
 #campaign-totals-area .characters .character.resolved {
-  color: lime;
+  color: #EFB149;
 }
 #campaign-totals-area .label {
   font-size: 18px;

@@ -1,3 +1,5 @@
+$donate-main-color: #EFB149;
+
 @font-face {
   font-family: League Gothic;
   src: url('fonts/LeagueGothic/League_Gothic_Regular.woff');
@@ -57,8 +59,8 @@
   .light {
     font-weight: 200;
   }
-  .lime {
-    color: lime;
+  .donate-main-color {
+    color: $donate-main-color;
   }
   .required {
     color: $green;
@@ -167,7 +169,7 @@
       }
       &.selected,
       &:hover {
-        background-color: lime;
+        background-color: $donate-main-color;
       }
       &.selected {
         color: $black;
@@ -210,7 +212,7 @@
         text-decoration: none;
         width: 120px;
         &.selected {
-          background-color: lime;
+          background-color: $donate-main-color;
           color: $black;
         }
         @include media-breakpoint-up(md) {
@@ -405,7 +407,7 @@
         }
       }
       .selected {
-        background-color: lime;
+        background-color: $donate-main-color;
         transition: all 0.5s;
         .slides {
           display: block;
@@ -418,7 +420,7 @@
         }
         @include media-breakpoint-up(md) {
           background-color: white;
-          box-shadow: 8px 8px lime;
+          box-shadow: 8px 8px $donate-main-color;
           position: relative;
           top: -4px;
         }
@@ -458,7 +460,7 @@
         }
       }
       &.selected {
-        background-color: lime;
+        background-color: $donate-main-color;
         color: $black;
       }
     }
@@ -612,7 +614,7 @@
     }
     #donate-submit-button {
       button {
-        background-color: lime;;
+        background-color: $donate-main-color;
         color: $black;
         text-transform: uppercase;
         width: 300px;
@@ -697,7 +699,7 @@
       margin-right: 0.5%;
       margin-left: 0.5%;
       border-radius: 20px;
-      background-color: lime;
+      background-color: $donate-main-color;
       opacity: 0.3;
     }
 
@@ -763,7 +765,7 @@
       font-family: "League Gothic";
 
       .cover {
-        background: lime;
+        background: $donate-main-color;
         bottom: 0;
         left: 0;
         position: absolute;
@@ -778,7 +780,7 @@
       }
 
       &.resolved {
-        color: lime;
+        color: $donate-main-color;
       }
     }
   }
