@@ -1,6 +1,11 @@
 @font-face {
-  font-family: WhiteonBlack; /* by imagex-fonts.com */
-  src: url('./fonts/WhiteonBlack/WhiteOnBlack.ttf');
+  font-family: Corben; /* by imagex-fonts.com */
+  src: url('./fonts/Corben/Corben.ttf');
+}
+
+@font-face {
+    font-family: CorbenBold;
+    src: url("./fonts/Corben/Corben-Bold.ttf");
 }
 
 @font-face {
@@ -14,56 +19,66 @@
 
 
 .banner {
-  background-color: #000000;
+  background-color: #D4DFDC;
   z-index: 100000000000000 !important;
   overflow-x: hidden;
 }
 
 .footer__close {
-  height: 3rem;
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 3rem;
-  margin-top: 0rem;
-  margin-right: -2rem;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
   z-index: 1;
   font-weight: bolder;
   visibility: inherit;
 }
 
 .tracking-surveillan {
-  color: white;
-  font-family: "WhiteonBlack", sans-serif;
-  font-size: 50px;
-  text-transform: uppercase;
-  font-synthesis: style;
+  visibility: inherit;
+  background-color: #FAF5DF;
+  border-radius: 6px;
+  color: #05161C !important;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.banner-big-text {
+  color: #002140;
+  font-family: "CorbenBold";
+  font-size: 40px;
   margin: 0;
   width: 70%;
 }
 
-.take-back-the-intern {
-  color: white;
-  font-family: "TerminalGrotesque", monospace;
-  font-size: 25px;
+.banner-small-text {
+  color: #002140;
+  font-family: "Corben";
+  font-size: 22px;
   margin: 10px 0;
   width: 70%;
 }
 
+.banner-img-style {
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .rectangle {
-  background-image: url('./images/home/png/tape.png');
-  color: black;
-  padding: 15px 40px 0px 15px;
-  font-size: 2em;
-  font-family: "TerminalGrotesque", sans-serif;
+  background-color: #EFB149;
+  color: #002140;
+  padding: 15.5px 24px;
+  font-size: 18px;
+  font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
+  border-radius: 100px;
   background-size: cover;
   font-weight: bold;
 }
 
 .rectangle:hover {
-  background-image: url('./images/home/png/tape-purple.png');
-  color: white;
   text-decoration: none;
 }
 
@@ -72,6 +87,8 @@
   color: #9D4AE8;
   background: #000;
   font-family: Courier New, monospace;
+  min-height: 360px;
+  width: 100%;
 }
 
 .match:hover {
@@ -83,12 +100,9 @@
     right: 0;
     left: 0;
     top: 0;
-    padding: 1.25rem 1.25rem 2rem;
+    //padding: 1.25rem 1.25rem 2rem;
+    padding: 1.25rem 1.25rem 0;
     width: 100%;
-    background-image: url('./images/home/png/use-tor.png');
-    background-position: bottom 10% right 35%;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .eoy-sr-only {
@@ -111,10 +125,10 @@
   visibility: hidden;
 }
 @include media-breakpoint-down(xs) {
-  .tracking-surveillan{
+  .banner-big-text {
     width: 100%;
   }
-  .take-back-the-intern {
+  .banner-small-text {
     width: 100%;
     font-size: 2rem;
   }
