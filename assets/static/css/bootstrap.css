@@ -10232,10 +10232,6 @@ a.side-nav.active {
   z-index: 1;
   font-weight: bolder;
   visibility: inherit;
-}
-
-.tracking-surveillan {
-  visibility: inherit;
   background-color: #FAF5DF;
   border-radius: 6px;
   color: #05161C !important;
@@ -10260,11 +10256,17 @@ a.side-nav.active {
 }
 
 .banner-img-style {
-  max-width: 100%;
-  position: absolute;
-  bottom: 0;
+  max-width: 110%;
 }
 
+@media (min-width: 768px) and (max-width: 1255px) {
+  .banner-img-style {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    max-width: 130%;
+  }
+}
 .rectangle {
   background-color: #EFB149;
   color: #002140;
