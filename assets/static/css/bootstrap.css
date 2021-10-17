@@ -10217,6 +10217,10 @@ a.side-nav.active {
   padding-top: 0 !important;
 }
 
+.bg-donate {
+  background-color: #D4DFDC;
+}
+
 .banner {
   background-color: #D4DFDC;
   z-index: 100000000000000 !important;
