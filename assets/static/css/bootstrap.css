@@ -10366,11 +10366,6 @@ a.side-nav.active {
 .donate-has-image .donate-header-image-mobile {
   display: flex;
 }
-@media (min-width: 576px) {
-  .donate-has-image .donate-header-image-mobile {
-    display: none;
-  }
-}
 .donate-has-image .donate-header-image {
   display: none;
 }
