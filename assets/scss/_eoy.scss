@@ -45,7 +45,7 @@
   font-family: "CorbenBold";
   font-size: 40px;
   margin: 0;
-  width: 70%;
+  width: 80%;
 }
 
 .banner-small-text {
@@ -58,6 +58,15 @@
 
 .banner-img-style {
   max-width: 110%;
+  position: relative;
+  left: -5%; // Off-center isn't good
+}
+
+@media (min-width: 768px) and (max-width: 1200px) { //Why do you force me to do it manually CSS/Bootstrap?
+	.banner-img-style {
+		left: -50% !important;
+		max-width: 170% !important;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1255px) {
@@ -68,6 +77,7 @@
 		max-width: 130%
 	}
 }
+
 
 .rectangle {
   background-color: #EFB149;

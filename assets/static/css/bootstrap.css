@@ -10244,7 +10244,7 @@ a.side-nav.active {
   font-family: "CorbenBold";
   font-size: 40px;
   margin: 0;
-  width: 70%;
+  width: 80%;
 }
 
 .banner-small-text {
@@ -10257,8 +10257,16 @@ a.side-nav.active {
 
 .banner-img-style {
   max-width: 110%;
+  position: relative;
+  left: -5%;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .banner-img-style {
+    left: -50% !important;
+    max-width: 170% !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 1255px) {
   .banner-img-style {
     position: absolute;
