@@ -65,22 +65,29 @@
   left: -5%; // Off-center isn't good
 }
 
-@media (min-width: 768px) and (max-width: 1200px) { //Why do you force me to do it manually CSS/Bootstrap?
+@media (min-width: 768px) and (max-width: 1099px) { //Why do you force me to do it manually CSS/Bootstrap?
 	.banner-img-style {
+		position: absolute;
+		bottom: 0;
 		left: -50% !important;
 		max-width: 170% !important;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1255px) {
+@media (min-width: 1100px) and (max-width: 1255px) {
 	.banner-img-style {
-		position: absolute;
 		bottom: 0;
-		left: -20%;
-		max-width: 130%
+		left: -30%;
+		max-width: 140%;
 	}
 }
 
+@media (min-width: 1256px) and (max-width: 1400px) {
+	.banner-img-style {
+		left: -30%;
+		max-width: 130%
+	}
+}
 
 .rectangle {
   background-color: #EFB149;

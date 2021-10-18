@@ -10265,17 +10265,24 @@ a.side-nav.active {
   left: -5%;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1099px) {
   .banner-img-style {
+    position: absolute;
+    bottom: 0;
     left: -50% !important;
     max-width: 170% !important;
   }
 }
-@media (min-width: 768px) and (max-width: 1255px) {
+@media (min-width: 1100px) and (max-width: 1255px) {
   .banner-img-style {
-    position: absolute;
     bottom: 0;
-    left: -20%;
+    left: -30%;
+    max-width: 140%;
+  }
+}
+@media (min-width: 1256px) and (max-width: 1400px) {
+  .banner-img-style {
+    left: -30%;
     max-width: 130%;
   }
 }
