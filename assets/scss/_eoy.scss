@@ -123,8 +123,11 @@
     right: 0;
     left: 0;
     top: 0;
-    padding: 1.25rem 1.25rem 0;
     width: 100%;
+}
+
+.banner-padding {
+    padding: 1.25rem 1.25rem 0;
 }
 
 .eoy-sr-only {
@@ -142,7 +145,7 @@
   left: -9999px;
 }
 
-#trigger:checked ~  #banner-header, .banner__containter > #trigger:checked, #trigger:checked + label {
+#trigger:checked ~ #banner-padding, .banner__containter > #trigger:checked, #trigger:checked + label {
   display: none;
   visibility: hidden;
 }
