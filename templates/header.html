@@ -1,3 +1,6 @@
+{% if this._model == 'donate-form' and this.header_image|length %}
+  {% include 'banner.html' %}
+{% else %}
 {% if this.color == 'primary' %}
 <div class="container-fluid bg-primary">
 {% else %}
@@ -11,8 +14,7 @@
     {% endif %}
       <div class="row">
         {% if this._model == 'donate-form' and this.header_image|length %}
-	  {% include 'banner.html' %}
-	  {# <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
+	  <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
             <h2 class="mx-auto display-3 text-white text-capitalize donate-title">{{ this.title }}</h2>
             <img src="{{ '/static/css/images/home/png/yec-activist-light-en@3x.png' | asseturl }}" class="donate-header-image img-fluid" />
             <!--{% set idx = this.header_image.index(".png") %}
@@ -23,7 +25,7 @@
                 <a href="{{ this.header_tag_link.ascii_url }}" title="Friends of Tor" class="match">{{ _( this.header_tag_line ) }}</a>
               </div>
             {% endif %}
-	</div> #}
+	</div>
         {% else %}
         <div class="col-12 content-center pt-5">
           <div class="row">
@@ -49,4 +51,5 @@
 </div>
 {% if this.section_id == 'about' %}
   {% include 'pagenav.html' %}
+{% endif %}
 {% endif %}
