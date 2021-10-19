@@ -30,19 +30,17 @@
             {% if this._model == 'donate-form' %}
 	      <a class="rectangle" href="#giving-form">{{ _('Donate now') }}</a>
 	    {% else %}
-              {% set link = bag('links', this.alt, 'donate') %}
-              {% if link %}
-              <a class="rectangle" href="{{ link }}">{{ _('Donate now') }}</a>
-              {% else %}
-              <a class="rectangle" href="https://torproject.org/donate/donate-usetor-hp1">{{ _('DONATE NOW') }}</a>
-              {% endif %}
+              <a class="rectangle" href="https://torproject.org/donate/donate-phr-hp1">{{ _('Donate now') }}</a>
 	    {% endif %}
           </div>
         </div>
       </div>
       <div class="col-1 px-0"></div>
       <div class="col-lg-4 col-md-4 col-10 pt-0 px-0 illo-container position-relative">
-	      <img class="banner-img-style" src="{{ '/static/css/images/home/png/yec-activist-light-en@3x.png'|asseturl }}">
+        <picture class="banner-img-style">
+          <source srcset="{{ '/static/css/images/home/png/yec-activist-light-{% this.alt %}@3x.png'|asseturl }}">
+	  <img src="{{ '/static/css/images/home/png/yec-activist-light-en@3x.png'|asseturl }}">
+	</picture>
       </div>
       <div class="col-1 px-0"></div>
     </div>
