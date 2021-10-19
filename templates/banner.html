@@ -27,12 +27,16 @@
                </div>
                </div> -->
 	        <div class="row py-3">
-            {% set link = bag('links', this.alt, 'donate') %}
-            {% if link %}
-            <a class="rectangle" href="{{ link }}">{{ _('Donate now') }}</a>
-            {% else %}
-            <a class="rectangle" href="https://torproject.org/donate/donate-usetor-hp1">{{ _('DONATE NOW') }}</a>
-            {% endif %}
+            {% if this._model == 'donate-form' %}
+	      <a class="rectangle" href="#giving-form">{{ _('Donate now') }}</a>
+	    {% else %}
+              {% set link = bag('links', this.alt, 'donate') %}
+              {% if link %}
+              <a class="rectangle" href="{{ link }}">{{ _('Donate now') }}</a>
+              {% else %}
+              <a class="rectangle" href="https://torproject.org/donate/donate-usetor-hp1">{{ _('DONATE NOW') }}</a>
+              {% endif %}
+	    {% endif %}
           </div>
         </div>
       </div>
