@@ -41,6 +41,13 @@
   color: #05161C !important;
   font-size: 1.3em;
   text-align: center;
+  background-image: url(./images/x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__close:hover {
+  background-color: #EFB149;
 }
 
 .banner-big-text {
@@ -57,6 +64,15 @@
   font-size: 22px;
   margin: 10px 0;
   width: 70%;
+}
+
+@include media-breakpoint-down(sm) {
+  .banner-small-text {
+    font-size: 20px;
+  }
+  .banner-big-text {
+    font-size: 30px;
+  }
 }
 
 .banner-img-style {
@@ -102,6 +118,7 @@
 }
 
 .rectangle:hover {
+  background-color: #E98346;
   text-decoration: none;
 }
 
@@ -155,7 +172,6 @@
   }
   .banner-small-text {
     width: 100%;
-    font-size: 2rem;
   }
 
   .banner__containter {
