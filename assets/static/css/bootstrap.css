@@ -10454,7 +10454,7 @@ a.side-nav.active {
 .donate-form .field.cvc:focus,
 .donate-form textarea:focus {
   border-color: #59316B;
-  color: #8a2be2;
+  color: #7D4698;
   outline: none;
 }
 .donate-form textarea {
@@ -10481,7 +10481,7 @@ a.side-nav.active {
 }
 .donate-form select:focus {
   border-color: #59316B;
-  color: #8a2be2;
+  color: #7D4698;
   outline: none;
 }
 .donate-form .field-row {
@@ -10512,7 +10512,7 @@ a.side-nav.active {
   font-size: 20px;
   background-color: white;
   border: 2px solid #848E97;
-  color: #8a2be2;
+  color: #7D4698;
   font-weight: normal;
   display: block;
   text-align: center;
@@ -10564,7 +10564,7 @@ a.side-nav.active {
 }
 .donate-form .donation-selection-area .donate-buttons .price-btn {
   line-height: 20px;
-  background-color: #8a2be2;
+  background-color: #7D4698;
   border-radius: 5px;
   border-style: none;
   color: white;
@@ -10829,7 +10829,7 @@ a.side-nav.active {
   min-width: 160px;
   vertical-align: top;
   line-height: 20px;
-  color: #8a2be2;
+  color: #7D4698;
   border-radius: 5px;
   padding: 14px 10px;
   font-size: 20px;

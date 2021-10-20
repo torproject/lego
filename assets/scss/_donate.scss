@@ -94,7 +94,7 @@ $donate-main-color: #EFB149;
     }
     &:focus {
       border-color: $purple-dark;
-      color: $blue-violet;
+      color: $bd-purple;
       outline: none;
     }
   }
@@ -121,7 +121,7 @@ $donate-main-color: #EFB149;
     }
     &:focus {
       border-color: $purple-dark;
-      color: $blue-violet;
+      color: $bd-purple;
       outline: none;
     }
   }
@@ -151,7 +151,7 @@ $donate-main-color: #EFB149;
       font-size: 20px;
       background-color: white;
       border: 2px solid $gray-600;
-      color: $blue-violet;
+      color: $bd-purple;
       font-weight: normal;
       display: block;
       text-align: center;
@@ -199,7 +199,7 @@ $donate-main-color: #EFB149;
       }
       .price-btn {
         line-height: 20px;
-        background-color: $blue-violet;
+        background-color: $bd-purple;
         border-radius: 5px;
         border-style: none;
         color: white;
@@ -447,7 +447,7 @@ $donate-main-color: #EFB149;
       min-width: 160px;
       vertical-align: top;
       line-height: 20px;
-      color: $blue-violet;
+      color: $bd-purple;
       border-radius: 5px;
       padding: 14px 10px;
       font-size: 20px;
