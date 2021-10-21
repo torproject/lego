@@ -1,9 +1,9 @@
 {% set locale = bag('alternatives', this.alt) %}
 <div class="banner__containter banner align-middle d-flex justify-content-center">
   <input id="trigger" type="checkbox" title="{{ _('Close banner') }}" />
-  <label for="trigger" class="footer__close text-white">X</label>
+  <label for="trigger" class="footer__close text-white"></label>
   <span class="eoy-sr-only text-white">{{ _('Close banner') }}</span>
-  <div class="eoy-banner row col-md-12 pt-5" id="banner-header" role="contentinfo">
+  <div class="eoy-banner row col-md-12" id="banner-header" role="contentinfo">
     <div class="col-1 px-0"></div>
     <div class="col-lg-5 col-md-5 col-11 px-0">
       <div class="col-12 pl-0 {{ locale.direction }}">
@@ -27,18 +27,21 @@
                </div>
                </div> -->
 	        <div class="row py-3">
-            {% set link = bag('links', this.alt, 'donate') %}
-            {% if link %}
-            <a class="rectangle" href="{{ link }}">{{ _('Donate now') }}</a>
-            {% else %}
-            <a class="rectangle" href="https://torproject.org/donate/donate-usetor-hp1">{{ _('DONATE NOW') }}</a>
-            {% endif %}
+            {% if this._model == 'donate-form' %}
+	      <a class="rectangle" href="#giving-form">{{ _('Donate now') }}</a>
+	    {% else %}
+              <a class="rectangle" href="https://torproject.org/donate/donate-phr-hp1">{{ _('Donate now') }}</a>
+	    {% endif %}
           </div>
         </div>
       </div>
       <div class="col-1 px-0"></div>
-      <div class="col-lg-4 col-md-4 col-10 px-0 position-relative">
-	      <img class="banner-img-style" src="/static/css/images/home/png/yec-activist-light-en.png">
+      <div class="col-lg-4 col-md-4 col-10 pt-0 px-0 illo-container position-relative">
+        <picture>
+          {% set image = '/static/css/images/home/png/yec-activist-' + this.alt + '@3x.png' %}
+          <source srcset="{{ image|asseturl }}">
+	  <img class="banner-img-style" src="{{ '/static/css/images/home/png/yec-activist-en@3x.png'|asseturl }}">
+	</picture>
       </div>
       <div class="col-1 px-0"></div>
     </div>

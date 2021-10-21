@@ -10217,6 +10217,10 @@ a.side-nav.active {
   padding-top: 0 !important;
 }
 
+.bg-donate {
+  background-color: #D4DFDC;
+}
+
 .banner {
   background-color: #D4DFDC;
   z-index: 100000000000000 !important;
@@ -10232,15 +10236,18 @@ a.side-nav.active {
   z-index: 1;
   font-weight: bolder;
   visibility: inherit;
-}
-
-.tracking-surveillan {
-  visibility: inherit;
   background-color: #FAF5DF;
   border-radius: 6px;
   color: #05161C !important;
   font-size: 1.3em;
   text-align: center;
+  background-image: url(./images/x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__close:hover {
+  background-color: #EFB149;
 }
 
 .banner-big-text {
@@ -10248,7 +10255,7 @@ a.side-nav.active {
   font-family: "CorbenBold";
   font-size: 40px;
   margin: 0;
-  width: 70%;
+  width: 80%;
 }
 
 .banner-small-text {
@@ -10259,12 +10266,42 @@ a.side-nav.active {
   width: 70%;
 }
 
+@media (max-width: 767px) {
+  .banner-small-text {
+    font-size: 20px;
+  }
+
+  .banner-big-text {
+    font-size: 30px;
+  }
+}
 .banner-img-style {
-  max-width: 100%;
-  position: absolute;
-  bottom: 0;
+  max-width: 110%;
+  position: relative;
+  left: -5%;
 }
 
+@media (min-width: 768px) and (max-width: 1099px) {
+  .banner-img-style {
+    position: absolute;
+    bottom: 0;
+    left: -50% !important;
+    max-width: 170% !important;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1255px) {
+  .banner-img-style {
+    bottom: 0;
+    left: -30%;
+    max-width: 140%;
+  }
+}
+@media (min-width: 1256px) and (max-width: 1400px) {
+  .banner-img-style {
+    left: -30%;
+    max-width: 130%;
+  }
+}
 .rectangle {
   background-color: #EFB149;
   color: #002140;
@@ -10278,6 +10315,7 @@ a.side-nav.active {
 }
 
 .rectangle:hover {
+  background-color: #E98346;
   text-decoration: none;
 }
 
@@ -10299,8 +10337,11 @@ a.side-nav.active {
   right: 0;
   left: 0;
   top: 0;
-  padding: 1.25rem 1.25rem 0;
   width: 100%;
+}
+
+.eoy-banner {
+  padding: 4.25rem 2rem 0 !important;
 }
 
 .eoy-sr-only {
@@ -10330,7 +10371,6 @@ a.side-nav.active {
 
   .banner-small-text {
     width: 100%;
-    font-size: 2rem;
   }
 
   .banner__containter {
@@ -10351,11 +10391,6 @@ a.side-nav.active {
 }
 .donate-has-image .donate-header-image-mobile {
   display: flex;
-}
-@media (min-width: 576px) {
-  .donate-has-image .donate-header-image-mobile {
-    display: none;
-  }
 }
 .donate-has-image .donate-header-image {
   display: none;
