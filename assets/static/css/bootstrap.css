@@ -10084,6 +10084,12 @@ size .no {
   z-index: 999;
 }
 
+@media (max-width: 991px) {
+  .d-sm-block .sticky {
+    position: static !important;
+  }
+}
+
 @media (max-width: 767px) {
   .mobile {
     display: block !important;
