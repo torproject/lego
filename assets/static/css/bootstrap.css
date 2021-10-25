@@ -10276,6 +10276,7 @@ a.side-nav.active {
   }
 }
 .banner-img-style {
+  width: auto !important;
   max-width: 110%;
   position: relative;
   left: -5%;
