@@ -14,7 +14,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: $zindex-dropdown;
+  z-index: 1030; //$zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
