@@ -14,7 +14,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1030; //$zindex-dropdown;
+  z-index: 1030; // Replaced $zindex-dropdown because it put it under the about/ menu, see #246;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
