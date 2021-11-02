@@ -133,6 +133,8 @@ class Translations():
 
     def merge_pot(self, from_filenames, to_filename):
         msgcat=locate_executable('msgcat')
+        if msgcat is None:
+            msgcat="/usr/bin/msgcat"
         cmdline=[msgcat, "--use-first"]
         cmdline.extend(from_filenames)
         cmdline.extend(("-o", to_filename))
@@ -141,6 +143,8 @@ class Translations():
 
     def parse_templates(self, to_filename):
         pybabel=locate_executable('pybabel')
+        if pybabel is None:
+            pybabel="/usr/bin/pybabel"
         cmdline=[pybabel, 'extract', '-F', 'babel.cfg', "-o", to_filename, "./"]
         reporter.report_debug_info('pybabel cmd line', cmdline)
         portable_popen(cmdline).wait()
