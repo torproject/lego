@@ -1,6 +1,3 @@
-{% if this._model == 'donate-form' and this.header_image|length %}
-  {% include 'banner.html' %}
-{% else %}
 {% if this.color == 'primary' %}
 <div class="container-fluid bg-primary">
 {% else %}
@@ -10,29 +7,29 @@
     {% if this.color == 'primary' %}
     <div class="container bg-primary pt-1 pt-sm-0">
     {% else %}
-    <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}git {% if this._model == 'donate-form' %} pt-4 px-4 {% else %} py-4 {% endif %}">
+    <div class="container {% if this.header_color %} bg-{{ this.header_color }} {% else %} bg-dark {% endif %}git py-4">
     {% endif %}
       <div class="row">
         {% if this._model == 'donate-form' and this.header_image|length %}
-	  <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
-            <h2 class="mx-auto display-3 text-white donate-title">{{ this.title }}</h2>
-            <img src="{{ '/static/css/images/home/png/yec-activist-light-en@3x.png' | asseturl }}" class="donate-header-image img-fluid" />
-            <!--{% set idx = this.header_image.index(".png") %}
+        <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
+            <h2 class="mx-auto display-3 text-white text-capitalize donate-title">{{ this.title }}</h2>
+            <img src="{{ this.header_image | asseturl }}" class="donate-header-image img-fluid" />
+            {#% set idx = this.header_image.index(".png") %}
             {% set header_mobile = this.header_image[:idx] + "-mobile" + this.header_image[idx:] %}
-	    <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />-->
+            <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />#}
             {% if this.header_tag_line %}
               <div class="text-center py-3">
                 <a href="{{ this.header_tag_link.ascii_url }}" title="Friends of Tor" class="match">{{ _( this.header_tag_line ) }}</a>
               </div>
             {% endif %}
-	</div>
+        </div>
         {% else %}
         <div class="col-12 content-center pt-5">
           <div class="row">
-            <h6 class="mx-auto text-white">{% block section %}{{ this.section }}{% endblock %}</h6>
+            <h6 class="mx-auto text-white text-capitalize">{% block section %}{{ this.section }}{% endblock %}</h6>
           </div>
           <div class="row pb-5">
-            <h2 class="mx-auto display-3 text-white">{% block title %}{{ this.title }}{% endblock %}</h2>
+            <h2 class="mx-auto display-3 text-white text-capitalize">{% block title %}{{ this.title }}{% endblock %}</h2>
           </div>
           {% if this.header_description_alignment == 'center' %}
           <div class="row text-center header-description">
@@ -51,5 +48,4 @@
 </div>
 {% if this.section_id == 'about' %}
   {% include 'pagenav.html' %}
-{% endif %}
 {% endif %}
