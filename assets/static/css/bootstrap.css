@@ -9199,7 +9199,7 @@ main {
  */
 /* Move down content because we have a fixed navbar that is 10rem tall */
 .page {
-  padding-top: 2em;
+  padding-top: 0 !important;
 }
 
 /* Reset */
