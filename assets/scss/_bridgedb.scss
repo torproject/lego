@@ -1,0 +1,158 @@
+#bridgedb-advanced-options {
+    margin-top: 5%;
+    background-color: #f9fafb;
+    padding: 3%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+
+    input[type=submit] {
+        background-color: var(--purple);
+        border: none;
+        width: auto;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    h3 {
+        padding: 0;
+        color: black;
+    }
+}
+#just-give-me-bridges-btn {
+    text-decoration: none;
+    width: auto;
+    background-color: var(--purple);
+    border: none;
+}
+.bridgedb-form-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: start;
+    padding-bottom: 1rem;
+
+    div {
+        display: inline-block;
+
+        &:not(:last-child) {
+            padding-right: 1rem;
+        }
+
+        &:last-child {
+            padding-left: 1rem;
+        }
+    }
+}
+.fs-2r {
+    font-size: 2rem;
+}
+#bridges-button-container {
+    display: inline-block;
+    width: auto;
+
+    :hover {
+        cursor: pointer;
+    }
+}
+.margin-4r-0 {
+    margin: 4rem 0;
+}
+#bridgedb-support-header {
+    color: #848e97;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+#bridgelines {
+    overflow-x: auto;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: nowrap;
+    background-color: #f9fafb;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+#bridgedb-qrcodebtn {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+}
+#bridgedb-selectbtn {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.bridgedb-modal.visible {
+    display: block !important;
+}
+#container-bridges {
+    display: none;
+}
+#bridgedb-captcha {
+    display: flex;
+    width: fit-content;
+
+    img {
+        margin: 0 auto;
+    }
+}
+div#bridgedb-captcha-container {
+    width: fit-content;
+    margin: 0 auto 5%;
+    position: relative;
+
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        input[type=text] {
+            flex-grow: 1;
+        }
+    }
+}
+#bridgedb-captcha-submit {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 10%;
+}
+#bridgedb-captcha-input {
+    border-radius: 0;
+}
+#bridgedb-steps-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between !important;
+
+    section {
+        border: 1px solid lightgray;
+        border-radius: 0.25rem;
+        width: 30%;
+
+        a {
+            width: 100%;
+            font-weight: bold;
+        }
+    }
+}
+#bridgedb-homepage-intro * {
+    color: gray;
+}
+#bridgedb-support-body h3 {
+    color: var(--purple);
+}
+#bridgedb-pathbar {
+    background-color: #f8f9fa;
+    padding: 0.75em 1.75em;
+}
+#bridgedb-pathbar-sep {
+    margin: 0 0.5em;
+
+    &::after {
+        content: "/";
+    }
+}
+#bridgedb-pathbar-sep-container {
+    color: #848e97;
+}
