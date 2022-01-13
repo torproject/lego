@@ -11112,6 +11112,7 @@ a.side-nav.active {
   padding: 5px 5px 2px 5px;
   margin: 0;
   z-index: 100;
+  cursor: pointer;
 }
 .cryptocurrency .copy-button:focus {
   outline: none;
