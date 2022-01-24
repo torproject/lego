@@ -10085,7 +10085,7 @@ size .no {
 }
 
 @media (max-width: 991px) {
-  .d-sm-block .sticky {
+  .d-sm-block.sticky {
     position: static !important;
   }
 }

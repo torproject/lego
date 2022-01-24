@@ -720,7 +720,7 @@ table {
 }
 
 @include media-breakpoint-down(md) {
-  .d-sm-block .sticky {
+  .d-sm-block.sticky {
     position: static !important;
   }
 }
