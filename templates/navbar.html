@@ -1,3 +1,10 @@
+{% if envvars('IS_REVIEW_APP') %}
+<div>
+  <h1>
+    {{ md(_('**ATTENTION: This is a staging site. If you want to see the current version of this page, [click here]') + '(' + site.config['PROJECT']['url'].rstrip('/') + this.url_path + ')**') }}
+  </h1>
+</div>
+{% endif %}
 {% if not this.color %}
 <div class="container-fluid bg-primary">
   <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
