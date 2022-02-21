@@ -9329,27 +9329,27 @@ main {
  */
 @font-face {
   font-family: Source Sans Pro;
-  src: url("fonts/SourceSansPro/SourceSansPro-Regular.ttf");
+  src: url("../fonts/SourceSansPro/SourceSansPro-Regular.ttf");
 }
 @font-face {
   font-family: Source Sans Pro Light;
-  src: url("fonts/SourceSansPro/SourceSansPro-Light.ttf");
+  src: url("../fonts/SourceSansPro/SourceSansPro-Light.ttf");
 }
 @font-face {
   font-family: Source Sans Pro Bold;
-  src: url("fonts/SourceSansPro/SourceSansPro-Bold.ttf");
+  src: url("../fonts/SourceSansPro/SourceSansPro-Bold.ttf");
 }
 @font-face {
   font-family: Source Serif Pro;
-  src: url("fonts/SourceSerifPro/SourceSerifPro-Regular.ttf");
+  src: url("../fonts/SourceSerifPro/SourceSerifPro-Regular.ttf");
 }
 @font-face {
   font-family: Source Code Pro;
-  src: url("fonts/SourceCodePro/SourceCodePro-Regular.ttf");
+  src: url("../fonts/SourceCodePro/SourceCodePro-Regular.ttf");
 }
 @font-face {
   font-family: Tor Icons;
-  src: url("../static/fonts/TorIcons/tor-icons.eot?#iefix") format("embedded-opentype"), url("../static/fonts/TorIcons/tor-icons.woff2") format("woff2"), url("../static/fonts/TorIcons/tor-icons.woff") format("woff"), url("../static/fonts/TorIcons/tor-icons.ttf") format("truetype"), url("../static/fonts/TorIcons/tor-icons.svg?#tor-icons") format("svg");
+  src: url("../fonts/TorIcons/tor-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/TorIcons/tor-icons.woff2") format("woff2"), url("../fonts/TorIcons/tor-icons.woff") format("woff"), url("../fonts/TorIcons/tor-icons.ttf") format("truetype"), url("../fonts/TorIcons/tor-icons.svg?#tor-icons") format("svg");
 }
 .ti:before {
   font-family: Tor Icons !important;
@@ -10205,7 +10205,7 @@ a.side-nav.active {
 
 @font-face {
   font-family: League Gothic;
-  src: url("fonts/LeagueGothic/League_Gothic_Regular.woff");
+  src: url("../fonts/LeagueGothic/League_Gothic_Regular.woff");
 }
 .donate-header-image {
   width: 100%;
