@@ -1,16 +1,16 @@
 @font-face {
   font-family: Corben; /* by imagex-fonts.com */
-  src: url('./fonts/Corben/Corben.ttf');
+  src: url('../fonts/Corben/Corben.ttf');
 }
 
 @font-face {
     font-family: CorbenBold;
-    src: url("./fonts/Corben/Corben-Bold.ttf");
+    src: url("../fonts/Corben/Corben-Bold.ttf");
 }
 
 @font-face {
   font-family: TerminalGrotesque; /* https://open-foundry.com/fonts/terminal_grotesque_open */
-  src: url('./fonts/grotesque/terminal-grotesque_open.otf');
+  src: url('../fonts/grotesque/terminal-grotesque_open.otf');
 }
 
 /* Don't move down content w banner. Navbar isn't fixed. */
