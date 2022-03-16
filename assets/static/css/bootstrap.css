@@ -9510,7 +9510,7 @@ main {
 }
 
 .font-weight-light {
-  font-family: Source Sans Pro Light;
+  font-family: "Source Sans Pro Light", sans-serif;
 }
 
 .font-weight-bold {
