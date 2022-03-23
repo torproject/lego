@@ -14,9 +14,9 @@ $donate-main-color: #49CBB7;
   }
   .donate-header-image-mobile {
     display: flex;
-    //@include media-breakpoint-up(sm) {
-    //  display: none;
-    //}
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
   }
   .donate-header-image {
     display: none;
