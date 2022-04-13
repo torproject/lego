@@ -14,9 +14,9 @@
         <div class="col-12 content-center pt-1 pt-sm-0 donate-has-image">
             <h2 class="mx-auto display-3 text-white text-capitalize donate-title">{{ this.title }}</h2>
             <img src="{{ this.header_image | asseturl }}" class="donate-header-image img-fluid" />
-            {#% set idx = this.header_image.index(".png") %}
+            {% set idx = this.header_image.index(".png") %}
             {% set header_mobile = this.header_image[:idx] + "-mobile" + this.header_image[idx:] %}
-            <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />#}
+            <img src="{{ header_mobile | asseturl }}" class="donate-header-image-mobile img-fluid" />
             {% if this.header_tag_line %}
               <div class="text-center py-3">
                 <a href="{{ this.header_tag_link.ascii_url }}" title="Friends of Tor" class="match">{{ _( this.header_tag_line ) }}</a>
