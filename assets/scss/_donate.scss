@@ -8,6 +8,11 @@ $donate-main-color: #49CBB7;
   width: 100%;
 }
 
+/* without this, faq questions with lists have a larger font then the rest of the page*/
+ol.questions div.answer li {
+  font-size: 1.3rem;
+}
+
 .donate-has-image {
   .donate-title {
     display: none;
