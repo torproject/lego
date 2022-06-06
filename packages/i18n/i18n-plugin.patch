@@ -1,0 +1,17 @@
+diff --git a/packages/i18n/lektor_i18n.py b/packages/i18n/lektor_i18n.py
+index a0ac284..80074c4 100644
+--- a/packages/i18n/lektor_i18n.py
++++ b/packages/i18n/lektor_i18n.py
+@@ -399,7 +399,11 @@ class I18NPlugin(Plugin):
+         lines = []
+         for line in content.split('\n'):
+             line_stripped = line.strip()
+-            trans_stripline = trans(translator, line_stripped) # trnanslate the stripped version
++            # translating the empty string will produce a POT header instead of an empty string
++            if len(line_stripped) == 0:
++                trans_tripline = ''
++            else:
++                trans_stripline = trans(translator, line_stripped) # trnanslate the stripped version
+             # and re-inject the stripped translation into original line (not stripped)
+             lines.append(line.replace(line_stripped,
+                         trans_stripline, 1))
