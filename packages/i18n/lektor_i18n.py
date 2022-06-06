@@ -399,11 +399,7 @@ class I18NPlugin(Plugin):
         lines = []
         for line in content.split('\n'):
             line_stripped = line.strip()
-            # translating the empty string will produce a POT header instead of an empty string
-            if len(line_stripped) == 0:
-                trans_tripline = ''
-            else:
-                trans_stripline = trans(translator, line_stripped) # trnanslate the stripped version
+            trans_stripline = trans(translator, line_stripped) # trnanslate the stripped version
             # and re-inject the stripped translation into original line (not stripped)
             lines.append(line.replace(line_stripped,
                         trans_stripline, 1))
