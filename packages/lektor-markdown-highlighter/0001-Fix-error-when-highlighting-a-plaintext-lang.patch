@@ -1,0 +1,28 @@
+From c505bb3b25fdb5791a6a2933f3bd394788d8a34e Mon Sep 17 00:00:00 2001
+From: kez <kez@torproject.org>
+Date: Wed, 29 Jun 2022 13:22:56 -0700
+Subject: [PATCH] Fix error when highlighting a plaintext `lang`
+
+A code block with no specified lexer name is given a `lang` of
+'plaintext'. Attempting to highlight a plaintext lang block causes an
+error in the lektor build process.
+---
+ lektor_markdown_highlighter.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lektor_markdown_highlighter.py b/lektor_markdown_highlighter.py
+index 3876b84..3ffeec7 100644
+--- a/lektor_markdown_highlighter.py
++++ b/lektor_markdown_highlighter.py
+@@ -26,7 +26,7 @@ class MarkdownHighlighterPlugin(Plugin):
+     def on_markdown_config(self, config, **extra):
+         class HighlightMixin(object):
+             def block_code(ren, text, lang=None):
+-                if not lang:
++                if not lang or lang == 'plaintext':
+                     return super(HighlightMixin, ren).block_code(text, lang)
+                 return self.highlight_code(text, lang)
+         config.renderer_mixins.append(HighlightMixin)
+-- 
+2.35.3
+
