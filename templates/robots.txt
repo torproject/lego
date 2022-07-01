@@ -9,11 +9,13 @@ Disallow: /static/*
 {#- the '\n' is because we need a newline,
 but we need to strip trailing and leading whitespace as well.
 fragile, be careful #}
-{% for user_agent, directives in bag('robots_txt').items() -%}
-  {{ '\n' }}User-agent: {{ user_agent }}
-  {%- for directive, values in directives.items() -%}
-    {%- for value in values -%}
-      {{ '\n' }}{{ capitalize_first(directive) }}: {{ value -}}
-    {% endfor -%}
+{% if bag('robots_txt') %}
+  {%- for user_agent, directives in bag('robots_txt').items() -%}
+    {{ '\n' }}User-agent: {{ user_agent }}
+    {%- for directive, values in directives.items() -%}
+      {%- for value in values -%}
+        {{ '\n' }}{{ capitalize_first(directive) }}: {{ value -}}
+      {% endfor -%}
+    {% endfor %}
   {% endfor %}
-{% endfor %}
+{% endif %}
