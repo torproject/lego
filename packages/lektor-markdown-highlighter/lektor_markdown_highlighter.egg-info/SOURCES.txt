@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+lektor_markdown_highlighter.py
+setup.cfg
+setup.py
+lektor_markdown_highlighter.egg-info/PKG-INFO
+lektor_markdown_highlighter.egg-info/SOURCES.txt
+lektor_markdown_highlighter.egg-info/dependency_links.txt
+lektor_markdown_highlighter.egg-info/entry_points.txt
+lektor_markdown_highlighter.egg-info/requires.txt
+lektor_markdown_highlighter.egg-info/top_level.txt
