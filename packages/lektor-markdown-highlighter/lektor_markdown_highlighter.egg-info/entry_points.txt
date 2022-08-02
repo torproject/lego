@@ -1,0 +1,3 @@
+[lektor.plugins]
+markdown-highlighter = lektor_markdown_highlighter:MarkdownHighlighterPlugin
+
