@@ -9121,6 +9121,11 @@ main {
   padding-bottom: 5em;
 }
 
+/* see tpo/web/lego#44 */
+main img {
+  max-width: 100%;
+}
+
 .window-bg {
   background-image: url("images/tb85/tb85@2x.png");
   background-repeat: no-repeat;
