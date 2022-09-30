@@ -1,151 +1,245 @@
 @font-face {
-  font-family: Corben; /* by imagex-fonts.com */
-  src: url('../fonts/Corben/Corben.ttf');
+  font-family: SpaceMono;
+  src: url('../fonts/Space/SpaceMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: CorbenBold;
-    src: url("../fonts/Corben/Corben-Bold.ttf");
+    font-family: SpaceGrotesk;
+    src: url("../fonts/Space/SpaceGrotesk-Regular.ttf");
 }
 
 @font-face {
-  font-family: TerminalGrotesque; /* https://open-foundry.com/fonts/terminal_grotesque_open */
-  src: url('../fonts/grotesque/terminal-grotesque_open.otf');
+    font-family: SpaceGrotesk-Medium;
+    src: url("../fonts/Space/SpaceGrotesk-Medium.ttf");
+}
+
+:root {
+  --abouttor-yec-page-bg-color: #0E0625;
+  --abouttor-yec-heading-color: #C0FF00;
+  --abouttor-yec-heading-alt-color: #FF8AFF;
+  --abouttor-yec-button-color: #000000;
+  --abouttor-yec-button-bg-color: #C0FF00;
+  --abouttor-yec-button-hover-bg-color: #A8DF00;
+  --abouttor-yec-button-active-bg-color: #90BF00;
+  --abouttor-yec-donate-text-color: #FAF5DF;
 }
 
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
-  padding-top: 0 !important; }
-
-.bg-donate {
-  background-color: #D4DFDC;
+  padding-top: 0 !important;
 }
 
 .banner {
-  background-color: #D4DFDC;
+  background-color: var(--abouttor-yec-page-bg-color);
   z-index: 100000000000000 !important;
-  overflow-x: hidden;
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 360px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.footer__close {
+.banner-content {
+  height: auto;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+}
+
+.banner-content-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.banner-main-graphics {
+  position: relative;
+}
+
+.banner-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  position: relative;
+  top: -20px;
+}
+
+.banner-foreground-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+.banner-sub-headings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: matrix(1, -0.04, 0, 1, 0, 0);
+  position: relative;
+  top: -10px;
+}
+.banner-sub-heading-bold {
+  font-family: 'SpaceGrotesk-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: var(--abouttor-yec-heading-alt-color);
+  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
+  margin: 0;
+}
+.banner-sub-heading-light {
+  font-family: 'SpaceGrotesk';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  color: var(--abouttor-yec-heading-color);
+  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
+  margin: 0;
+}
+
+.yec-background-image {
+  transform: rotate(-2.25deg);
+}
+
+.banner-heading {
+  color: var(--abouttor-yec-heading-color);
+  font-family: 'SpaceMono', monospace;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  transform: matrix(1, 0, 0.03, 1, 0, 0);
+}
+
+.banner-donate-text {
+  color: var(--abouttor-yec-donate-text-color);
+  font-family: 'SpaceMono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  width: 284px;
+  height: 75px;
+}
+
+.banner-donate-button {
+  color: var(--abouttor-yec-button-color);
+  background-color: var(--abouttor-yec-button-bg-color);
+  text-decoration: none;
+  line-height: 1.4;
+  padding: 13px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+}
+
+.banner-donate-button:hover {
+  background-color: var(--abouttor-yec-button-hover-bg-color);
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
+}
+
+.banner-donate-button:active {
+  background-color: var(--abouttor-yec-button-active-bg-color);
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
+}
+
+.banner-donate-button:focus-visible {
+  outline: 2px solid var(--abouttor-yec-button-bg-color);
+  outline-offset: 2px;
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .banner-content {
+    align-items: center;
+    margin-top: 75px;
+    margin-bottom: 40px;
+  }
+  .banner-content-2 {
+    display: block;
+  }
+  .banner-cta {
+    top: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  .banner-main-graphics {
+    height: 100px;
+  }
+  .banner-foreground-text {
+    gap: 8px;
+  }
+  .yec-background-image {
+    width: 300px;
+  }
+  .yec-foreground-image {
+    width: 97px;
+  }
+  .banner-sub-headings {
+    top: -5px;
+  }
+  .banner-sub-heading-bold {
+    font-size: 32px;
+  }
+  .banner-sub-heading-light {
+    font-size: 32px;
+  }
+  .banner-heading {
+    font-size: 28px;
+  }
+  .banner-donate-text {
+    order: 1;
+    font-size: 14px;
+    height: auto;
+    text-align: center;
+    font-weight: 700;
+  }
+  .banner-donate-button {
+    order: 0;
+    padding: 9px 96px;
+  }
+}
+
+.banner-close {
   position: absolute;
   right: 16px;
   top: 16px;
   width: 32px;
   height: 32px;
   z-index: 1;
-  font-weight: bolder;
   visibility: inherit;
   background-color: #FAF5DF;
   border-radius: 6px;
   color: #05161C !important;
-  font-size: 1.3em;
-  text-align: center;
   background-image: url(./images/x.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.footer__close:hover {
+.banner-close:hover {
   background-color: #EFB149;
-}
-
-.banner-big-text {
-  color: #002140;
-  font-family: "CorbenBold";
-  font-size: 40px;
-  margin: 0;
-  width: 80%;
-}
-
-.banner-small-text {
-  color: #002140;
-  font-family: "Corben";
-  font-size: 22px;
-  margin: 10px 0;
-  width: 70%;
-}
-
-@include media-breakpoint-down(sm) {
-  .banner-small-text {
-    font-size: 20px;
-  }
-  .banner-big-text {
-    font-size: 30px;
-  }
-}
-
-.banner-img-style {
-  width: auto !important;
-  max-width: 110%;
-  position: relative;
-  left: -5%; // Off-center isn't good
-}
-
-@media (min-width: 768px) and (max-width: 1099px) { //Why do you force me to do it manually CSS/Bootstrap?
-	.banner-img-style {
-		position: absolute;
-		bottom: 0;
-		left: -50% !important;
-		max-width: 170% !important;
-	}
-}
-
-@media (min-width: 1100px) and (max-width: 1255px) {
-	.banner-img-style {
-		bottom: 0;
-		left: -30%;
-		max-width: 140%;
-	}
-}
-
-@media (min-width: 1256px) and (max-width: 1400px) {
-	.banner-img-style {
-		left: -30%;
-		max-width: 130%
-	}
-}
-
-.rectangle {
-  background-color: #EFB149;
-  color: #002140;
-  padding: 15.5px 24px;
-  font-size: 18px;
-  font-family: "Source Sans Pro", sans-serif;
-  text-decoration: none;
-  border-radius: 100px;
-  background-size: cover;
-  font-weight: bold;
-}
-
-.rectangle:hover {
-  background-color: #E98346;
-  text-decoration: none;
-}
-
-.match {
-  font-size: 18px;
-  color: #9D4AE8;
-  background: #000;
-  font-family: Courier New, monospace;
-  min-height: 360px;
-  width: 100%;
-}
-
-.match:hover {
-  color: #00FF00;
-}
-
-.banner__containter {
-    position: relative;
-    right: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-.eoy-banner {
-  padding: 4.25rem 2rem 0 !important;
 }
 
 .eoy-sr-only {
@@ -163,20 +257,7 @@
   left: -9999px;
 }
 
-#trigger:checked ~ #banner-header, .banner__containter > #trigger:checked, #trigger:checked + label {
+#trigger:checked ~ #banner-header, .banner > #trigger:checked, #trigger:checked + label {
   display: none;
   visibility: hidden;
-}
-@include media-breakpoint-down(xs) {
-  .banner-big-text {
-    width: 100%;
-  }
-  .banner-small-text {
-    width: 100%;
-  }
-
-  .banner__containter {
-      background-position: top 90% right -20%;
-      background-size: 70%;
-  }
 }
