@@ -3,39 +3,43 @@
   <label for="trigger" class="banner-close text-white"></label>
   <span class="eoy-sr-only text-white">{{ _('Close banner') }}</span>
   
-  <div class="banner-content" id="banner-header"> 
-    <h1 class="banner-heading">{{ _('POWERED BY PRIVACY:') }}</h1>
-    
-    <div class="banner-content-2">
-      <div class="banner-main-graphics">
-        <img class="yec-background-image"
-          alt=""
-          srcset="
-          /static/images/yec-bg-desktop-2x.png 2x,
-          /static/images/yec-bg-desktop-3x.png 3x" />
-        
-        <div class="banner-foreground-text">
-          <img class="yec-foreground-image"
-          alt=""
-          srcset="
-          /static/images/yec-foreground-2x_12x.png 2x,
-          /static/images/yec-foreground-2x_13x.png 3x" />
-          
-          <div class="banner-sub-headings">
-            <p class="banner-sub-heading-bold">{{ _('RESISTANCE') }}</p>
-            <p class="banner-sub-heading-light">{{ _('CHANGE') }}</p>
-            <p class="banner-sub-heading-bold">{{ _('FREEDOM') }}</p>
+  <div id="banner-header">
+    <div class="banner-content">
+      <div class="banner-content-spacer">
+        <h1 class="banner-heading">{{ _('POWERED BY PRIVACY:') }}</h1>
+
+        <div class="banner-content-2">
+          <div class="banner-main-graphics">
+            <img class="yec-background-image"
+              alt=""
+              srcset="
+              /static/images/yec-bg-desktop-2x.png 2x,
+              /static/images/yec-bg-desktop-3x.png 3x" />
+
+            <div class="banner-foreground-text">
+              <img class="yec-foreground-image"
+              alt=""
+              srcset="
+              /static/images/yec-foreground-2x_12x.png 2x,
+              /static/images/yec-foreground-2x_13x.png 3x" />
+
+              <div class="banner-sub-headings">
+                <p class="banner-sub-heading-bold">{{ _('RESISTANCE') }}</p>
+                <p class="banner-sub-heading-light">{{ _('CHANGE') }}</p>
+                <p class="banner-sub-heading-bold">{{ _('FREEDOM') }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner-cta">
+            <p class="banner-donate-text">{{ _('Your donation will be matched by Friends of Tor, up to $100,000.') }}</p>
+            <a class="banner-donate-button"
+               href="https://donate.torproject.org/"
+               target="_blank">
+              {{ _('DONATE NOW') }}
+            </a>
           </div>
         </div>
-      </div>
-
-      <div class="banner-cta">
-        <p class="banner-donate-text">{{ _('Your donation will be matched by Friends of Tor, up to $100,000.') }}</p>
-        <a class="banner-donate-button"
-           href="https://donate.torproject.org/"
-           target="_blank">
-          {{ _('DONATE NOW') }}
-        </a>
       </div>
     </div>
   </div>
