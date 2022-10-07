@@ -19,15 +19,15 @@
             <img class="yec-background-image"
               alt=""
               srcset="
-              /static/images/yec-bg-desktop-2x.png 2x,
-              /static/images/yec-bg-desktop-3x.png 3x" />
+                {{ '/static/images/yec-bg-desktop-2x.png'|asseturl }} 2x,
+                {{ '/static/images/yec-bg-desktop-3x.png'|asseturl }} 3x" />
 
             <div class="banner-foreground-text">
               <img class="yec-foreground-image"
               alt=""
               srcset="
-              /static/images/yec-foreground-2x_12x.png 2x,
-              /static/images/yec-foreground-2x_13x.png 3x" />
+                {{ '/static/images/yec-foreground-2x_12x.png'|asseturl }} 2x,
+                {{ '/static/images/yec-foreground-2x_13x.png'|asseturl }} 3x" />
 
               <div class="banner-sub-headings">
                 <p class="banner-sub-heading-bold">{{ _('RESISTANCE') }}</p>
