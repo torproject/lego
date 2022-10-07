@@ -1,6 +1,12 @@
 <div class="banner">
   <input id="trigger" type="checkbox" title="{{ _('Close banner') }}" />
-  <label for="trigger" class="banner-close text-white"></label>
+  <label for="trigger" class="banner-close text-white">
+    <noscript>
+      <div class="d-flex h-100">
+        <img src="{{ '/static/css/images/x.png'|asseturl }}" class="m-auto h-100 w-100 p-1">
+      </div>
+    </noscript>
+  </label>
   <span class="eoy-sr-only text-white">{{ _('Close banner') }}</span>
   
   <div id="banner-header">
