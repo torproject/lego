@@ -10286,7 +10286,6 @@ a.side-nav.active {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 20px;
 }
 
 #banner-header {
@@ -10297,6 +10296,7 @@ a.side-nav.active {
 .banner-content-spacer {
   margin-top: auto;
   margin-bottom: auto;
+  gap: 36px;
 }
 
 .banner-content-2 {
@@ -10330,7 +10330,7 @@ a.side-nav.active {
   gap: 16px;
   position: absolute;
   left: -10px;
-  top: -10px;
+  top: -25px;
 }
 
 .banner-sub-headings {
@@ -10339,7 +10339,6 @@ a.side-nav.active {
   align-items: flex-start;
   transform: matrix(1, -0.04, 0, 1, 0, 0);
   position: relative;
-  top: -10px;
 }
 
 .banner-sub-heading-bold {
@@ -10347,10 +10346,9 @@ a.side-nav.active {
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 105%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-alt-color);
-  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
   margin: 0;
 }
 
@@ -10359,24 +10357,41 @@ a.side-nav.active {
   font-style: normal;
   font-weight: 300;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 105%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-color);
-  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
   margin: 0;
-}
-
-.yec-background-image {
-  transform: rotate(-2.25deg);
 }
 
 .banner-heading {
   color: var(--abouttor-yec-heading-color);
   font-family: "SpaceMono", monospace;
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.05em;
   transform: matrix(1, 0, 0.03, 1, 0, 0);
+}
+
+.yec-background-image {
+  transform: rotate(-2.25deg);
+  opacity: 70%;
+}
+
+html[dir=rtl] .banner-content-2 {
+  flex-direction: row-reverse;
+}
+html[dir=rtl] .yec-background-image {
+  transform: rotate(2.25deg);
+}
+html[dir=rtl] .banner-sub-headings {
+  transform: matrix(1, 0.04, -0.08, 1, 0, 0);
+}
+html[dir=rtl] .yec-foreground-image {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .banner-foreground-text {
+  left: auto;
+  right: -10px;
 }
 
 .banner-donate-text {
@@ -10423,12 +10438,15 @@ a.side-nav.active {
 @media (max-width: 767px) {
   .banner-content {
     align-items: center;
-    margin-top: 75px;
-    margin-bottom: 40px;
   }
 
   .banner-content-2 {
     display: block;
+  }
+
+  .banner-content-spacer {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 
   .banner-cta {
@@ -10454,7 +10472,7 @@ a.side-nav.active {
   }
 
   .banner-sub-headings {
-    top: -5px;
+    top: 8px;
   }
 
   .banner-sub-heading-bold {
