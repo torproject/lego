@@ -51,7 +51,6 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 20px;
 }
 
 #banner-header {
@@ -62,6 +61,7 @@
 .banner-content-spacer {
     margin-top: auto;
     margin-bottom: auto;
+    gap: 36px;
 }
 
 .banner-content-2 {
@@ -95,7 +95,7 @@
   gap: 16px;
   position: absolute;
   left: -10px;
-  top: -10px;
+  top: -25px;
 }
 .banner-sub-headings {
   display: flex;
@@ -103,7 +103,6 @@
   align-items: flex-start;
   transform: matrix(1, -0.04, 0, 1, 0, 0);
   position: relative;
-  top: -10px;
 }
 .banner-sub-heading-bold {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
@@ -113,7 +112,6 @@
   line-height: 100%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-alt-color);
-  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
   margin: 0;
 }
 .banner-sub-heading-light {
@@ -124,7 +122,6 @@
   line-height: 100%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-color);
-  transform: matrix(1, -0.04, 0.03, 1, 0, 0);
   margin: 0;
 }
 
@@ -135,6 +132,29 @@
   font-weight: 700;
   letter-spacing: -0.05em;
   transform: matrix(1, 0, 0.03, 1, 0, 0);
+}
+
+.yec-background-image {
+  transform: rotate(-2.25deg);
+}
+
+html[dir="rtl"] {
+  .banner-content-2 {
+    flex-direction: row-reverse;
+  }
+  .yec-background-image {
+    transform: rotate(2.25deg);
+  }
+  .banner-sub-headings {
+    transform: matrix(1, 0.04, -0.08, 1, 0, 0);
+  }
+  .yec-foreground-image {
+    transform: scaleX(-1);
+  }
+  .banner-foreground-text {
+    left: auto;
+    right: -10px;
+  }
 }
 
 .banner-donate-text {
