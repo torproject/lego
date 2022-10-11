@@ -109,7 +109,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 105%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-alt-color);
   margin: 0;
@@ -119,7 +119,7 @@
   font-style: normal;
   font-weight: 300;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 105%;
   letter-spacing: -0.05em;
   color: var(--abouttor-yec-heading-color);
   margin: 0;
@@ -128,7 +128,7 @@
 .banner-heading {
   color: var(--abouttor-yec-heading-color);
   font-family: 'SpaceMono', monospace;
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.05em;
   transform: matrix(1, 0, 0.03, 1, 0, 0);
@@ -136,6 +136,7 @@
 
 .yec-background-image {
   transform: rotate(-2.25deg);
+  opacity: 70%;
 }
 
 html[dir="rtl"] {
@@ -205,6 +206,10 @@ html[dir="rtl"] {
   .banner-content-2 {
     display: block;
   }
+  .banner-content-spacer {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
   .banner-cta {
     top: 20px;
     gap: 20px;
@@ -223,7 +228,7 @@ html[dir="rtl"] {
     width: 97px;
   }
   .banner-sub-headings {
-    top: -5px;
+    top: 8px;
   }
   .banner-sub-heading-bold {
     font-size: 32px;
