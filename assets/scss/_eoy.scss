@@ -201,8 +201,6 @@ html[dir="rtl"] {
 @include media-breakpoint-down(sm) {
   .banner-content {
     align-items: center;
-    margin-top: 75px;
-    margin-bottom: 40px;
   }
   .banner-content-2 {
     display: block;
