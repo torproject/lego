@@ -16,7 +16,7 @@
 :root {
   --abouttor-yec-page-bg-color: #0E0625;
   --abouttor-yec-heading-color: #C0FF00;
-  --abouttor-yec-heading-alt-color: #FF8AFF;
+  --abouttor-yec-heading-alt-color: #FFA3FF;
   --abouttor-yec-button-color: #000000;
   --abouttor-yec-button-bg-color: #C0FF00;
   --abouttor-yec-button-hover-bg-color: #A8DF00;
@@ -103,6 +103,7 @@
   align-items: flex-start;
   transform: matrix(1, -0.04, 0, 1, 0, 0);
   position: relative;
+  mix-blend-mode: hard-light
 }
 .banner-sub-heading-bold {
   font-family: 'SpaceGrotesk-Medium', sans-serif;
@@ -129,7 +130,7 @@
   color: var(--abouttor-yec-heading-color);
   font-family: 'SpaceMono', monospace;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.05em;
   transform: matrix(1, 0, 0.03, 1, 0, 0);
 }
@@ -137,6 +138,10 @@
 .yec-background-image {
   transform: rotate(-2.25deg);
   opacity: 70%;
+}
+
+.yec-foreground-image {
+  mix-blend-mode: hard-light
 }
 
 html[dir="rtl"] {
