@@ -1,0 +1,52 @@
+<div class="banner">
+  <input id="trigger" type="checkbox" title="{{ _('Close banner') }}" />
+  <label for="trigger" class="banner-close text-white">
+    <noscript>
+      <div class="d-flex h-100">
+        <img src="{{ '/static/css/images/x.png'|asseturl }}" class="m-auto h-100 w-100 p-1">
+      </div>
+    </noscript>
+  </label>
+  <span class="eoy-sr-only text-white">{{ _('Close banner') }}</span>
+  
+  <div id="banner-header">
+    <div class="banner-content">
+      <div class="banner-content-spacer pt-2">
+        <h1 class="banner-heading pb-4 mb-3">{{ _('POWERED BY PRIVACY:') }}</h1>
+
+        <div class="banner-content-2">
+          <div class="banner-main-graphics">
+            <img class="yec-background-image"
+              alt=""
+              srcset="
+                {{ '/static/images/yec-bg-desktop-2x.png'|asseturl }} 2x,
+                {{ '/static/images/yec-bg-desktop-3x.png'|asseturl }} 3x" />
+
+            <div class="banner-foreground-text">
+              <img class="yec-foreground-image"
+              alt=""
+              srcset="
+                {{ '/static/images/yec-foreground-2x_12x.png'|asseturl }} 2x,
+                {{ '/static/images/yec-foreground-2x_13x.png'|asseturl }} 3x" />
+
+              <div class="banner-sub-headings">
+                <p class="banner-sub-heading-bold">{{ _('RESISTANCE') }}</p>
+                <p class="banner-sub-heading-light">{{ _('CHANGE') }}</p>
+                <p class="banner-sub-heading-bold">{{ _('FREEDOM') }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner-cta">
+            <p class="banner-donate-text m-0">{{ _('Your donation will be matched by Friends of Tor, up to $100,000.') }}</p>
+            <a class="banner-donate-button"
+               href="https://torproject.org/donate/donate-pbp-banner"
+               target="_blank">
+              {{ _('DONATE NOW') }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
