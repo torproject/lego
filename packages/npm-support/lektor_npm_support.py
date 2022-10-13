@@ -83,17 +83,21 @@ class ProcessManager(object):
 
 class NPMRunner(object):
 
-    def __init__(self, folder, npm, build_script, watch_script):
+    def __init__(self, folder, npm, build_script, watch_script, install_args):
         self.folder = folder
         self.npm = npm
         self.build_script = build_script
         self.watch_script = watch_script
+        self.install_args = install_args
 
     def npm_args(self, *args):
         return popen_args_type([self.npm] + list(args), self.folder)
 
     def build(self, proc):
-        proc.start(self.npm_args('install'), self.npm_args('run', self.build_script))
+        proc.start(
+            self.npm_args('install', self.install_args),
+            self.npm_args('run', self.build_script)
+        )
 
     def watch(self, proc):
         proc.start(self.npm_args('install'), self.npm_args('run', self.watch_script))
@@ -118,7 +122,8 @@ class NPMSupportPlugin(Plugin):
                 folder=os.path.join(self.env.root_path, section),
                 npm=props.get('npm', 'npm'),
                 build_script=props.get('build_script', 'build'),
-                watch_script=props.get('watch_script', 'watch')
+                watch_script=props.get('watch_script', 'watch'),
+                install_args=props.get('install_args', '')
             )
 
     def on_server_spawn(self, extra_flags, **extra):

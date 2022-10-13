@@ -27,14 +27,27 @@ This file instructs the plugin how to generate the assets:
 npm = yarn
 watch_script = watch
 build_script = build
+install_args = --force
 ```
 
 * The section name `[parcel]` is the name of the folder where the Parcel project is located.
 * `npm` is the package manager command used to build the project. This example will use [Yarn](https://yarnpkg.com).
 * `watch_script` is the npm script used in `lektor server -f npm`,
-* `build_script` is the npm script used in `lektor build -f npm`.
+* `build_script` is the npm script used in `lektor build -f npm`,
 
 This plugin supports more than one such entry.
+
+#### install_args
+
+```
+[parcel]
+npm = yarn
+install_args = --force
+watch_script = watch
+build_script = build
+```
+
+The `install_args` line is the argument string passed to `npm install`. This is optional, and only recommended if your project *needs* to use an install flag.
 
 ### `parcel/package.json`
 
