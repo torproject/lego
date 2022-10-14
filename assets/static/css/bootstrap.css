@@ -10522,7 +10522,7 @@ html[dir=rtl] .banner-foreground-text {
 }
 
 .banner-close:hover {
-  background-color: #EFB149;
+  background-color: var(--abouttor-yec-heading-color);
 }
 
 .eoy-sr-only {
