@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // stylelint-disable no-duplicate-selectors, selector-no-qualifying-type
 
 //
@@ -117,7 +119,7 @@
 .bd-example {
   position: relative;
   padding: 1rem;
-  margin: 1rem (-$grid-gutter-width / 2);
+  margin: 1rem math.div(-$grid-gutter-width, 2);
   overflow: auto;
   border: solid #f7f7f9;
   border-width: .2rem 0 0;
@@ -414,8 +416,8 @@
 }
 
 .bd-content .highlight {
-  margin-right: (-$grid-gutter-width / 2);
-  margin-left: (-$grid-gutter-width / 2);
+  margin-right: math.div(-$grid-gutter-width, 2);
+  margin-left: math.div(-$grid-gutter-width, 2);
 
   @include media-breakpoint-up(sm) {
     margin-right: 0;
