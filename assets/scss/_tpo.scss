@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /* TPO Styles
 *
 */
@@ -115,7 +117,7 @@ main{
   position: relative;
   overflow: hidden;
   width: 100vw;
-  left: -($grid-gutter-width/2);
+  left: -1 * math.div($grid-gutter-width, 2);
 }
 
 
