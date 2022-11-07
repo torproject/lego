@@ -4,7 +4,6 @@
 User-agent: *
 Disallow: /javascript/*
 Disallow: /scss/*
-Disallow: /static/*
 
 {#- the '\n' is because we need a newline,
 but we need to strip trailing and leading whitespace as well.
