@@ -1,21 +1,14 @@
-{%- macro capitalize_first(text) -%}
-  {{- text[0].upper() -}}{{- text[1:] -}}
-{%- endmacro -%}
 User-agent: *
-Disallow: /javascript/*
-Disallow: /scss/*
-Disallow: /static/*
+Disallow: /javascript
+Disallow: /scss
 
-{#- the '\n' is because we need a newline,
-but we need to strip trailing and leading whitespace as well.
-fragile, be careful #}
 {% if bag('robots_txt') %}
-  {%- for user_agent, directives in bag('robots_txt').items() -%}
-    {{ '\n' }}User-agent: {{ user_agent }}
-    {%- for directive, values in directives.items() -%}
-      {%- for value in values -%}
-        {{ '\n' }}{{ capitalize_first(directive) }}: {{ value -}}
-      {% endfor -%}
+  {% for user_agent, directives in bag('robots_txt').items() %}
+    User-agent: {{ user_agent }}
+    {% for directive, values in directives.items() %}
+      {% for value in values %}
+        {{ directive }}: {{ value }}
+      {% endfor %}
     {% endfor %}
   {% endfor %}
 {% endif %}
