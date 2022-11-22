@@ -1,5 +1,3 @@
-@use 'sass:math';
-
 //
 // Base styles
 //
@@ -45,7 +43,7 @@
 }
 
 .card-subtitle {
-  margin-top: -1 * math.div($card-spacer-y, 2);
+  margin-top: -($card-spacer-y / 2);
   margin-bottom: 0;
 }
 
@@ -100,15 +98,15 @@
 //
 
 .card-header-tabs {
-  margin-right: -1 * math.div($card-spacer-x, 2);
+  margin-right: -($card-spacer-x / 2);
   margin-bottom: -$card-spacer-y;
-  margin-left: -1 * math.div($card-spacer-x, 2);
+  margin-left: -($card-spacer-x / 2);
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -1 * math.div($card-spacer-x, 2);
-  margin-left: -1 * math.div($card-spacer-x, 2);
+  margin-right: -($card-spacer-x / 2);
+  margin-left: -($card-spacer-x / 2);
 }
 
 // Card image
