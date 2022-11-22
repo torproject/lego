@@ -23,7 +23,7 @@ setup(
     url='https://github.com/chaos-bodensee/lektor-scss.git',
     version='1.4.1',
     install_requires  =  [
-        "libsass==0.21.0", "termcolor",
+        "libsass>=0.22.0", "termcolor",
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
