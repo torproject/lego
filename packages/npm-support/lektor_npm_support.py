@@ -100,7 +100,7 @@ class NPMRunner(object):
         )
 
     def watch(self, proc):
-        proc.start(self.npm_args('install'), self.npm_args('run', self.watch_script))
+        proc.start(self.npm_args('install', self.install_args), self.npm_args('run', self.watch_script))
 
 
 class NPMSupportPlugin(Plugin):
