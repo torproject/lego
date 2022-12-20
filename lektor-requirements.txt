@@ -168,3 +168,6 @@ setuptools==64.0.2 \
     --hash=sha256:2fc6046e3cddf0ef48493410c18a3f0e4fc888b4460f35e07808591481cdc2ac \
     --hash=sha256:74432f2e66b9afb4a4fceed175d9f3f24986cabf325ecbf1278ec93f846726d3
     # via lektor
+lektor-markdown-image-attrs==0.2.1 \
+    --hash=sha256:e76a191aa9da92716a6bc695b1aecde296e9c4656254cf5dc105208b31fc5fd5
+    --hash=sha256:141e127d7c210c1305eb7880b9267160c807919f10bc7a73056bc58c791dd3cc
