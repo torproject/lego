@@ -25,14 +25,3 @@ if (Modernizr.addTest('svgasimg', document.implementation.hasFeature('http://www
     }
   });
 }
-
-$('.side-nav').click(function(){
-  if ($('.side-nav.active').length > 0) {
-    $('.side-nav.active').removeClass('active')
-  }
-  $(this).addClass('active');
-});
-
-if($('.show').length !== 1 ) {
-  $('.show').collapse();
-}
