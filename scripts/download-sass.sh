@@ -20,7 +20,7 @@ fi
 
 tar xf "$dart_tarball_filename" dart-sass/sass
 
-user_bin_dir="$(xdg-user-dir)"/.local/bin
+user_bin_dir=$HOME/.local/bin
 
 mkdir -p "$user_bin_dir"
 mv sass "$user_bin_dir"
