@@ -7,21 +7,15 @@
 dart_release_tag=${dart_release_tag:-1.56.1}
 dart_tarball_checksum=${dart_tarball_checksum:-624f41102c59eb3eaf4a90726971a0604b42ccbe2265c13146f89d762ef1f74e}
 
-verify_checksum=${verify_checksum:-true}
-
 dart_tarball_filename=dart-sass-"$dart_release_tag"-linux-x64.tar.gz
 dart_tarball_url=https://github.com/sass/dart-sass/releases/download/"$dart_release_tag"/"$dart_tarball_filename"
 
 curl -s -O "$dart_tarball_filename" "$dart_tarball_url"
 
-if [ "$verify_checksum" != false ]; then
-    if ! sha256sum -c <(echo "$dart_tarball_checksum $dart_tarball_filename"); then
-        echo "bad checksum for $dart_tarball_filename"
-        echo "make sure you you set the right checksum in this script"
-        exit 1
-    fi
-else
-    echo "WARNING: verify_checksum set to false, not verifying the dart tarball"
+if ! sha256sum -c <(echo "$dart_tarball_checksum $dart_tarball_filename"); then
+    echo "bad checksum for $dart_tarball_filename"
+    echo "make sure you you set the right checksum in this script"
+    exit 1
 fi
 
 tar xf "$dart_tarball_filename" dart-sass/sass
