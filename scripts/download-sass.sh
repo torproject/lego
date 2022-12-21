@@ -18,12 +18,10 @@ if ! sha256sum -c <(echo "$dart_tarball_checksum $dart_tarball_filename"); then
     exit 1
 fi
 
-tar xf "$dart_tarball_filename" dart-sass/sass
-
 user_bin_dir=$HOME/.local/bin
 
 mkdir -p "$user_bin_dir"
-mv sass "$user_bin_dir"
+tar -x -f "$dart_tarball_filename" -C  "$user_bin_dir" dart-sass/sass
 
 rm -r "$dart_tarball_filename" dart-sass
 
