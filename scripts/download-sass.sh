@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -e
+
 # install the dart sass binary for x86_64 linux
 
 # change to the desired release tag and sha256 checksum
