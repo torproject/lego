@@ -7,7 +7,7 @@ set -e
 # change to the desired release tag and sha256 checksum
 # <https://github.com/sass/dart-sass/releases/>
 dart_release_tag=${dart_release_tag:-1.56.1}
-dart_tarball_checksum=${dart_tarball_checksum:-624f41102c59eb3eaf4a90726971a0604b42ccbe2265c13146f89d762ef1f74e}
+dart_tarball_checksum=${dart_tarball_checksum:-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
 
 dart_tarball_filename=dart-sass-"$dart_release_tag"-linux-x64.tar.gz
 dart_tarball_url=https://github.com/sass/dart-sass/releases/download/"$dart_release_tag"/"$dart_tarball_filename"
