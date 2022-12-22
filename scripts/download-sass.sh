@@ -12,7 +12,7 @@ dart_tarball_checksum=${dart_tarball_checksum:-624f41102c59eb3eaf4a90726971a0604
 dart_tarball_filename=dart-sass-"$dart_release_tag"-linux-x64.tar.gz
 dart_tarball_url=https://github.com/sass/dart-sass/releases/download/"$dart_release_tag"/"$dart_tarball_filename"
 
-curl -s -O "$dart_tarball_filename" "$dart_tarball_url"
+curl -s -o "$dart_tarball_filename" "$dart_tarball_url"
 
 if ! sha256sum -c <(echo "$dart_tarball_checksum $dart_tarball_filename"); then
     echo "bad checksum for $dart_tarball_filename"
