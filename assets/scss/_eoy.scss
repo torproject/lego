@@ -279,7 +279,6 @@ html[dir="rtl"] {
 
 .eoy-sr-only {
   height: 1px;
-  left: -10000px;
   overflow: hidden;
   position: absolute;
   top: auto;
@@ -289,7 +288,6 @@ html[dir="rtl"] {
 #trigger {
   position: absolute;
   top: -9999px;
-  left: -9999px;
 }
 
 #trigger:checked ~ #banner-header, .banner > #trigger:checked, #trigger:checked + label {
