@@ -1,3 +1,0 @@
-[lektor.plugins]
-scss = lektor_scss:scssPlugin
-

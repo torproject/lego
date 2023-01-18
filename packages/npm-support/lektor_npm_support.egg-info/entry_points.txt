@@ -1,3 +1,0 @@
-[lektor.plugins]
-npm-support = lektor_npm_support:NPMSupportPlugin
-

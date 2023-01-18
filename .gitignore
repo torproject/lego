@@ -2,11 +2,4 @@
 __pycache__
 *.pyc
 .egg*
-/packages/txt-to-html/lektor_txt_to_html.egg-info/
-/packages/xml-to-html/lektor_xml_to_html.egg-info/
-/packages/environs/environs.egg-info/PKG-INFO
-/packages/envvars/lektor_envvars.egg-info/PKG-INFO
-/packages/envvars/lektor_envvars.egg-info/entry_points.txt
-/packages/i18n/lektor_i18n.egg-info/PKG-INFO
-/packages/i18n/lektor_i18n.egg-info/SOURCES.txt
-/packages/i18n/lektor_i18n.egg-info/entry_points.txt
+packages/**/*.egg-info

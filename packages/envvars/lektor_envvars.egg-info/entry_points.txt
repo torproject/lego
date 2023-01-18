@@ -1,3 +1,0 @@
-[lektor.plugins]
-envvars = lektor_envvars:EnvvarsPlugin
-
