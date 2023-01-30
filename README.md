@@ -43,6 +43,18 @@ Here's what's inside lego:
 * `packages/`: A number of mirrored and patched python packages. See each package's README for details
 * `templates/`: Useful templates used by several of the sites
 
+## SCSS
+
+The previous SCSS workflow for lego was to store all the scss in the lego repo, alongside the resulting compiled CSS files. This meant that any change to the SCSS also had to include the compiled CSS, leading to MRs and diffs with tens of thousands of changed lines, which were usually just whitespace and formatting changes to the CSS.
+
+In [lego issue #55](https://gitlab.torproject.org/tpo/web/lego/-/issues/55), the prebuilt bootstrap CSS was removed from lego, and all sites now include the web team's fork of the [lektor-scss](https://gitlab.torproject.org/tpo/web/lektor-scss/) plugin so that the SCSS is built as part of the lektor build process. Our lektor CI build process uses this plugin as well.
+
+The lektor-scss plugin requires the dart sass compiler to be in your `PATH`. The sass binary installed by npm will not be able to build our SCSS, since we use the `math.div` function which is only available in the dart sass compiler.
+
+If you need to install the dart sass compiler, the lego wiki has [a helper script](https://gitlab.torproject.org/tpo/web/team/-/wikis/documentation/How-to-edit-css#installing-the-sass-compiler) to install it for you. Just be sure to add `$HOME/bin` to your `PATH` variable!
+
+**NOTE**: like lektor-i18n, the lektor-scss plugin requires you to build a lektor site at least twice, or lektor won't be able to resolve the `bootstrap-*.css` asseturl.
+
 ## License
 
 **TBD**
