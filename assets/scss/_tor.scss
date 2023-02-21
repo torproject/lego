@@ -554,11 +554,11 @@ table {
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    border-bottom: (calc(#{$table-border-width} * 2)) solid $table-border-color;
   }
 
   tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
+    border-top: (calc(#{$table-border-width} * 2)) solid $table-border-color;
   }
 
   .table {
