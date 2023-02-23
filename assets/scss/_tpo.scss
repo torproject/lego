@@ -115,7 +115,7 @@ main{
   position: relative;
   overflow: hidden;
   width: 100vw;
-  left: -($grid-gutter-width*0.5);
+  left: calc(#{$grid-gutter-width} * -0.5);
 }
 
 
