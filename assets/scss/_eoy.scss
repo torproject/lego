@@ -14,14 +14,31 @@
 }
 
 :root {
-  --abouttor-yec-page-bg-color: #0E0625;
-  --abouttor-yec-heading-color: #C0FF00;
-  --abouttor-yec-heading-alt-color: #FFA3FF;
+  --abouttor-yec-page-bg-color: #272727;
   --abouttor-yec-button-color: #000000;
-  --abouttor-yec-button-bg-color: #C0FF00;
-  --abouttor-yec-button-hover-bg-color: #A8DF00;
-  --abouttor-yec-button-active-bg-color: #90BF00;
+  --abouttor-yec-button-bg-color: #FBBE22;
+  --abouttor-yec-button-hover-bg-color: #CC9A19;
+  --abouttor-yec-button-active-bg-color: #AC8112;
   --abouttor-yec-donate-text-color: #FAF5DF;
+}
+
+#yec-donate-button:hover {
+  background-color: var(--abouttor-yec-button-hover-bg-color);
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
+}
+
+#yec-donate-button:active {
+  background-color: var(--abouttor-yec-button-active-bg-color);
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
+}
+
+#yec-donate-button:focus-visible {
+  outline: 2px solid var(--abouttor-yec-button-bg-color);
+  outline-offset: 2px;
+  color: var(--abouttor-yec-button-color);
+  text-decoration: none;
 }
 
 /* Don't move down content w banner. Navbar isn't fixed. */
@@ -36,32 +53,23 @@
   right: 0;
   left: 0;
   top: 0;
-  width: 100%;
-  //min-height: 360px;
-  height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .banner-content {
   height: auto;
   min-height: 360px;
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
-}
-
-#banner-header {
-    width: 100%;
-    display: flex;
+  min-height: inherit;
+  max-height: inherit;
 }
 
 .banner-content-spacer {
     margin-top: auto;
     margin-bottom: auto;
-    gap: 36px;
+    padding: 1.5rem 1rem 2rem 1rem;
+    min-height: inherit;
+    max-height: inherit;
 }
 
 .banner-content-2 {
@@ -70,10 +78,6 @@
   align-items: flex-start;
   padding: 0px;
   gap: 24px;
-}
-
-.banner-main-graphics {
-  position: relative;
 }
 
 .banner-cta {
@@ -211,10 +215,6 @@ html[dir="rtl"] {
   .banner-content-2 {
     display: block;
   }
-  .banner-content-spacer {
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-  }
   .banner-cta {
     top: 20px;
     gap: 20px;
@@ -261,20 +261,19 @@ html[dir="rtl"] {
   position: absolute;
   right: 16px;
   top: 16px;
-  width: 32px;
-  height: 32px;
+  height: 4.5vh;
+  min-height: 32px;
   z-index: 1;
   visibility: inherit;
-  background-color: #FAF5DF;
   border-radius: 6px;
   color: #05161C !important;
-  background-image: url(images/x.svg);
+  background-image: url(../images/x.svg);
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.banner-close:hover {
-  background-color: var(--abouttor-yec-heading-color);
+  img {
+    padding: 0 !important;
+  }
 }
 
 .eoy-sr-only {
@@ -293,4 +292,102 @@ html[dir="rtl"] {
 #trigger:checked ~ #banner-header, .banner > #trigger:checked, #trigger:checked + label {
   display: none;
   visibility: hidden;
+}
+
+#banner-header {
+    h1, p {
+      color: #FBFBFE;
+    }
+
+  h1 {
+    font-size: 1.5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 2rem;
+    }
+    font-family: "Source Sans Pro Bold", sans-serif;
+    line-height: 130%;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 1rem;
+    @include media-breakpoint-up(md) {
+      font-size: 1.1rem;
+    }
+    line-height: 150%;
+    margin-bottom: 0px;
+  }
+
+  p strong {
+      font-weight: 700;
+  }
+}
+
+.banner-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 2rem 2rem 2.5rem 2rem;
+  }
+}
+
+#yec-donate-button-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
+}
+
+#yec-donate-button {
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  align-self: stretch;
+  background-color: #FFBD4F;
+  color: unset;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 120%; /* 1.05rem */
+
+  .donate-heart {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+.yec-illo {
+  width: 156px;
+  @include media-breakpoint-up(md) {
+    width: 208px !important;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 260px !important;
+  }
+}
+
+#banner-text {
+  gap: 1rem;
+}
+
+#banner-text-container {
+  gap: 1.5rem;
+  max-width: 45rem;
 }
