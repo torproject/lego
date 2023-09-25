@@ -1,5 +1,96 @@
+# css is built as part of the build process, doesn't need to be tracked
+assets/static/css
+
+node_modules
+
 .sass-cache
-__pycache__
+.DS_Store
+
+cache
+
+public
+*.mo
+*.po
+contents+*.lr
+
+*.ipynb*
+
+*.egg-info
 *.pyc
-.egg*
-packages/**/*.egg-info
+__pycache__
+
+### Lektor Temps ###
+*~*
+
+### Idea (IDE) ###
+.idea/
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+node_modules
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+projectile-bookmarks.eld
+
+# directory configuration
+.dir-locals.el
+
+# saveplace
+places
+
+# url cache
+url/cache/
+
+# cedet
+ede-projects.el
+
+# smex
+smex-items
+
+# company-statistics
+company-statistics-cache.el
+
+# anaconda-mode
+anaconda-mode/
+
+venv
