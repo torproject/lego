@@ -24,4 +24,10 @@ if (Modernizr.addTest('svgasimg', document.implementation.hasFeature('http://www
       }
     }
   });
+  a = $('[class*="img-svg"]');
+  a.each(function(i, obj) {
+    pngSrc = $(obj).attr('src');
+    svgSrc = pngSrc.replace(/png/g,"svg");
+    $(obj).attr("src",svgSrc);
+  });
 }
