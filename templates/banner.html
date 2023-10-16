@@ -14,7 +14,7 @@
           <div class="banner-main-graphics h-100">
             <img class="yec-illo img-svg" src="{{ '/static/images/yec-2023/main-illo.png'|asseturl }}">
           </div>
-          <div id="banner-text-container" class="d-flex flex-column">
+          <div id="banner-text-container" class="d-flex flex-column {{ bag('alternatives', this.alt, 'direction') }}">
             <div id="banner-text" class="d-flex flex-column">
               <h1>{{ _('Right now, Tor Browser is protecting your privacy and the privacy of millions of people like you!') }}</h1>
               <p>
