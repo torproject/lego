@@ -76,6 +76,12 @@
   }
 }
 
+/* send close button to left on rtl languages */
+.banner-close:dir(rtl) {
+  left: 16px;
+  right: auto;
+}
+
 .eoy-sr-only {
   height: 1px;
   overflow: hidden;
