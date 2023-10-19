@@ -49,6 +49,10 @@ footer .border{
   max-height: 280px;
 }
 
+.footer .onion-pattern:dir(rtl) {
+  transform: scaleX(-1);
+}
+
 .footer .download-section {
   max-width: 36rem;
 }
