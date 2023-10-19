@@ -76,11 +76,7 @@
   }
 }
 
-/* send close button to left on rtl languages */
-.banner-close:dir(rtl) {
-  left: 16px;
-  right: auto;
-}
+
 
 .eoy-sr-only {
   height: 1px;
@@ -196,4 +192,15 @@
 #banner-text-container {
   gap: 1.5rem;
   max-width: 45rem;
+}
+
+/* send close button to left on rtl languages */
+html:dir(rtl) {
+  .banner-close {
+    left: 16px;
+    right: auto;
+  }
+  .eoy-sr-only, #trigger {
+    right: 0;
+  }
 }
