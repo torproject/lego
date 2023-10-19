@@ -102,6 +102,7 @@
         {% from "macros/footer.html" import render_faq %}
         <p class="text-primary text-light">{{ _('Trademark, copyright notices, and rules for use by third parties can be found in our %(link_to_faq)s.')|format(link_to_faq=render_faq())|safe }}</p>
       </div>
+      {% if bag('alternatives')|length > 1 -%}
       <div class="col-sm-2 mt-5 d-none d-sm-block">
         <div class="btn-group dropup float-right">
       	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,6 +117,7 @@
         	</div>
         </div>
       </div>
+      {%- endif %}
     </div>
   </div>
   <script src="{{ '/static/js/jquery-3.2.1.min.js'|asseturl }}" ></script>
