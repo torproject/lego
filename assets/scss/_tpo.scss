@@ -44,6 +44,15 @@ footer .border{
   border-bottom: 1px solid rgba(255,255,255,0.3) !important;
 }
 
+.footer .onion-pattern {
+  direction: rtl;
+  max-height: 280px;
+}
+
+.footer .download-section {
+  max-width: 36rem;
+}
+
 main{
   padding-bottom: 5em;
 }
@@ -52,14 +61,6 @@ main{
   background-image: url("../images/tb85/tb85@2x.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.onion-bg{
-  background: url("../images/circle-pattern.png");
-  background-color: rgba(0, 0, 0, 0);
-  background-position-x: -85%;
-  background-repeat: no-repeat;
-  background-size: 65%;
 }
 
 .btn-shadow {
@@ -129,8 +130,11 @@ main{
        font-size: 1.3rem;
    }
   .window-bg,
-  .onion-bg {
-      background: none;
+  .footer .onion-pattern {
+    display: none !important;
+  }
+  .footer .download-section {
+    margin: 3rem auto 0 !important;
   }
   .hero > p{
     font-size: 2.5rem;

@@ -6,22 +6,22 @@
 
   {% if this.path != '/download' %}
 
-  <div class="row onion-bg">
-    <div class="col-12 d-flex justify-content-right">
-      <div class="container pt-5 justify-content-right">
-        <div class="offset-lx-2 offset-sm-4 mt-5">
-           <h2 class="text-white text-bold">{{ _('Download Tor Browser') }}</h2>
-            <p class="text-white">{{ _('Download Tor Browser to experience real private browsing without tracking, surveillance, or censorship.') }}</p>
-            {% set download = site.get('/download') %}
-            {% if download == None %}
-              <a class="btn text-primary bg-white btn-light pull-right mt-2" href="https://www.torproject.org/download/">
-            {% else %}
-              <a class="btn text-primary bg-white btn-light pull-right mt-2" href="{{ this.url_to(download, alt=this.alt) }}">
-            {% endif %}
-
-              {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png-purple"></i>
-            </a>
-        </div>
+  <div class="row">
+      <div class="col-4 d-flex onion-pattern">
+          <img src="{{ '/static/images/circle-pattern.png'|asseturl }}" class="img-svg">
+    </div>
+    <div class="col-sm-8 d-flex download-section mt-auto">
+      <div class="container pb-2 justify-content-right">
+         <h2 class="text-white text-bold">{{ _('Download Tor Browser') }}</h2>
+         <p class="text-white">{{ _('Download Tor Browser to experience real private browsing without tracking, surveillance, or censorship.') }}</p>
+          {%- set download = site.get('/download') -%}
+          {% if download == None -%}
+            <a class="btn text-primary bg-white btn-light pull-right mt-2" href="https://www.torproject.org/download/">
+          {% else %}
+            <a class="btn text-primary bg-white btn-light pull-right mt-2" href="{{ this.url_to(download, alt=this.alt) }}">
+          {% endif -%}
+          {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png-purple"></i>
+         </a>
       </div>
     </div>
   </div>
