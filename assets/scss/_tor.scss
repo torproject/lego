@@ -354,6 +354,13 @@ mark, .mark {
   font-weight: bold;
 }
 
+/* prevent reordering of characters in code samples
+ * on rtl pages, see tpo/community/l10n#40120
+ */
+code:dir(rtl) {
+  unicode-bidi: plaintext;
+}
+
 /*
  * Nav
  */
