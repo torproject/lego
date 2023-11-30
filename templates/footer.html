@@ -62,7 +62,7 @@
         {% if config.base_url != "https://donate.torproject.org/" %}
         {% set link = bag('links', this.alt, 'donate') %}
         {% if link %}
-          <a href="{{ link }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2 mt-2 h5">{{ _("Donate Now") }}</span></a>
+          <a href="{{ link }}" title="{{ _("Donate") }}" class="h5"><span class="badge badge-warning p-2 mt-2">{{ _("Donate Now") }}</span></a>
         {% else %}
           <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}"><span class="badge badge-warning p-2 h4">{{ _("Donate Now") }}</span></a>
         {% endif %}
