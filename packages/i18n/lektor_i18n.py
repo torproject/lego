@@ -399,7 +399,9 @@ class I18NPlugin(Plugin):
         lines = []
         for line in content.split('\n'):
             line_stripped = line.strip()
-            trans_stripline = trans(translator, line_stripped) # trnanslate the stripped version
+            trans_stripline = ''
+            if line_stripped:
+                trans_stripline = trans(translator, line_stripped) # translate the stripped version
             # and re-inject the stripped translation into original line (not stripped)
             lines.append(line.replace(line_stripped,
                         trans_stripline, 1))
