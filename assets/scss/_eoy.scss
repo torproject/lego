@@ -1,29 +1,17 @@
 :root {
-  --abouttor-yec-page-bg-color: #272727;
-  --abouttor-yec-button-color: #000000;
-  --abouttor-yec-button-bg-color: #FBBE22;
-  --abouttor-yec-button-hover-bg-color: #CC9A19;
-  --abouttor-yec-button-active-bg-color: #AC8112;
-  --abouttor-yec-donate-text-color: #FAF5DF;
+  --abouttor-yec-page-bg-color: #F5F5F5;
+  --abouttor-yec-button-color: #15141A;
+  --abouttor-yec-button-bg-color-browse: #C1ED75;
+  --abouttor-yec-button-bg-color-search: #FF6A75;
+  --abouttor-yec-button-bg-color-speak: #D898FA;
+  --abouttor-yec-donate-text-color: #15141A;
+  --abouttor-yec-donate-text-highlight: #FFBD4F;
+  --abouttor-yec-match-bg-color: #D898FA;
 }
 
-#yec-donate-button:hover {
-  background-color: var(--abouttor-yec-button-hover-bg-color);
-  color: var(--abouttor-yec-button-color);
-  text-decoration: none;
-}
-
-#yec-donate-button:active {
-  background-color: var(--abouttor-yec-button-active-bg-color);
-  color: var(--abouttor-yec-button-color);
-  text-decoration: none;
-}
-
-#yec-donate-button:focus-visible {
-  outline: 2px solid var(--abouttor-yec-button-bg-color);
-  outline-offset: 2px;
-  color: var(--abouttor-yec-button-color);
-  text-decoration: none;
+@font-face {
+    font-family: SpaceGrotesk-Bold;
+    src: url("../fonts/Space/SpaceGrotesk-Bold.ttf");
 }
 
 /* Don't move down content w banner. Navbar isn't fixed. */
@@ -67,16 +55,11 @@
   visibility: inherit;
   border-radius: 6px;
   color: #05161C !important;
-  background-image: url(../images/x.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 
   img {
     padding: 0 !important;
   }
 }
-
-
 
 .eoy-sr-only {
   height: 1px;
@@ -98,45 +81,47 @@
 
 #banner-header {
     h1, p {
-      color: #FBFBFE;
+      color: var(--abouttor-yec-donate-text-color);
     }
 
   h1 {
+    display: inline;
     font-size: 1.5rem;
     @include media-breakpoint-up(md) {
       font-size: 2rem;
     }
-    font-family: "Source Sans Pro Bold", sans-serif;
-    line-height: 130%;
+    font-family: "SpaceGrotesk-Bold", sans-serif;
+    line-height: 140%;
     margin-bottom: 0px;
-  }
+    background-color: var(--abouttor-yec-donate-text-highlight);
+    padding: 0 0.75rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     @include media-breakpoint-up(md) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
+    font-family: "Source Sans Pro", sans-serif;
     line-height: 150%;
-    margin-bottom: 0px;
-  }
-
-  p strong {
-      font-weight: 700;
+    margin: 1rem 0 0 0;
   }
 }
 
 .banner-content-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
-    padding: 2rem 2rem 2.5rem 2rem;
+    padding: 2rem;
   }
 }
 
@@ -157,12 +142,12 @@
 
 #yec-donate-button {
   display: flex;
+  visibility: hidden;
   padding: 0.75rem 1rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
   align-self: stretch;
-  background-color: #FFBD4F;
   color: unset;
 
   font-size: 1.1rem;
@@ -176,13 +161,39 @@
 }
 
 .yec-illo {
-  width: 156px;
+  width: 320px;
   @include media-breakpoint-up(md) {
-    width: 208px !important;
+    width: 350px !important;
   }
   @include media-breakpoint-up(lg) {
-    width: 260px !important;
+    width: 420px !important;
   }
+}
+
+#banner-header .banner-content {
+  h1.yec-variant-search,
+  h1.yec-variant-speak,
+  img.yec-variant-search,
+  img.yec-variant-speak {
+    display: none;
+  }
+  h1.yec-variant-browse,
+  img.yec-variant-browse {
+    visibility: hidden;
+  }
+}
+
+#yec-donate-button.yec-variant-browse {
+  background-color: var(--abouttor-yec-button-bg-color-browse);
+  visibility: visible;
+}
+#yec-donate-button.yec-variant-search {
+  background-color: var(--abouttor-yec-button-bg-color-search);
+  visibility: visible;
+}
+#yec-donate-button.yec-variant-speak {
+  background-color: var(--abouttor-yec-button-bg-color-speak);
+  visibility: visible;
 }
 
 #banner-text {
@@ -203,9 +214,4 @@ html:dir(rtl) {
   .eoy-sr-only, #trigger {
     right: 0;
   }
-}
-
-#banner-header #match-text {
-  color: #FFBD4F;
-  font-weight: 600;
 }
