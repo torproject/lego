@@ -38,6 +38,14 @@
 </div>
 
 <script type="text/javascript">
+/* persist banner close across pages in the same session/tab */
+let trigger = document.querySelector(".banner #trigger");
+trigger.addEventListener("change", () => {
+    sessionStorage.setItem("bannerClosed", trigger.checked);
+});
+if (sessionStorage.getItem("bannerClosed")) {
+    trigger.checked = sessionStorage.getItem("bannerClosed");
+}
 /* display a random variant of the banner */
 /* not using jQuery because it's loaded later, and this is just faster */
 const variants = ['browse', 'search', 'speak'];
