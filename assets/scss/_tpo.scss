@@ -57,6 +57,15 @@ footer .border{
   max-width: 36rem;
 }
 
+.footer .trademark-policy {
+  p, a {
+    @extend .text-light;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
 main{
   padding-bottom: 5em;
 }
