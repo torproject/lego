@@ -362,37 +362,33 @@ class I18NPlugin(Plugin):
         return newblocks
 
 
-    def on_before_build(self, builder, build_state, source, prog, **extra):
-        """Before building a page, produce all its alternatives (=translated pages)
+    def process_contents(self):
+        """Produce all content file alternatives (=translated pages)
         using the gettext translations available."""
-        if self.enabled and isinstance(source,Page) and source.alt in (PRIMARY_ALT, self.content_language):
-            contents = None
-            for fn in source.iter_source_filenames():
-                try:
-                    contents=FileContents(fn)
-                except IOError:
-                    pass # next
-
-            for language in self.translations_languages:
-                translator = gettext.translation("contents",
-                        join(self.i18npath,'_compiled'), languages=[language], fallback = True)
-                translated_filename = join(dirname(source.source_filename),
-                        "contents+%s.lr"%language)
-                with contents.open(encoding='utf-8') as file:
-                    chunks = self.__parse_source_structure(file.readlines())
-                with open(translated_filename,"w") as f:
-                    for type, content in chunks: # see __parse_source_structure
-                        if type == 'raw':
-                            f.write(content)
-                        elif type == 'translatable':
-                            if self.trans_parwise: # translate per paragraph
-                                f.write(self.__trans_parwise(content,
-                                    translator))
+        for root, _, files in os.walk(os.path.join(self.env.root_path, 'content')):
+            if re.match('content$', root):
+                continue
+            if 'contents.lr' in files:
+                fn = os.path.join(root, 'contents.lr')
+                contents = FileContents(fn)
+                for language in self.translations_languages:
+                    translator = gettext.translation("contents", join(self.i18npath, '_compiled'), languages=[language], fallback=True)
+                    translated_filename = os.path.join(root, "contents+%s.lr" % language)
+                    with contents.open(encoding='utf-8') as file:
+                        chunks = self.__parse_source_structure(file.readlines())
+                    with open(translated_filename, "w") as f:
+                        reporter.report_generic("writing to " + translated_filename)
+                        for type, content in chunks:  # see __parse_source_structure
+                            if type == 'raw':
+                                f.write(content)
+                            elif type == 'translatable':
+                                if self.trans_parwise:  # translate per paragraph
+                                    f.write(self.__trans_parwise(content, translator))
+                                else:
+                                    f.write(self.__trans_linewise(content, translator))
                             else:
-                                f.write(self.__trans_linewise(content,
-                                    translator))
-                        else:
-                            raise RuntimeError("Unknown chunk type detected, this is a bug")
+                                raise RuntimeError("Unknown chunk type detected, this is a bug")
+
 
     def __trans_linewise(self, content, translator):
         """Translate the chunk linewise."""
@@ -447,6 +443,9 @@ class I18NPlugin(Plugin):
             reporter.report_generic("Parsing templates for i18n into %s" \
                     % relpath(templates_pot_filename, builder.env.root_path))
             translations.parse_templates(templates_pot_filename)
+            # walk through contents.lr files and produce alternatives
+            # before the build system creates its work queue
+            self.process_contents()
 
 
     def on_after_build_all(self, builder, **extra):
