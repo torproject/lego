@@ -1,0 +1,3 @@
+[submodule "packages/scss"]
+	path = packages/scss
+	url = https://gitlab.torproject.org/tpo/web/lektor-scss.git
