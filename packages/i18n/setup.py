@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='lektor-i18n',
-    version='0.4.4',
+    version='0.5.0',
     author=u'NumeriCube',
     author_email='support@numericube.com',
     url='https://github.com/numericube/lektor-i18n-plugin',
