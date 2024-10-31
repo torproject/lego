@@ -1,18 +1,15 @@
 [build-system]
-requires = [
-    "hatchling>=1.9.0",
-    "hatch-vcs",
-]
-build-backend = "hatchling.build"
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "lektor-markdown-image-attrs"
-dynamic = ["readme", "version"]
+version = "0.2.1"
 description = """\
     Extend Lektor’s Markdown syntax to allow setting \
     arbitrary HTML attributes on images and links.\
     """
-license = "MIT"
+license = {text = "MIT"}
 authors = [
     { name = "Jeff Dairiki", email = "dairiki@dairiki.org" },
 ]
