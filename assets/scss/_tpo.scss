@@ -57,6 +57,10 @@ footer .border{
   max-width: 36rem;
 }
 
+.footer #ddgSearch {
+  max-width: 60%;
+}
+
 .footer .trademark-policy {
   p, a {
     @extend .text-light;
@@ -153,9 +157,16 @@ main{
     font-size: 2.5rem;
     line-height: 3rem;
   }
- }
-
-@include media-breakpoint-up(md) {
-
+  .footer #ddgSearch {
+    max-width: 100%;
+  }
 }
+
+@include media-breakpoint-down(md) {
+  .footer #ddgSearch {
+    max-width: 80%;
+  }
+}
+
+@include media-breakpoint-up(md) {}
 @include media-breakpoint-up(lg) {}
