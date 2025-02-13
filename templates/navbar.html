@@ -1,30 +1,35 @@
+{% set navbar_top_class = 'navbar no-background navbar-expand-lg navbar-dark p-4' %}
+{% set navbar_top_container_class = 'container-fluid' %}
 {% if not this.color %}
-<div class="container-fluid bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
+<div class="{{ navbar_top_container_class }} bg-primary">
+  <nav class="{{ navbar_top_class }} bg-primary">
 {% elif this.color == 'primary' %}
-<div class="container-fluid bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
+<div class="{{ navbar_top_container_class }} bg-primary">
+  <nav class="{{ navbar_top_class }} bg-primary">
 {% else %}
-<div class="container-fluid bg-dark">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-dark p-4">
+<div class="{{ navbar_top_container_class }} bg-dark">
+  <nav class="{{ navbar_top_class }} bg-dark">
 {% endif %}
-    <a class="navbar-brand" href="{{ 'https://torproject.org/{}/'.format(this.alt) }}">
-      <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
-      <span class="sr-only">Tor Logo</span>
-    </a>
+    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+        <a class="navbar-brand pt-0" href="{{ 'https://torproject.org/{}/'.format(this.alt) }}">
+          <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
+          <span class="sr-only">Tor Logo</span>
+        </a>
 
-    {% set link = bag('links', this.alt, 'donate') %}
-    {% if link %}
-      <a href="{{ link }}" title="{{ _("Donate") }}" class="px-2 h4"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
-    {% else %}
-      <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}" class="px-2 h4"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
-    {% endif %}
+        {% set link = bag('links', this.alt, 'donate') %}
+        {% set donate_button_class = 'px-0 px-md-2 h4 mb-0 mt-3 mt-md-2' %}
+        {% if link %}
+          <a href="{{ link }}" title="{{ _("Donate") }}" class="{{ donate_button_class }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
+        {% else %}
+          <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}" class="{{ donate_button_class }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
+        {% endif %}
 
-    <label for="nav-toggle">
-      <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        {{ _("Menu") }} <span class="navbar-toggler-icon ml-1"></span>
-      </a>
-    </label>
+        <label for="nav-toggle" class="position-absolute top-0 end-0 mt-3 mt-md-0">
+          <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </a>
+        </label>
+    </div>
     <input type="checkbox" id="nav-toggle"/>
     <div class="collapse navbar-collapse hamburger-menu" id="navbarSupportedContent">
       <div class="mx-auto">
