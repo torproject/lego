@@ -69,12 +69,13 @@
           {% set alts = bag('alternatives').items() %}
           {% if alts|length > 1 %}
             <div class="btn-group dropdown pull-right">
+              {% set language_button_class = 'btn dropdown-toggle px-0 px-md-3 mt-4 mt-md-0' %}
               {% if not this.color %}
-                <button type="button" class="btn btn-primary bg-primary dropdown-toggle px-0 px-md-3 mt-4 mt-md-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="{{ language_button_class }} btn-primary bg-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {% elif this.color == 'primary' %}
-                <button type="button" class="btn btn-primary bg-primary dropdown-toggle px-0 px-md-3 mt-4 mt-md-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="{{ language_button_class }} btn-primary bg-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {% else %}
-                <button type="button" class="btn btn-dark bg-dark dropdown-toggle px-0 px-md-3 mt-4 mt-md-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="{{ language_button_class }} btn-dark bg-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {% endif %}
               {{ bag('alternatives', this.alt, 'language') }}
               </button>
@@ -89,10 +90,11 @@
           {% endif %}
           {% set download = site.get('/download') %}
           <div class="pull-right">
+            {% set download_button_class = 'btn btn-outline-light pull-right mt-4 mt-md-0' %}
             {% if download == None %}
-              <a class="btn btn-outline-light pull-right mt-4 mt-md-1" href="https://www.torproject.org/download/">
+              <a class="{{ download_button_class }}" href="https://www.torproject.org/download/">
             {% else %}
-              <a class="btn btn-outline-light pull-right mt-4 mt-md-1" href="{{ this.url_to(download)|url(alt=this.alt) }}">
+              <a class="{{ download_button_class }}" href="{{ this.url_to(download)|url(alt=this.alt) }}">
             {% endif %}
               {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png"></i>
             </a>
