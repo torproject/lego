@@ -11,6 +11,14 @@ $positions: static, relative, absolute, fixed, sticky;
 
 // Shorthand
 
+.top-0 {
+  top: 0;
+}
+
+.end-0 {
+  right: 0;
+}
+
 .fixed-top {
   position: fixed;
   top: 0;

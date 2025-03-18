@@ -1,30 +1,35 @@
+{% set navbar_top_class = 'navbar no-background navbar-expand-lg navbar-dark p-4' %}
+{% set navbar_top_container_class = 'container-fluid' %}
 {% if not this.color %}
-<div class="container-fluid bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
+<div class="{{ navbar_top_container_class }} bg-primary">
+  <nav class="{{ navbar_top_class }} bg-primary">
 {% elif this.color == 'primary' %}
-<div class="container-fluid bg-primary">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-primary p-4">
+<div class="{{ navbar_top_container_class }} bg-primary">
+  <nav class="{{ navbar_top_class }} bg-primary">
 {% else %}
-<div class="container-fluid bg-dark">
-  <nav class="navbar no-background navbar-expand-lg navbar-dark bg-dark p-4">
+<div class="{{ navbar_top_container_class }} bg-dark">
+  <nav class="{{ navbar_top_class }} bg-dark">
 {% endif %}
-    <a class="navbar-brand" href="{{ 'https://torproject.org/{}/'.format(this.alt) }}">
-      <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
-      <span class="sr-only">Tor Logo</span>
-    </a>
+    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+        <a class="navbar-brand pt-0" href="{{ 'https://torproject.org/{}/'.format(this.alt) }}">
+          <img alt="{{ 'The Tor Project' }}" src="{{ '/static/images/tor-logo@2x.png'|asseturl }}" >
+          <span class="sr-only">Tor Logo</span>
+        </a>
 
-    {% set link = bag('links', this.alt, 'donate') %}
-    {% if link %}
-      <a href="{{ link }}" title="{{ _("Donate") }}" class="px-2 h4"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
-    {% else %}
-      <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}" class="px-2 h4"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
-    {% endif %}
+        {% set link = bag('links', this.alt, 'donate') %}
+        {% set donate_button_class = 'px-0 px-md-2 h4 mb-0 mt-3 mt-md-2' %}
+        {% if link %}
+          <a href="{{ link }}" title="{{ _("Donate") }}" class="{{ donate_button_class }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
+        {% else %}
+          <a href="https://www.torproject.org/donate/{{ this.alt }}" title="{{ _("Donate") }}" class="{{ donate_button_class }}"><span class="badge badge-warning p-2">{{ _("Donate Now") }}</span></a>
+        {% endif %}
 
-    <label for="nav-toggle">
-      <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        {{ _("Menu") }} <span class="navbar-toggler-icon ml-1"></span>
-      </a>
-    </label>
+        <label for="nav-toggle" class="position-absolute top-0 end-0 mt-3 mt-md-0">
+          <a class="btn btn-lg btn-primary navbar-toggler text-white p-3" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </a>
+        </label>
+    </div>
     <input type="checkbox" id="nav-toggle"/>
     <div class="collapse navbar-collapse hamburger-menu" id="navbarSupportedContent">
       <div class="mx-auto">
@@ -65,36 +70,40 @@
     -->
         </ul>
       </div>
-      {% set alts = bag('alternatives').items() %}
-      {% if alts|length > 1 %}
-        <div class="btn-group dropdown pull-right">
-          {% if not this.color %}
-            <button type="button" class="btn btn-primary bg-primary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {% elif this.color == 'primary' %}
-            <button type="button" class="btn btn-primary bg-primary dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {% else %}
-            <button type="button" class="btn btn-dark bg-dark dropdown-toggle btn-block my-3 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {% endif %}
-          {{ bag('alternatives', this.alt, 'language') }}
-          </button>
-          <div class="dropdown-menu">
-            {% for id, item in bag('alternatives').items() %}
-              {% if this.alt != id %}
-                <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
+      <div class="d-flex flex-column-reverse flex-md-row">
+          {% set alts = bag('alternatives').items() %}
+          {% if alts|length > 1 %}
+            <div class="btn-group dropdown pull-right">
+              {% set language_button_class = 'btn dropdown-toggle px-0 px-md-3 mt-4 mt-md-0' %}
+              {% if not this.color %}
+                <button type="button" class="{{ language_button_class }} btn-primary bg-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% elif this.color == 'primary' %}
+                <button type="button" class="{{ language_button_class }} btn-primary bg-primary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {% else %}
+                <button type="button" class="{{ language_button_class }} btn-dark bg-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {% endif %}
-            {% endfor %}
+              {{ bag('alternatives', this.alt, 'language') }}
+              </button>
+              <div class="dropdown-menu">
+                {% for id, item in bag('alternatives').items() %}
+                  {% if this.alt != id %}
+                    <a class="dropdown-item" href="{{ this.path|url(alt=id) }}">{{ item.language }}</a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+          {% set download = site.get('/download') %}
+          <div class="pull-right">
+            {% set download_button_class = 'btn btn-outline-light pull-right mt-4 mt-md-0' %}
+            {% if download == None %}
+              <a class="{{ download_button_class }}" href="https://www.torproject.org/download/">
+            {% else %}
+              <a class="{{ download_button_class }}" href="{{ this.url_to(download)|url(alt=this.alt) }}">
+            {% endif %}
+              {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png"></i>
+            </a>
           </div>
-        </div>
-      {% endif %}
-      {% set download = site.get('/download') %}
-      <div class="pull-right">
-        {% if download == None %}
-          <a class="btn btn-outline-light pull-right" href="https://www.torproject.org/download/">
-        {% else %}
-          <a class="btn btn-outline-light pull-right" href="{{ this.url_to(download)|url(alt=this.alt) }}">
-        {% endif %}
-          {{ _("Download Tor Browser") }}<i class="ml-2 pt-1 fas fa-arrow-down-png"></i>
-        </a>
       </div>
     </nav>
 </div>
