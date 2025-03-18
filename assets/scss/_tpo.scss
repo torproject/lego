@@ -99,6 +99,9 @@ main{
   border-radius: 100%;
   width: 150px;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .oval-3 {
@@ -110,8 +113,6 @@ main{
 
 .oval-2 i{
    font-size: 5em;
-   padding: 0.4em 0.5em;
-   text-align: center;
  }
 
 .oval-3 i {
