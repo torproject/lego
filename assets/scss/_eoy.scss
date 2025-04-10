@@ -1,18 +1,23 @@
 :root {
-  --abouttor-yec-page-bg-color: #F5F5F5;
-  --abouttor-yec-button-color: #15141A;
-  --abouttor-yec-button-bg-color-browse: #C1ED75;
-  --abouttor-yec-button-bg-color-search: #FF6A75;
-  --abouttor-yec-button-bg-color-speak: #D898FA;
-  --abouttor-yec-donate-text-color: #15141A;
-  --abouttor-yec-donate-text-highlight: #FFBD4F;
-  --abouttor-yec-match-bg-color: #D898FA;
+  --yec-page-bg-color: #EAFFC4;
+  --yec-button-color: #EAFFC4;
+  --yec-button-bg-color: #18232F;
+  --yec-button-bg-color-hover: #3B444E;
+  --yec-button-bg-color-active: #000;
+  --yec-button-border-color-focus: #000;
+  --yec-donate-text-color: #18232F;
 }
 
 @font-face {
-    font-family: SpaceGrotesk-Bold;
-    src: url("../fonts/Space/SpaceGrotesk-Bold.ttf");
+    font-family: ChakraPetch-Bold;
+    src: url("../fonts/ChakraPetch/ChakraPetch-Bold.ttf");
 }
+
+@font-face {
+    font-family: SourceSans3-Regular;
+    src: url("../fonts/SourceSans3/SourceSans3-Regular.ttf");
+}
+
 
 /* Don't move down content w banner. Navbar isn't fixed. */
 .page {
@@ -20,7 +25,7 @@
 }
 
 .banner {
-  background-color: var(--abouttor-yec-page-bg-color);
+  background-color: var(--yec-page-bg-color);
   z-index: 1000 !important;
   position: relative;
   right: 0;
@@ -40,7 +45,7 @@
 .banner-content-spacer {
     margin-top: auto;
     margin-bottom: auto;
-    padding: 1.5rem 1rem 2rem 1rem;
+    padding: 24px;
     min-height: inherit;
     max-height: inherit;
 }
@@ -81,47 +86,52 @@
 
 #banner-header {
     h1, p {
-      color: var(--abouttor-yec-donate-text-color);
+      color: var(--yec-donate-text-color);
     }
 
   h1 {
     display: inline;
-    font-size: 1.5rem;
-    @include media-breakpoint-up(md) {
-      font-size: 2rem;
+    @include media-breakpoint-down(sm) {
+      /* centered text */
+      display: block;
+      margin: 0 auto;
+      width: fit-content;
     }
-    font-family: "SpaceGrotesk-Bold", sans-serif;
+    font-size: 1.625rem;
+    @include media-breakpoint-up(md) {
+      font-size: 2.25rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 2.5rem;
+    }
+    font-family: "ChakraPetch-Bold", sans-serif;
     line-height: 140%;
     margin-bottom: 0px;
-    background-color: var(--abouttor-yec-donate-text-highlight);
-    padding: 0 0.75rem;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
 }
 
   p {
-    font-size: 1.2rem;
-    @include media-breakpoint-up(md) {
-      font-size: 1.3rem;
+    font-size: 1rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.125rem;
     }
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "SourceSans3-Regular", sans-serif;
     line-height: 150%;
-    margin: 1rem 0 0 0;
+    margin: 16px 0 24px 0;
   }
 }
 
 .banner-content-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 24px;
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
-    padding: 2rem;
   }
 }
 
@@ -135,22 +145,23 @@
   align-self: stretch;
   margin: 0 auto;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     margin: 0;
   }
 }
 
 #yec-donate-button {
   display: flex;
-  visibility: hidden;
-  padding: 0.75rem 1rem;
+  background-color: var(--yec-button-bg-color);
+  padding: 0.5rem 1rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
   align-self: stretch;
-  color: unset;
+  color: var(--yec-button-color);
+  border-radius: 0.4rem;
 
-  font-size: 1.1rem;
+  font-size: 0.875;
   font-weight: 700;
   line-height: 120%; /* 1.05rem */
 
@@ -158,42 +169,25 @@
     height: 1rem;
     width: 1rem;
   }
+  @include media-breakpoint-up(lg) {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+#yec-donate-button:hover, #yec-donate-button:focus {
+  background-color: var(--yec-button-bg-color-hover);
+}
+
+#yec-donate-button:active {
+  background-color: var(--yec-button-bg-color-active);
 }
 
 .yec-illo {
-  width: 300px;
-  @include media-breakpoint-up(md) {
-    width: 350px !important;
-  }
+  width: 280px;
   @include media-breakpoint-up(lg) {
-    width: 420px !important;
+    width: 344px !important;
   }
-}
-
-#banner-header .banner-content {
-  h1.yec-variant-search,
-  h1.yec-variant-speak,
-  img.yec-variant-search,
-  img.yec-variant-speak {
-    display: none;
-  }
-  h1.yec-variant-browse,
-  img.yec-variant-browse {
-    visibility: hidden;
-  }
-}
-
-#yec-donate-button.yec-variant-browse {
-  background-color: var(--abouttor-yec-button-bg-color-browse);
-  visibility: visible;
-}
-#yec-donate-button.yec-variant-search {
-  background-color: var(--abouttor-yec-button-bg-color-search);
-  visibility: visible;
-}
-#yec-donate-button.yec-variant-speak {
-  background-color: var(--abouttor-yec-button-bg-color-speak);
-  visibility: visible;
 }
 
 #banner-text {
@@ -201,7 +195,6 @@
 }
 
 #banner-text-container {
-  gap: 1.5rem;
   max-width: 45rem;
 }
 
@@ -215,3 +208,5 @@ html:dir(rtl) {
     right: 0;
   }
 }
+
+
