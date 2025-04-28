@@ -2,35 +2,29 @@
   <input id="trigger" type="checkbox" title="Close banner" />
   <label for="trigger" class="banner-close text-white">
       <div class="d-flex h-100">
-        <img src="{{ '/static/images/yec/x-dark.png'|asseturl }}" class="m-auto h-100 w-100 p-1 img-svg">
+          <img src="{{ '/static/images/yec/x-dark.png'|asseturl }}" class="m-auto h-100 w-100 p-1 img-svg">
       </div>
   </label>
   <span class="eoy-sr-only text-black">Close banner</span>
   
   <div id="banner-header">
     <div class="banner-content">
-      <div class="banner-content-spacer pt-5 h-100">
+      <div class="banner-content-spacer h-100">
         <div class="banner-content-container d-flex px-3">
+          <div class="banner-main-graphics h-100">
+            <img class="yec-illo" src="{{ '/static/images/yec/spring-onion-comp_1.5x.png'|asseturl }}">
+          </div>
           <div id="banner-text-container" class="d-flex flex-column {{ bag('alternatives', this.alt, 'direction') }}">
             <div id="banner-text">
-              <h1 class="yec-variant-browse">{{ _("You have a right to BROWSE without being watched.") }}</h1>
-              <h1 class="yec-variant-search">{{ _("You have a right to SEARCH without being followed.") }}</h1>
-              <h1 class="yec-variant-speak">{{ _("You have a right to SPEAK without uninvited listeners.") }}</h1>
-              <p>{{ _("Join the thousands of Tor supporters building an internet powered by privacy.") }} 
-                 {{ _("Make a donation today.") }}</p>
-              <p><strong>{{ _("Through December 31, your gift will be matched 1:1, up to $300,000!") }}</strong></p>
+              <h1 class="yec-variant-browse">{{ _('Privacy is possible.') }}</h1>
+              <p>{{ _('A better world is possible when you invest in tools that prioritize your privacy over profit. Donate to Tor today.') }}{{ "".format(_("Opting out of Big Tech means investing in better alternatives. That's where Tor, Tor Browser, and Tails come in.")) }}{{ "".format(_('Help fuel the development of truly private tools.')) }}</p>
             </div>
             <div id="yec-donate-button-container">
-              <a class="btn" id="yec-donate-button" href="https://donate.torproject.org/">
+              <a class="btn" id="yec-donate-button" href="https://torproject.org/donate/donate-bn1-sc2025">
                 <span>{{ _("Donate now") }}</span>
-                <img src="{{ '/static/images/yec/heart.png'|asseturl }}" class="donate-heart img-svg">
+                <img src="{{ '/static/images/yec/spring-heart.svg'|asseturl }}" class="donate-heart">
               </a>
             </div>
-          </div>
-          <div class="banner-main-graphics h-100">
-            <img class="yec-illo yec-variant-browse img-svg" src="{{ '/static/images/yec/illo-yec-browse.png'|asseturl }}">
-            <img class="yec-illo yec-variant-search img-svg" src="{{ '/static/images/yec/illo-yec-search.png'|asseturl }}">
-            <img class="yec-illo yec-variant-speak img-svg" src="{{ '/static/images/yec/illo-yec-speak.png'|asseturl }}">
           </div>
         </div>
       </div>
@@ -47,36 +41,4 @@ trigger.addEventListener("change", () => {
 if (sessionStorage.getItem("bannerClosed")) {
     trigger.checked = sessionStorage.getItem("bannerClosed");
 }
-/* display a random variant of the banner */
-/* not using jQuery because it's loaded later, and this is just faster */
-const variants = ['browse', 'search', 'speak'];
-const default_variant = 'browse';
-const variant = variants[Math.floor(Math.random() * variants.length)]
-const variant_elements =  document.querySelectorAll('h1.yec-variant-' + default_variant + ', img.yec-variant-' + default_variant);
-if (variant == default_variant) {
-    variant_elements.forEach((i) => {
-        i.style.visibility = 'visible';
-    });
-} else {
-    variant_elements.forEach((i) => {
-        i.style.display = 'none';
-    });
-    document.querySelector('h1.yec-variant-' + variant).style.display = 'inline';
-    document.querySelector('img.yec-variant-' + variant).style.display = 'block';
-}
-document.getElementById('yec-donate-button').classList.add('yec-variant-' + variant);
 </script>
-
-<noscript>
-<!-- show the default variant -->
-<style>
-  #banner-header .banner-content h1.yec-variant-browse,
-  #banner-header .banner-content img.yec-variant-browse {
-    visibility: visible;
-  }
-  #yec-donate-button {
-    background-color: var(--abouttor-yec-button-bg-color-browse);
-    visibility: visible;
-  }
-</style>
-</noscript>
